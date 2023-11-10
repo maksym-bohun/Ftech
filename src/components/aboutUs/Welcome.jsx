@@ -1,6 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import mailImage from "../../assets/icons/mail.png";
+import mailIcon from "../../assets/icons/mailIcon.svg";
+import mailText from "../../assets/icons/mailText.svg";
+import { colors } from "../../styles/colors";
 
 const Welcome = () => {
   return (
@@ -13,7 +16,12 @@ const Welcome = () => {
         </p>
       </div>
       <div className="image">
-        <img src={mailImage} alt="mail image" />
+        <img className="image--icon" src={mailIcon} alt="mail image" />
+        <img
+          className="image--text"
+          src={mailText}
+          alt="text above the image"
+        />
       </div>
     </Container>
   );
@@ -26,7 +34,7 @@ const Container = styled.section`
   align-items: center;
 
   .text {
-    color: #000;
+    color: ${colors.textColor};
 
     h1 {
       font-size: 4rem;
@@ -43,9 +51,13 @@ const Container = styled.section`
 
   .image {
     justify-self: center;
-    img {
-      height: 200px;
-      border-radius: 50%;
+    position: relative;
+    &--icon {
+      position: absolute;
+    }
+    &--text {
+      position: absolute;
+      animation: rotate 10s linear infinite;
     }
   }
 `;

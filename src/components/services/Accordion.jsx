@@ -1,16 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { colors } from "../../styles/colors";
 
 const Accordion = () => {
-  return (
-    <Container className="accordion">
-      <div className="actions">
-        <button className="btn btn-active">Розробка</button>
-        <button className="btn">Дизайн</button>
-        <button className="btn">Я хз</button>
-        <button className="btn">Консультації</button>
-      </div>
+  const [activeBtn, setActiveBtn] = useState("Розробка");
+  const buttonNames = ["Розробка", "Дизайн", "Я хз", "Консультації"];
+  const panels = {
+    Розробка: (
       <div className="info">
         <div className="info-text">
           <h3>ТУТ ЗАГОЛОВОК ТИПУ ОСНОВНЕ</h3>
@@ -30,6 +26,93 @@ const Accordion = () => {
           </p>
         </div>
       </div>
+    ),
+
+    Дизайн: (
+      <div className="info">
+        <div className="info-text">
+          <h3>ДИЗАЙН</h3>
+          <p>
+            А тут текст ще про опис шо ми їбать ведемо провект от і до кароче
+            можна ще по пунктах шось перечисліть в стілі:
+          </p>
+          <ul>
+            <li>пункт 1 тут ще буков трекба</li>
+            <li>пункт 2 букви</li>
+            <li>пункт 3 шось там я хз</li>
+            <li>пункт 4 бла блабла</li>
+          </ul>
+          <p>
+            тут шото ще текст я хз шо писать бла бла бла бла треба більше інфи і
+            копірайтер якийсь я хз блабалбла пес патро байрактар
+          </p>
+        </div>
+      </div>
+    ),
+    "Я хз": (
+      <div className="info">
+        <div className="info-text">
+          <h3>Я ХЗ</h3>
+          <p>
+            А тут текст ще про опис шо ми їбать ведемо провект от і до кароче
+            можна ще по пунктах шось перечисліть в стілі:
+          </p>
+          <ul>
+            <li>пункт 1 тут ще буков трекба</li>
+            <li>пункт 2 букви</li>
+            <li>пункт 3 шось там я хз</li>
+            <li>пункт 4 бла блабла</li>
+          </ul>
+          <p>
+            тут шото ще текст я хз шо писать бла бла бла бла треба більше інфи і
+            копірайтер якийсь я хз блабалбла пес патро байрактар
+          </p>
+        </div>
+      </div>
+    ),
+    Консультації: (
+      <div className="info">
+        <div className="info-text">
+          <h3>Консультації</h3>
+          <p>
+            А тут текст ще про опис шо ми їбать ведемо провект от і до кароче
+            можна ще по пунктах шось перечисліть в стілі:
+          </p>
+          <ul>
+            <li>пункт 1 тут ще буков трекба</li>
+            <li>пункт 2 букви</li>
+            <li>пункт 3 шось там я хз</li>
+            <li>пункт 4 бла блабла</li>
+          </ul>
+          <p>
+            тут шото ще текст я хз шо писать бла бла бла бла треба більше інфи і
+            копірайтер якийсь я хз блабалбла пес патро байрактар
+          </p>
+        </div>
+      </div>
+    ),
+  };
+
+  const [currentPanel, setCurrentPanel] = useState(panels["Розробка"]);
+
+  const clickBtnHandler = (e) => {
+    setActiveBtn(e.target.textContent);
+    setCurrentPanel(panels[e.target.textContent]);
+  };
+
+  return (
+    <Container className="accordion">
+      <div className="actions">
+        {buttonNames.map((buttonName) => (
+          <button
+            onClick={clickBtnHandler}
+            className={`btn ${activeBtn === buttonName ? "btn--active" : ""}`}
+          >
+            {buttonName}
+          </button>
+        ))}
+      </div>
+      {currentPanel}
     </Container>
   );
 };
@@ -50,14 +133,15 @@ const Container = styled.section`
 
     .btn {
       color: #d5d9e2;
-      background-color: #c1c5d0;
+      background-color: ${colors.primaryGray};
       font-size: 1.6rem;
       border: none;
       padding: 2.2rem;
       text-transform: uppercase;
       border-radius: 20px;
+      transition: all 0.3s;
 
-      &-active {
+      &--active {
         background-color: ${colors.primaryBlue};
         color: #fff;
         font-weight: 600;

@@ -6,6 +6,8 @@ import Header from "./components/header/Header";
 import { colors } from "./styles/colors";
 import AboutUs from "./components/AboutUs/AboutUs";
 import Services from "./components/services/Services";
+import Portfolio from "./components/portfolio/Portfolio";
+import Faq from "./components/faq/Faq";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -15,6 +17,8 @@ function App() {
       <Header />
       <AboutUs />
       <Services />
+      <Portfolio />
+      <Faq />
     </Container>
   );
 }

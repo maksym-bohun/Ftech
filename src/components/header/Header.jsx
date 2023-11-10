@@ -6,10 +6,7 @@ import ukraineFlag from "../../assets/icons/ukraine.png";
 const Header = () => {
   return (
     <Container>
-      <div className="logo">
-        FT
-        <span>ECH</span>
-      </div>
+      <div className="logo">FTECH</div>
 
       <div className="links">
         <ul className="list">
@@ -40,12 +37,12 @@ const Container = styled.nav`
   width: 100%;
   font-size: 1.4em;
   padding-top: 1.8rem;
-  color: ${colors.darkBlue};
+  color: ${colors.textColor};
 
   a:link,
   a:visited {
     text-decoration: none;
-    color: ${colors.darkBlue};
+    color: ${colors.textColor};
   }
 
   .list {
@@ -76,9 +73,9 @@ const Container = styled.nav`
     margin-right: 1.6rem;
     & > button {
       padding: 0.75rem 1.5rem;
-      background-color: ${colors.primaryBlue};
+      background-color: ${colors.primaryViolet};
       border: none;
-      color: #fff;
+      color: ${colors.darkGray};
       font-weight: 600;
       text-transform: uppercase;
       font-size: 90%;

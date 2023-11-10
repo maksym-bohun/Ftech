@@ -18,7 +18,7 @@ const Services = () => {
 };
 
 const Container = styled.section`
-  margin: 5rem 0 20rem 0;
+  margin: 5rem 0 10rem 0;
   width: 100%;
 
   h2 {
