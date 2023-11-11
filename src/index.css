@@ -12,7 +12,6 @@ body {
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background: linear-gradient(to bottom, #1c1c1c, #1c1c1c 60%, #36353c);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -22,8 +21,9 @@ body {
 }
 
 .section-header {
+  margin: 0;
   font-size: 14px;
-  margin-top: 120px;
+  padding-top: 120px;
   margin-bottom: 40px;
   font-weight: 400;
   line-height: 18.2px;

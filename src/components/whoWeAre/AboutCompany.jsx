@@ -6,7 +6,6 @@ import backgroundTriangle4 from "../../assets/backgroundTriangle4.svg";
 const AboutCompany = () => {
   return (
     <Container>
-      <img src={backgroundTriangle4} className="triangle" alt="triangle" />
       <div className="centered">
         <h2>
           Українська технологічна компанія, що активно працює на ринку більше 5
@@ -31,18 +30,12 @@ const Container = styled.div`
   color: ${colors.primaryDarkGray};
   position: relative;
 
-  .triangle {
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 10;
-  }
-
   h2 {
     font-size: 1rem;
     width: 456px;
     font-weight: 500;
     padding-top: 120px;
+    margin: 0;
   }
 
   h1 {

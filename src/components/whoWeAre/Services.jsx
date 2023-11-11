@@ -54,6 +54,7 @@ const Container = styled.div`
   margin-top: 10rem;
   position: relative;
   // background-color: gray;
+  margin-bottom: 0;
 
   .frame {
     position: absolute;

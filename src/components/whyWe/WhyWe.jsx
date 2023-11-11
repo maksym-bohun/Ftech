@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { colors } from "../../styles/colors";
+import Cards from "./Cards";
 
 const WhyWe = () => {
   return (
@@ -12,6 +13,7 @@ const WhyWe = () => {
           професіоналізмом, відданістю та здатністю долати виклики
         </div>
       </div>
+      <Cards />
     </Container>
   );
 };
@@ -31,7 +33,7 @@ const Container = styled.section`
     line-height: 46.8px;
     letter-spacing: 1.8%;
     margin: 0 auto;
-    padding-bottom: 5rem;
+    padding-bottom: 8rem;
   }
 `;
 
