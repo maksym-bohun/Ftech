@@ -13,7 +13,8 @@ const AboutUs = () => {
 };
 
 const Container = styled.section`
-  margin: 10rem 0;
+  margin-top: 80px;
+  height: 100vh;
 `;
 
 export default AboutUs;

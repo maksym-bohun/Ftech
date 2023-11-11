@@ -1,25 +1,26 @@
 import React from "react";
 import styled from "styled-components";
-import kyivLogo from "../../assets/icons/kyiv-logo.png";
+import kyivLogo from "../../assets/kyiv-logo.png";
+import { colors } from "../../styles/colors";
 
 const OfficialInfo = () => {
   return (
     <Container>
-      <div className="statistics">
+      <div className="statistics ">
         <div>
-          <h3>148+</h3> <span>Клієнтів</span>
+          <h3>5</h3> <span>Років досвіду</span>
         </div>
         <div>
-          <h3>8</h3> <span>Років досвіду</span>
+          <h3>30+</h3> <span>Клієнтів</span>
         </div>
         <div>
-          <h3>148+</h3> <span>Чогось там ще крутого</span>
+          <h3>100К+</h3> <span>Задоволених громадян</span>
         </div>
         <div>
-          <h3>8</h3> <span>Років на ринку</span>
+          <h3>10+</h3> <span>CRM систем</span>
         </div>
       </div>
-      <div className="labels">
+      {/* <div className="labels">
         <div className="label">
           <img src={kyivLogo} alt="Kyiv flag" />
           <div className="text">
@@ -55,12 +56,14 @@ const OfficialInfo = () => {
             <p>Київська міська державна адміністрація</p>
           </div>
         </div>
-      </div>
+      </div> */}
     </Container>
   );
 };
 
 const Container = styled.section`
+  width: 1120px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -71,8 +74,8 @@ const Container = styled.section`
     margin-top: 7rem;
     display: flex;
     justify-content: space-between;
-    color: #000;
-    background-color: #fff;
+    color: ${colors.lightColor};
+    background-color: ${colors.secondaryDarkGray};
     border-radius: 15px;
 
     div {
@@ -84,50 +87,6 @@ const Container = styled.section`
         margin: 0;
         font-weight: 800;
         font-size: 1.4rem;
-      }
-    }
-  }
-
-  .labels {
-    display: flex;
-    justify-content: space-between;
-    .label {
-      display: flex;
-      gap: 1.2rem;
-      img {
-        height: 2.8rem;
-        filter: grayscale(100%);
-      }
-
-      .text {
-        color: #000;
-        display: flex;
-        flex-direction: column;
-        // gap: 0.3rem;
-
-        h4,
-        h5,
-        p {
-          margin: 0;
-        }
-
-        h4 {
-          font-size: 0.8rem;
-          margin-bottom: 0.1rem;
-        }
-
-        h5,
-        p {
-          color: gray;
-        }
-
-        h5 {
-          font-size: 0.5rem;
-        }
-
-        p {
-          font-size: 0.4rem;
-        }
       }
     }
   }

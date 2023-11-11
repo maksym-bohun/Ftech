@@ -12,7 +12,7 @@ body {
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: "#1c1c1c";
+  background: linear-gradient(to bottom, #1c1c1c, #1c1c1c 60%, #36353c);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -21,11 +21,66 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
+.section-header {
+  font-size: 14px;
+  margin-top: 120px;
+  margin-bottom: 40px;
+  font-weight: 400;
+  line-height: 18.2px;
+  letter-spacing: 1.8%;
+}
+
+.green {
+  color: #aff143;
+}
+
+.violet {
+  color: #af87ff;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.centered {
+  width: 80vw;
+  margin: 0 auto;
+}
+
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes changeOpacityMail {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes changeOpacityMailGradient {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideLabel {
+  0% {
+  }
+
+  100% {
+    transform: translateX(100%);
   }
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { colors } from "../../styles/colors";
-import ukraineFlag from "../../assets/icons/ukraine.png";
+import ukraineFlag from "../../assets/ukraine.png";
 
 const Header = () => {
   return (
@@ -11,17 +11,15 @@ const Header = () => {
       <div className="links">
         <ul className="list">
           <li>
-            <a href="#">Послуги</a>
-          </li>
-          <li>
             <a href="#">Проєкти</a>
           </li>
           <li>
-            <a href="#">FAQ</a>
+            <a href="#">Карʼєра</a>
           </li>
-          <li>
-            <img src={ukraineFlag}></img>UA{" "}
-            <span className="triangle">&#9660;</span>
+          <li className="language">
+            <img src={ukraineFlag}></img>
+            <span>UA</span>
+            <span className="language__triangle">&#9660;</span>
           </li>
         </ul>
         <button>Зв'язатись</button>
@@ -31,18 +29,18 @@ const Header = () => {
 };
 
 const Container = styled.nav`
+  width: 1120px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  font-size: 1.4em;
   padding-top: 1.8rem;
-  color: ${colors.textColor};
+  color: ${colors.lightColor};
 
   a:link,
   a:visited {
     text-decoration: none;
-    color: ${colors.textColor};
+    color: ${colors.lightColor};
   }
 
   .list {
@@ -51,6 +49,16 @@ const Container = styled.nav`
     gap: 3.4rem;
     list-style: none;
     text-transform: uppercase;
+    font-size: 16px;
+
+    .language {
+      display: flex;
+      gap: 0.3rem;
+      &__triangle {
+        font-size: 0.6rem;
+        margin-left: 0.5rem;
+      }
+    }
 
     & > li {
       display: flex;
@@ -72,13 +80,14 @@ const Container = styled.nav`
     gap: 3rem;
     margin-right: 1.6rem;
     & > button {
-      padding: 0.75rem 1.5rem;
+      width: 168px;
+      height: 51px;
+      font-size: 18px;
       background-color: ${colors.primaryViolet};
       border: none;
-      color: ${colors.darkGray};
+      color: ${colors.primaryDarkGray};
       font-weight: 600;
       text-transform: uppercase;
-      font-size: 90%;
       letter-spacing: 1px;
       border-radius: 12px;
       &: hover {
@@ -95,10 +104,6 @@ const Container = styled.nav`
     & > span {
       color: ${colors.primaryBlue};
     }
-  }
-
-  .triangle {
-    font-size: 0.5rem;
   }
 `;
 

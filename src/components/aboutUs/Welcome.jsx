@@ -1,63 +1,120 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import mailImage from "../../assets/icons/mail.png";
-import mailIcon from "../../assets/icons/mailIcon.svg";
-import mailText from "../../assets/icons/mailText.svg";
+import mailIcon from "../../assets/mailIcon.svg";
+import mailIconGradient from "../../assets/mailIconGradient.svg";
+import mailText from "../../assets/mailText.svg";
 import { colors } from "../../styles/colors";
 
 const Welcome = () => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
   return (
     <Container>
+      <h1 className="header">
+        Цифрове <span>вдосконалення</span> держави і бізнесу
+      </h1>
       <div className="text">
-        <h1>Код для держави та бізнесу</h1>
         <p>
-          Розробка та впровадження галузевих ІТ рішень з метою цифровізації та
-          модернізації корпоративного ринку, державних і громадських структур.
+          Розробка та впровадження галузевих IT рішень з метою цифровізації та
+          модернізації корпоративного ринку, державних і громадських структур
         </p>
-      </div>
-      <div className="image">
-        <img className="image--icon" src={mailIcon} alt="mail image" />
-        <img
-          className="image--text"
-          src={mailText}
-          alt="text above the image"
-        />
+        <div
+          className="image"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
+          <div>
+            <img
+              className="image--icon"
+              src={isHovered ? mailIconGradient : mailIcon}
+              alt="mail image"
+            />
+            <img
+              className="image--icon"
+              src={isHovered ? mailIconGradient : mailIcon}
+              alt="mail image"
+            />
+          </div>
+          <img
+            className="image--text"
+            src={mailText}
+            alt="text above the image"
+          />
+        </div>
       </div>
     </Container>
   );
 };
 
 const Container = styled.section`
-  display: grid;
-  grid-template-columns: 5fr 3fr;
-  gap: 3rem;
+  width: 80vw;
+  margin-left: 10vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   align-items: center;
 
-  .text {
-    color: ${colors.textColor};
-
-    h1 {
-      font-size: 4rem;
-      text-transform: uppercase;
-      font-weight: 900;
-      line-height: 5rem;
-    }
-    p {
-      font-size: 1.2rem;
-      width: 80%;
-      margin-top: -1rem;
+  .header {
+    font-size: 4rem;
+    width: 1120px;
+    text-transform: uppercase;
+    font-weight: 900;
+    line-height: 81.6px;
+    span {
+      color: ${colors.primaryViolet};
+      font-style: italic;
     }
   }
 
-  .image {
-    justify-self: center;
+  .text {
+    display: flex;
+    align-items: center;
     position: relative;
-    &--icon {
-      position: absolute;
+    p {
+      width: 544px;
+      color: ${colors.lightColor};
+      font-size: 24px;
+      text-transform: uppercase;
     }
-    &--text {
+
+    .image {
+      justify-self: center;
       position: absolute;
-      animation: rotate 10s linear infinite;
+      height: 100%;
+      width: 12rem;
+      top: 0;
+      left: 40rem;
+      transition: transform 0.5s ease-in-out;
+      border-radius: 50%;
+
+      &:hover {
+        transform: scale(1.04);
+        cursor: pointer;
+      }
+
+      &--icon {
+        background: ${mailIcon} center center no-repeat;
+        background-size: contain;
+        position: absolute;
+        // z-index: ${({ isHovered }) => (isHovered ? 1 : 100)};
+
+        &--gradient {
+          // z-index: ${({ isHovered }) => (isHovered ? 100 : 1)};
+        }
+      }
+      &--text {
+        position: absolute;
+        top: 0;
+        animation: rotate 15s linear infinite;
+      }
     }
   }
 `;
