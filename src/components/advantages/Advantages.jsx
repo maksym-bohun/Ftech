@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import bottomFade from "./../../assets/bottomFade.png";
 import { colors } from "../../styles/colors";
-import arrowIcon from "../../assets/arrowIcon.svg";
 
 const Advantages = () => {
   const list = useRef();
@@ -63,14 +62,6 @@ const Advantages = () => {
           </div>
         </div>
       </div>
-
-      <div className="connect-line">
-        <div>зв`язатись з нами</div>
-        <img src={arrowIcon} alt="arrow icon" />
-        <div>зв`язатись з нами</div>
-        <img src={arrowIcon} alt="arrow icon" />
-        <div>зв`язатись з нами</div>
-      </div>
     </Container>
   );
 };
@@ -81,7 +72,7 @@ const Container = styled.section`
   padding-top: 2rem;
   position: relative;
   padding-bottom: 20rem;
-  overflow-x: hidden;
+  overflow: hidden;
 
   .advantages {
     display: grid;
@@ -150,24 +141,6 @@ const Container = styled.section`
         }
       }
     }
-  }
-
-  .connect-line {
-    width: 100vw;
-    position: absolute;
-    background: linear-gradient(to right, #a0ef93, #d9ff6f);
-    bottom: 0;
-    left: 0;
-    display: flex;
-    justify-content: space-between;
-    font-size: 36px;
-    font-weight: 600;
-    line-height: 46.8px;
-    color: ${colors.primaryDarkGray};
-    text-transform: uppercase;
-    padding: 1rem 0;
-    transform: rotate(2deg);
-    z-index: 1;
   }
 `;
 

@@ -17,6 +17,8 @@ import ForWho from "./components/forWho/ForWho";
 import AboutCompany from "./components/whoWeAre/AboutCompany";
 import WhyWe from "./components/whyWe/WhyWe";
 import Advantages from "./components/advantages/Advantages";
+import Services from "./components/services/Services";
+import ConnectLine from "./components/advantages/ConnectLine";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -75,9 +77,12 @@ function App() {
           className="triangle triangle--8"
         />
         <Advantages />
+        <ConnectLine />
       </div>
 
-      <div className="light"></div>
+      <div className="light">
+        <Services />
+      </div>
     </Container>
   );
 }
