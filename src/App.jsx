@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import Header from "./components/navigation/Navigation";
 import { colors } from "./styles/colors";
@@ -28,12 +28,50 @@ import OurTeam from "./components/ourTeam/OurTeam";
 import Reviews from "./components/reviews/Reviews";
 import ContactUs from "./components/contactUs/ContactUs";
 import Footer from "./components/footer/Footer";
+import MailImage from "./components/aboutUs/MailImage";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const aboutUsRef = useRef(null);
+  const mailImageRef = useRef(null);
+  const [mailImageIsVisible, setMailImageIsVisible] = useState(false);
+  const [mailBounce, setMailBounce] = useState(false);
+
+  setInterval(() => {
+    setMailBounce(true);
+  }, 20000);
+
+  setInterval(() => {
+    setMailBounce(false);
+  }, 22100);
+
+  const scrollHandler = () => {
+    // console.log(window.innerHeight);
+    if (window.scrollY > aboutUsRef.current.scrollHeight - 100)
+      setMailImageIsVisible(true);
+    else {
+      setMailImageIsVisible(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", scrollHandler);
+
+    return () => {
+      window.removeEventListener("scroll", scrollHandler);
+    };
+  }, []);
 
   return (
     <Container>
+      {mailImageIsVisible && (
+        <div
+          className={`mail-image ${mailBounce ? "animated" : ""} `}
+          ref={mailImageRef}
+        >
+          <MailImage text={false} />
+        </div>
+      )}
+
       <div className="dark dark--1">
         <img
           src={backgroundTriangle1}
@@ -51,7 +89,9 @@ function App() {
           className="triangle triangle--3"
         />
         <Header />
-        <AboutUs />
+        <div ref={aboutUsRef}>
+          <AboutUs />
+        </div>
         <WhoWeAre />
       </div>
       <div className="light light--1">
@@ -140,6 +180,20 @@ const Container = styled.main`
   overflow-x: hidden;
   margin: 0;
 
+  .mail-image {
+    position: fixed;
+    bottom: 5%;
+    right: -1%;
+    z-index: 100;
+    transform: scale(70%);
+    opacity: 1;
+    transition: all 0.3s;
+  }
+
+  .animated {
+    animation: bounce 2s infinite;
+  }
+
   .dark {
     background: ${colors.primaryDarkGray};
     position: relative;
@@ -155,7 +209,7 @@ const Container = styled.main`
         z-index: 1;
 
         &--2 {
-          top: 27rem;
+          top: 26.5rem;
         }
         &--3 {
           right: 0;

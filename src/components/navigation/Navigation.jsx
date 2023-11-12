@@ -39,7 +39,7 @@ const Container = styled.nav`
 
   a:hover,
   a:active {
-    animation: changeTextColor 0.5s;
+    animation: changeTextColor 0.5 ease-out forwards;
   }
 
   a:link,

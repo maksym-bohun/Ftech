@@ -149,3 +149,21 @@ body {
     -webkit-text-fill-color: transparent;
   }
 }
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0) scale(70%);
+  }
+
+  40% {
+    transform: translateY(-20px) scale(70%);
+  }
+
+  60% {
+    transform: translateY(-10px) scale(70%);
+  }
+}

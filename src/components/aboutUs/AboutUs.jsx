@@ -14,7 +14,7 @@ const AboutUs = () => {
 
 const Container = styled.section`
   margin-top: 80px;
-  height: 100vh;
+  min-height: 48rem;
 `;
 
 export default AboutUs;

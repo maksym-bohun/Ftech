@@ -32,7 +32,7 @@ const Container = styled.section`
     line-height: 46.8px;
     letter-spacing: 1.8%;
     text-transform: uppercase;
-    margin-right: 9rem;
+    margin-right: 7rem;
   }
 
   .next-line {

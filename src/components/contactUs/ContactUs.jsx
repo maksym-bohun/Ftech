@@ -1,10 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import arrowIcon from "../../assets/arrowIcon.svg";
 import { colors } from "../../styles/colors";
 import { BsArrowUpRight } from "react-icons/bs";
 
 const ContactUs = () => {
+  const [selectedInterests, setSelectedInterests] = useState([]);
+  const interests = [
+    "для держави",
+    "для бізнесу",
+    "розробка",
+    "Маркетинг",
+    "Підтримка",
+    "Дизайн",
+  ];
+
+  const selectInterestHandler = (e) => {
+    console.log(e.target.id);
+    console.log(selectedInterests);
+    if (selectedInterests.includes(interests[e.target.id])) {
+      setSelectedInterests((prevInterests) =>
+        prevInterests.filter((interest) => interest !== interests[e.target.id])
+      );
+    } else
+      setSelectedInterests((prevInterests) => [
+        ...prevInterests,
+        interests[e.target.id],
+      ]);
+  };
+
   return (
     <Container>
       <div className="centered">
@@ -27,12 +50,20 @@ const ContactUs = () => {
 
             <div className="interests">
               <div className="interests__header">Мене цікавить..</div>
-              <div className="interests__label">для держави</div>
-              <div className="interests__label">для бізнесу</div>
-              <div className="interests__label">розробка</div>
-              <div className="interests__label">Маркетинг</div>
-              <div className="interests__label selected">Підтримка</div>
-              <div className="interests__label">Дизайн</div>
+              {interests.map((interest, index) => {
+                return (
+                  <div
+                    key={index}
+                    id={index}
+                    onClick={selectInterestHandler}
+                    className={`interests__label ${
+                      selectedInterests.includes(interest) ? "selected" : ""
+                    }`}
+                  >
+                    {interest}
+                  </div>
+                );
+              })}
             </div>
 
             <button type="submit">
@@ -160,6 +191,7 @@ const Container = styled.section`
 
           &.selected {
             border: 2px solid ${colors.primaryGreen};
+            color: ${colors.primaryGreen};
           }
         }
       }

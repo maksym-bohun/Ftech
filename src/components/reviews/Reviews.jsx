@@ -3,8 +3,6 @@ import styled from "styled-components";
 import { colors } from "../../styles/colors";
 
 const Reviews = () => {
-  const list = useRef();
-  const [overlayOpacity, setOverlayOpacity] = useState(1);
   const blocks = [
     {
       header: `Комунальна бюджетна установа "Контактний центр міста Києва"`,
@@ -36,26 +34,13 @@ const Reviews = () => {
     },
   ];
 
-  const scrollHandler = (e) => {
-    if (
-      list.current.scrollHeight -
-        list.current.scrollTop -
-        list.current.offsetHeight <=
-      10
-    ) {
-      setOverlayOpacity(0);
-    } else {
-      setOverlayOpacity(0.75);
-    }
-  };
-
   return (
     <Container>
       <div className="centered reviews">
         <h1 className="section-header">Відгуки</h1>
         <div className="list-container">
-          <div className="reviews__list" onScroll={scrollHandler}>
-            <div className="overlay" style={{ opacity: overlayOpacity }}></div>
+          <div className="reviews__list">
+            <div className="overlay"></div>
             {blocks.map((block, index) => (
               <div key={index} className="block">
                 <h2 className="block__header">{block.header}</h2>
