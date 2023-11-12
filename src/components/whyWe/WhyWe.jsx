@@ -33,7 +33,9 @@ const Container = styled.section`
     line-height: 46.8px;
     letter-spacing: 1.8%;
     margin: 0 auto;
-    padding-bottom: 8rem;
+    padding-left: 9rem;
+    padding-top: 1rem;
+    padding-bottom: 7rem;
   }
 `;
 

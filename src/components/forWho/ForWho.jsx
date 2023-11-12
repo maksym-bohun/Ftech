@@ -136,7 +136,7 @@ const ForWho = () => {
 
 const Container = styled.section`
   color: ${colors.primaryDarkGray};
-  padding-bottom: 12rem;
+  padding-bottom: 8rem;
   h1 {
     margin-bottom: 4rem;
   }
@@ -146,7 +146,7 @@ const Container = styled.section`
     grid-column-gap: 3rem;
     grid-template-columns: 1fr 1fr;
     justify-content: start;
-    // padding-bottom: 1rem;
+    // padding-bottom: 0.5rem;
     border-bottom: 1px solid ${colors.primaryDarkGray};
 
     .label {
@@ -184,13 +184,13 @@ const Container = styled.section`
     display: flex;
     width: 100%;
     justify-content: space-between;
-    margin-top: 3rem;
+    margin-top: 1.4rem;
     position: relative;
 
     .container {
       background-color: ${colors.primaryDarkGray};
       padding: 16px 8px;
-      width: 246px;
+      width: 21%;
       height: 230px;
       font-size: 16px;
       line-height: 20.8px;
@@ -222,12 +222,12 @@ const Container = styled.section`
 
     &--state::before {
       box-shadow: 0px 0px 500px 70px ${colors.primaryViolet};
-      left: -12vw;
+      left: -13vw;
     }
 
     &--business::after {
       box-shadow: 0px 0px 500px 70px #ffde03;
-      right: -12vw;
+      right: -13vw;
     }
   }
 `;

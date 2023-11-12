@@ -70,7 +70,7 @@ const Container = styled.section`
   margin-top: 2rem;
 
   .statistics {
-    padding: 1.2rem 2.4rem;
+    padding: 24px 40px;
     margin-top: 7rem;
     display: flex;
     justify-content: space-between;
@@ -85,8 +85,9 @@ const Container = styled.section`
 
       h3 {
         margin: 0;
+        padding: 0;
         font-weight: 800;
-        font-size: 1.4rem;
+        font-size: 24px;
       }
     }
   }

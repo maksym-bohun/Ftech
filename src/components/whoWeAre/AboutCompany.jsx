@@ -8,15 +8,15 @@ const AboutCompany = () => {
     <Container>
       <div className="centered">
         <h2>
-          Українська технологічна компанія, що активно працює на ринку більше 5
-          років і  зосереджена на створенні і впровадженні інноваційних
-          продуктів для автоматизації процесів та цифрового перетворення держави
-          та бізнеса
+          У FTech працюють виняткові фахівці, а не пересічні ентузіасти. Понад 5
+          років досвіду довели, що ми є українським технологічним лідером, який
+          присвятив себе створенню передових рішень — тих, що здатні змінити
+          світ на краще.
         </h2>
         <h1>
-          <span className="italic violet">Ми перетворюємо</span> застарілі
-          рутинні процедури на сучасні онлайн-сервіси та сприяємо покращенню
-          взаємодії між державою <br /> і населенням
+          <span className="italic violet"> Ми перетворюємо </span> застарілі
+          процедури на сучасні онлайн-сервіси — сприяємо полегшенню взаємодії
+          між державою і населенням
         </h1>
       </div>
     </Container>
@@ -25,21 +25,22 @@ const AboutCompany = () => {
 
 const Container = styled.div`
   width: 100vw;
-  min-height: 100vh;
-  //   padding-bottom: 3rem;
+  padding-bottom: 5rem;
   color: ${colors.primaryDarkGray};
   position: relative;
 
   h2 {
     font-size: 1rem;
-    width: 456px;
-    font-weight: 500;
+    width: 420px;
+    font-weight: 400;
     padding-top: 120px;
+    line-height: 20.8px;
+    letter-spacing: 1.8%;
     margin: 0;
   }
 
   h1 {
-    margin-top: 8rem;
+    margin-top: 5rem;
     font-weight: 400;
     text-transform: uppercase;
     font-size: 46px;

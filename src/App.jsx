@@ -12,6 +12,9 @@ import backgroundTriangle5 from "./assets/backgroundTriangle5.svg";
 import backgroundTriangle6 from "./assets/backgroundTriangle6.svg";
 import backgroundTriangle7 from "./assets/backgroundTriangle7.svg";
 import backgroundTriangle8 from "./assets/backgroundTriangle8.svg";
+import backgroundTriangle9 from "./assets/backgroundTriangle9.svg";
+import backgroundTriangle10 from "./assets/backgroundTriangle10.svg";
+import backgroundTriangle11 from "./assets/backgroundTriangle11.svg";
 import WhoWeAre from "./components/whoWeAre/WhoWeAre";
 import ForWho from "./components/forWho/ForWho";
 import AboutCompany from "./components/whoWeAre/AboutCompany";
@@ -19,6 +22,7 @@ import WhyWe from "./components/whyWe/WhyWe";
 import Advantages from "./components/advantages/Advantages";
 import Services from "./components/services/Services";
 import ConnectLine from "./components/advantages/ConnectLine";
+import OurTeam from "./components/ourTeam/OurTeam";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -83,19 +87,39 @@ function App() {
       <div className="light">
         <Services />
       </div>
+
+      <div className="dark dark--3">
+        <img
+          src={backgroundTriangle9}
+          alt="background triangle"
+          className="triangle triangle--9"
+        />
+        <img
+          src={backgroundTriangle10}
+          alt="background triangle"
+          className="triangle triangle--10"
+        />
+        <img
+          src={backgroundTriangle11}
+          alt="background triangle"
+          className="triangle triangle--11"
+        />
+        <OurTeam />
+      </div>
     </Container>
   );
 }
 
 const Container = styled.main`
   font-family: "Nunito Sans", sans-serif;
+  overflow-x: hidden;
   margin: 0;
 
   .dark {
     background: linear-gradient(to bottom, #1c1c1c, #1c1c1c 60%, #36353c);
+    position: relative;
 
     &--1 {
-      position: relative;
       .triangle {
         position: absolute;
         z-index: 1;
@@ -115,7 +139,6 @@ const Container = styled.main`
     }
 
     &--2 {
-      position: relative;
       background: ${colors.primaryDarkGray};
       min-height: 49.5rem;
 
@@ -135,8 +158,29 @@ const Container = styled.main`
         }
         &--8 {
           top: 49%;
-          top: 48%;
-          left: 5%;
+          top: 51%;
+          left: 2%;
+        }
+      }
+    }
+
+    &--3 {
+      background: ${colors.primaryDarkGray};
+      * {
+        z-index: 2;
+      }
+
+      .triangle {
+        position: absolute;
+        z-index: 0;
+
+        &--10 {
+          top: 9rem;
+          right: 0;
+        }
+        &--11 {
+          bottom: 0;
+          left: 24.6rem;
         }
       }
     }

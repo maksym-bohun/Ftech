@@ -77,8 +77,8 @@ const Services = () => {
 };
 
 const Container = styled.section`
-  padding-top: 10rem;
-  padding-bottom: 20rem;
+  padding-top: 7rem;
+  min-height: 35rem;
   color: ${colors.primaryDarkGray};
 
   h1 {

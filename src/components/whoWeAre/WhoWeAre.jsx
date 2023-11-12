@@ -5,14 +5,17 @@ import Services from "./Services";
 const WhoWeAre = () => {
   return (
     <Container>
-      <h1 className="section-header">Хто ми?</h1>
-      <div className="description">
-        FTech first technologies –{" "}
-        <span className="green">Ваш надійний партнер</span> у світі розробки
-        програмного забезпечення та CRM-систем.{" "}
-        <span className="italic violet">Ми надаємо</span> бізнес-орієнтовані веб
-        та мобільні додатки з комплексним впровадженням, підтримкою та
-        рекомендаціями наших експертів, і це є джерелом нашої гордості.
+      <div className="centered">
+        <h1 className="section-header">Хто ми?</h1>
+        <div className="description">
+          FTech first technologies –{" "}
+          <span className="green">Ваш вірний союзник</span> у розробці
+          програмного забезпечення та CRM-систем.{" "}
+          <span className="italic violet">Ми створюємо</span> бізнес-орієнтовані
+          <span className="next-line"></span> веб- та мобільні додатки і
+          пропонуємо їх бездоганне впровадження, експертну підтримку та
+          індивідуальні рекомендації.
+        </div>
       </div>
       <Services />
     </Container>
@@ -22,17 +25,18 @@ const WhoWeAre = () => {
 const Container = styled.section`
   margin-bottom: 0;
 
-  .section-header,
   .description {
-    width: 1220px;
-    margin: 0 auto;
-  }
-  .description {
+    padding-top: 1rem;
     font-size: 36px;
     font-weight: 600;
     line-height: 46.8px;
+    letter-spacing: 1.8%;
     text-transform: uppercase;
-    width: 1065px;
+    margin-right: 9rem;
+  }
+
+  .next-line {
+    margin-right: 4rem;
   }
 `;
 

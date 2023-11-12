@@ -77,7 +77,7 @@ const Container = styled.section`
   .advantages {
     display: grid;
     grid-template-columns: 1fr 6fr;
-    gap: 14rem;
+    gap: 9rem;
     padding-top: 5rem;
 
     h1 {
@@ -110,20 +110,22 @@ const Container = styled.section`
       width: 100%;
       height: 76vh;
       overflow: scroll;
+      overflow-x: hidden;
 
       .block {
-        display: grid;
-        grid-template-columns: 4fr 7fr;
-        gap: 1rem;
+        width: 100%;
+        display: flex;
+        gap: 3rem;
         padding: 2rem 1rem 2rem 0;
         border-bottom: 1px solid ${colors.lightColor};
 
-        &:first-child {
+        &:nth-child(2) {
           border-top: 1px solid ${colors.lightColor};
         }
 
         &__header {
           margin: 0;
+          width: 38%;
           font-size: 24px;
           font-weight: 700;
           line-height: 28.8px;
@@ -133,6 +135,7 @@ const Container = styled.section`
 
         &__text {
           margin: 0;
+          width: 62%;
           margin-left: 3.25rem;
           // margin-right: 2.4rem;
           line-height: 20.8px;
