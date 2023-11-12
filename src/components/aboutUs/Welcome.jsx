@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import mailIcon from "../../assets/mailIcon.svg";
 import mailIconGradient from "../../assets/mailIconGradient.svg";
@@ -7,6 +7,9 @@ import { colors } from "../../styles/colors";
 
 const Welcome = () => {
   const [isHovered, setIsHovered] = useState(false);
+  const [isImageVisible, setIsImageVisible] = useState(true);
+  const [imageIsFixed, setImageIsFixed] = useState(false);
+  const imageRef = useRef(null);
 
   const handleMouseEnter = () => {
     setIsHovered(true);
@@ -16,20 +19,53 @@ const Welcome = () => {
     setIsHovered(false);
   };
 
+  useEffect(() => {
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5, // Область видимости при которой сработает callback
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        setIsImageVisible(entry.isIntersecting);
+      });
+    }, options);
+
+    if (imageRef.current) {
+      observer.observe(imageRef.current);
+    }
+
+    // Отключаем observer при размонтировании компонента
+    return () => {
+      if (imageRef.current) {
+        observer.unobserve(imageRef.current);
+        setImageIsFixed(true);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!isImageVisible) {
+      console.log(imageRef.current);
+    }
+  }, [isImageVisible]);
+
   return (
     <Container>
       <h1 className="header">
         Цифрове <span>вдосконалення</span> держави і бізнесу
       </h1>
-      <div className="text">
+      <div className={`text ${imageIsFixed ? "" : "relative"}`}>
         <p>
           Розробка та впровадження галузевих IT рішень з метою цифровізації та
           модернізації корпоративного ринку, державних і громадських структур
         </p>
         <div
-          className="image"
+          className={`image ${imageIsFixed ? "fixed" : ""}`}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
+          ref={imageRef}
         >
           <div>
             <img
@@ -77,7 +113,6 @@ const Container = styled.section`
   .text {
     display: flex;
     align-items: center;
-    position: relative;
     p {
       width: 544px;
       color: ${colors.lightColor};

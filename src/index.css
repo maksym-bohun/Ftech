@@ -55,6 +55,16 @@ body {
   margin: 0 auto;
 }
 
+.relative {
+  position: relative;
+}
+
+.fixed {
+  position: fixed;
+  bottom: 10%;
+  right: 10%;
+}
+
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
@@ -93,12 +103,49 @@ body {
   }
 }
 
-@keyframes openBlock {
+@keyframes rotateAndTranslateArrow {
   0% {
-    transform: translateY(-100%);
+    transform: translateX(-0.1rem) rotate(45deg);
+  }
+
+  /* 20% {
+    transform: translateX(1rem) rotate(45deg);
+  } */
+
+  80% {
+    transform: translateX(770%) rotate(45deg);
+    z-index: 0;
   }
 
   100% {
-    transform: translateY(100%);
+    transform: translateX(710%) rotate(45deg);
+    stroke: #fee45c;
+    stroke-width: 1;
+  }
+}
+
+@keyframes translateButtonText {
+  0% {
+    transform: translateX(0);
+  }
+  70% {
+    transform: translateX(-2.6rem);
+  }
+  100% {
+    transform: translateX(-2rem) scale(102%);
+    color: #fee45c;
+  }
+}
+
+@keyframes changeTextColor {
+  0% {
+    background-position: 0% 0%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+    background: linear-gradient(to bottom, #d3a1ff, #99f2ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }

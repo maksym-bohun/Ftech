@@ -15,6 +15,8 @@ import backgroundTriangle8 from "./assets/backgroundTriangle8.svg";
 import backgroundTriangle9 from "./assets/backgroundTriangle9.svg";
 import backgroundTriangle10 from "./assets/backgroundTriangle10.svg";
 import backgroundTriangle11 from "./assets/backgroundTriangle11.svg";
+import backgroundTriangle12 from "./assets/backgroundTriangle12.svg";
+import backgroundTriangle13 from "./assets/backgroundTriangle13.svg";
 import WhoWeAre from "./components/whoWeAre/WhoWeAre";
 import ForWho from "./components/forWho/ForWho";
 import AboutCompany from "./components/whoWeAre/AboutCompany";
@@ -23,6 +25,9 @@ import Advantages from "./components/advantages/Advantages";
 import Services from "./components/services/Services";
 import ConnectLine from "./components/advantages/ConnectLine";
 import OurTeam from "./components/ourTeam/OurTeam";
+import Reviews from "./components/reviews/Reviews";
+import ContactUs from "./components/contactUs/ContactUs";
+import Footer from "./components/footer/Footer";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -106,6 +111,26 @@ function App() {
         />
         <OurTeam />
       </div>
+
+      <div className="light">
+        <Reviews />
+      </div>
+
+      <div className="dark dark--4">
+        <img
+          src={backgroundTriangle12}
+          alt="background triangle"
+          className="triangle triangle--12"
+        />
+        <img
+          src={backgroundTriangle13}
+          alt="background triangle"
+          className="triangle triangle--13"
+        />
+        <ContactUs />
+      </div>
+
+      <Footer />
     </Container>
   );
 }
@@ -116,12 +141,17 @@ const Container = styled.main`
   margin: 0;
 
   .dark {
-    background: linear-gradient(to bottom, #1c1c1c, #1c1c1c 60%, #36353c);
+    background: ${colors.primaryDarkGray};
     position: relative;
 
+    .triangle {
+      position: absolute;
+    }
+
     &--1 {
+      background: linear-gradient(to bottom, #1c1c1c, #1c1c1c 60%, #36353c);
+
       .triangle {
-        position: absolute;
         z-index: 1;
 
         &--2 {
@@ -143,7 +173,6 @@ const Container = styled.main`
       min-height: 49.5rem;
 
       .triangle {
-        position: absolute;
         z-index: 1;
 
         &--5 {
@@ -165,13 +194,11 @@ const Container = styled.main`
     }
 
     &--3 {
-      background: ${colors.primaryDarkGray};
       * {
         z-index: 2;
       }
 
       .triangle {
-        position: absolute;
         z-index: 0;
 
         &--10 {
@@ -184,12 +211,24 @@ const Container = styled.main`
         }
       }
     }
+
+    &--4 {
+      .triangle {
+        &--12 {
+          right: 0;
+        }
+
+        &--13 {
+          bottom: 0;
+        }
+      }
+    }
   }
 
   .light {
     background-color: ${colors.lightColor};
     position: relative;
-
+    color: ${colors.primaryDarkGray};
     &--1 {
       z-index: 2;
       .triangle {

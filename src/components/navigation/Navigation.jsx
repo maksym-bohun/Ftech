@@ -37,6 +37,11 @@ const Container = styled.nav`
   padding-top: 1.8rem;
   color: ${colors.lightColor};
 
+  a:hover,
+  a:active {
+    animation: changeTextColor 0.5s;
+  }
+
   a:link,
   a:visited {
     text-decoration: none;
@@ -90,8 +95,15 @@ const Container = styled.nav`
       text-transform: uppercase;
       letter-spacing: 1px;
       border-radius: 12px;
+      transition: all 0.3s;
+
       &: hover {
         cursor: pointer;
+        box-shadow: 0 0 18px 0 #7a37ff;
+      }
+
+      &:active {
+        background-color: #9c6bff;
       }
     }
   }
