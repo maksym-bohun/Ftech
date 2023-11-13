@@ -111,7 +111,7 @@ const ForWho = () => {
             id="state"
             className={`label ${currentLabel === "state" ? "active" : ""}`}
           >
-            <span onClick={chooseLabelHandler}>Для держави</span>{" "}
+            <span onClick={chooseLabelHandler}>Для державних установ</span>{" "}
           </div>
           <div
             id="business"
@@ -213,21 +213,33 @@ const Container = styled.section`
     &--business::after,
     &--state::before {
       content: " ";
-      height: 1rem;
-      width: 1rem;
       position: absolute;
-      top: 30%;
-      background-color: transparent;
+      // top: 20%;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      filter: blur(65px);
+      z-index: 3;
+      border-radius: 50%;
     }
 
     &--state::before {
-      box-shadow: 0px 0px 500px 70px ${colors.primaryViolet};
+      background-color: ${colors.primaryViolet};
       left: -13vw;
     }
 
     &--business::after {
-      box-shadow: 0px 0px 500px 70px #ffde03;
+      background-color: ${colors.primaryYellow};
       right: -13vw;
+    }
+  }
+
+  @media screen and (min-width: 1800px) {
+    .containers--state::before {
+    }
+
+    &--business::after {
+      box-shadow: 0px 0px 500px 70px #ffde03;
     }
   }
 `;

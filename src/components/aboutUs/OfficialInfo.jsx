@@ -5,7 +5,7 @@ import { colors } from "../../styles/colors";
 
 const OfficialInfo = () => {
   return (
-    <Container>
+    <Container className="centered">
       <div className="statistics ">
         <div>
           <h3>5</h3> <span>Років досвіду</span>
@@ -62,8 +62,6 @@ const OfficialInfo = () => {
 };
 
 const Container = styled.section`
-  width: 1120px;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -90,6 +88,10 @@ const Container = styled.section`
         font-size: 24px;
       }
     }
+  }
+
+  @media screen and (min-width: 1800px) {
+    padding-bottom: 5rem;
   }
 `;
 

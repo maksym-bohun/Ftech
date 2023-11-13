@@ -49,7 +49,7 @@ const Services = () => {
 };
 
 const Container = styled.div`
-  width: 100vw;
+  // width: 100vw;
   height: 300px;
   margin-top: 10rem;
   position: relative;
@@ -243,15 +243,20 @@ const Container = styled.div`
       top: 26%;
       transform: rotate(-10.3deg);
       transition: all 0.5s;
-      background: linear-gradient(to right, #a0ef93, #d9ff6f);
+      background: linear-gradient(to right, #5da1f2, #adc3d8);
     }
     &--10 {
       right: 1.3%;
       bottom: 9%;
       transform: rotate(11.85deg);
       transition: all 0.5s;
-      background: linear-gradient(to right, #5da1f2, #adc3d8);
+      background: linear-gradient(to right, #a0ef93, #d9ff6f);
     }
+  }
+
+  @media screen and (min-width: 1800px) {
+    width: 1500px;
+    margin: 0 auto;
   }
 `;
 

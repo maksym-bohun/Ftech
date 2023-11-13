@@ -24,6 +24,8 @@ const WhoWeAre = () => {
 
 const Container = styled.section`
   margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
 
   .description {
     padding-top: 1rem;
@@ -37,6 +39,15 @@ const Container = styled.section`
 
   .next-line {
     margin-right: 4rem;
+  }
+
+  @media screen and (min-width: 1800px) {
+    padding-bottom: 1.2rem;
+    gap: 6rem;
+
+    .description {
+      margin-right: 17rem;
+    }
   }
 `;
 

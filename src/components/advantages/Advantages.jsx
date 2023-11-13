@@ -145,6 +145,12 @@ const Container = styled.section`
       }
     }
   }
+
+  @media screen and (min-width: 1800px) {
+    .advantages {
+      gap: 11rem;
+    }
+  }
 `;
 
 export default Advantages;

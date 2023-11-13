@@ -13,6 +13,7 @@ import backgroundTriangle6 from "./assets/backgroundTriangle6.svg";
 import backgroundTriangle7 from "./assets/backgroundTriangle7.svg";
 import backgroundTriangle8 from "./assets/backgroundTriangle8.svg";
 import backgroundTriangle9 from "./assets/backgroundTriangle9.svg";
+import backgroundTriangle9_1 from "./assets/backgroundTriangle9.1.svg";
 import backgroundTriangle10 from "./assets/backgroundTriangle10.svg";
 import backgroundTriangle11 from "./assets/backgroundTriangle11.svg";
 import backgroundTriangle12 from "./assets/backgroundTriangle12.svg";
@@ -26,6 +27,7 @@ import Services from "./components/services/Services";
 import ConnectLine from "./components/advantages/ConnectLine";
 import OurTeam from "./components/ourTeam/OurTeam";
 import Reviews from "./components/reviews/Reviews";
+import Reviews1 from "./components/reviews/Reviews1";
 import ContactUs from "./components/contactUs/ContactUs";
 import Footer from "./components/footer/Footer";
 import MailImage from "./components/aboutUs/MailImage";
@@ -140,6 +142,11 @@ function App() {
           className="triangle triangle--9"
         />
         <img
+          src={backgroundTriangle9_1}
+          alt="background triangle"
+          className="triangle triangle--9--1"
+        />
+        <img
           src={backgroundTriangle10}
           alt="background triangle"
           className="triangle triangle--10"
@@ -152,8 +159,11 @@ function App() {
         <OurTeam />
       </div>
 
-      <div className="light">
-        <Reviews />
+      <div className="light" style={{ padding: "3rem 0" }}>
+        {/* <Reviews /> */}
+        <div style={{ height: "110vh", overflow: "scroll" }}>
+          <Reviews1 />
+        </div>
       </div>
 
       <div className="dark dark--4">
@@ -212,7 +222,7 @@ const Container = styled.main`
           top: 26.5rem;
         }
         &--3 {
-          right: 0;
+          right: -10%;
           top: 10rem;
         }
       }
@@ -231,9 +241,11 @@ const Container = styled.main`
 
         &--5 {
           top: -7%;
+          left: -5.5%;
         }
         &--6 {
           top: 23%;
+          left: -5.5%;
         }
         &--7 {
           top: 17.5%;
@@ -255,9 +267,15 @@ const Container = styled.main`
       .triangle {
         z-index: 0;
 
+        &--9 {
+          &--1 {
+            opacity: 0;
+          }
+        }
+
         &--10 {
-          top: 9rem;
-          right: 0;
+          top: 8rem;
+          right: -14rem;
         }
         &--11 {
           bottom: 0;
@@ -269,11 +287,12 @@ const Container = styled.main`
     &--4 {
       .triangle {
         &--12 {
-          right: 0;
+          right: -4rem;
         }
 
         &--13 {
           bottom: 0;
+          left: -4rem;
         }
       }
     }
@@ -287,9 +306,60 @@ const Container = styled.main`
       z-index: 2;
       .triangle {
         position: absolute;
-        right: 0;
+        right: -20%;
         top: 0;
         z-index: 0;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1800px) {
+    .triangle {
+      &--13 {
+        margin-left: 15rem;
+      }
+      &--12 {
+        margin-right: 13rem;
+      }
+
+      &--11 {
+        bottom: 0;
+        margin-left: 14.6rem;
+      }
+
+      &--9 {
+        opacity: 0;
+        &--1 {
+          opacity: 1 !important;
+        }
+      }
+
+      &--8 {
+        margin-top: 2.5%;
+        margin-left: 5%;
+      }
+
+      &--7 {
+        margin-top: 6%;
+        // margin-left: 0.5%;
+      }
+
+      &--6 {
+        margin-top: 5.5%;
+        margin-left: 4.5%;
+      }
+
+      &--5 {
+        margin-top: 7%;
+        margin-left: 5.5%;
+      }
+
+      &--4 {
+        margin-right: 20%;
+      }
+
+      &--3 {
+        margin-right: 10%;
       }
     }
   }

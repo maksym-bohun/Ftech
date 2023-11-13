@@ -178,6 +178,9 @@ const Container = styled.section`
 
           &:nth-child(3) {
             margin-right: 10rem;
+            @media screen and (min-width: 1800px) {
+              margin-right: 20rem;
+            }
           }
 
           &:hover {

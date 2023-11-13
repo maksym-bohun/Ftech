@@ -27,7 +27,6 @@ const Container = styled.section`
   .heading {
     text-transform: uppercase;
     color: ${colors.primaryDarkGray};
-    width: 47vw;
     font-size: 36px;
     font-weight: 600;
     line-height: 46.8px;
@@ -36,6 +35,13 @@ const Container = styled.section`
     padding-left: 9rem;
     padding-top: 1rem;
     padding-bottom: 7rem;
+  }
+
+  @media screen and (min-width: 1800px) {
+    .heading {
+      width: 35vw;
+      padding-left: 4rem;
+    }
   }
 `;
 

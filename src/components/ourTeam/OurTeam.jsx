@@ -49,6 +49,10 @@ const Container = styled.section`
       margin-right: 8rem;
     }
   }
+
+  @media screen and (min-width: 1800px) {
+    padding-bottom: 7rem;
+  }
 `;
 
 export default OurTeam;

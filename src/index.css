@@ -59,11 +59,18 @@ body {
   position: relative;
 }
 
-.fixed {
+.sticky {
+  position: sticky;
+  top: 0;
+  left: 0;
+  margin-bottom: -8rem;
+}
+
+/* .fixed {
   position: fixed;
   bottom: 10%;
   right: 10%;
-}
+} */
 
 @keyframes rotate {
   0% {
@@ -165,5 +172,11 @@ body {
 
   60% {
     transform: translateY(-10px) scale(70%);
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  .centered {
+    width: 1280px;
   }
 }

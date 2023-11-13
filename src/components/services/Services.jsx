@@ -145,6 +145,12 @@ const Container = styled.section`
       }
     }
   }
+
+  @media screen and (min-width: 1800px) {
+    .services-container {
+      gap: 8rem;
+    }
+  }
 `;
 
 export default Services;

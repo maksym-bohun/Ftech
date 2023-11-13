@@ -5,7 +5,7 @@ import ukraineFlag from "../../assets/ukraine.png";
 
 const Header = () => {
   return (
-    <Container>
+    <Container className="centered">
       <div className="logo">FTECH</div>
 
       <div className="links">
@@ -29,8 +29,6 @@ const Header = () => {
 };
 
 const Container = styled.nav`
-  width: 1120px;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;

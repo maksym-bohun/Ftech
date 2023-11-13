@@ -11,6 +11,8 @@ const ConnectLine = () => {
       <div>зв`язатись з нами</div>
       <img src={arrowIcon} alt="arrow icon" />
       <div>зв`язатись з нами</div>
+      <img src={arrowIcon} alt="arrow icon" className="lg" />
+      <div className="lg">зв`язатись з нами</div>
     </Container>
   );
 };
@@ -31,6 +33,16 @@ const Container = styled.div`
   padding: 1rem 0;
   transform: rotate(2deg);
   z-index: 10;
+  .lg {
+    display: none;
+  }
+
+  @media screen and (min-width: 1800px) {
+    padding: 2rem;
+    .lg {
+      display: block;
+    }
+  }
 `;
 
 export default ConnectLine;
