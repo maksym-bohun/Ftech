@@ -1,37 +1,71 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { colors } from "../../styles/colors";
 import shevronDown from "../../assets/shevronDown.svg";
 import shevronTop from "../../assets/shevronTop.svg";
 
-const Services = () => {
+const Services = ({ lang }) => {
   const [openedBlock, setOpenedBlock] = useState(null);
-  const dropDownBlocks = [
-    {
-      number: "01",
-      title: "розробка програмного забезпечення",
-      content:
-        "Розробляємо платформи, системи, тощо для держави та бізнесу. Ми завжди готові розробити рішення, яке вам буде допомогати.",
-    },
-    {
-      number: "02",
-      title: "UI/UX Дизайн",
-      content:
-        "Розробляємо платформи, системи, тощо для держави та бізнесу. Ми завжди готові розробити рішення, яке вам буде допомогати.",
-    },
-    {
-      number: "03",
-      title: "Digital Маркетинг",
-      content:
-        "Розробляємо платформи, системи, тощо для держави та бізнесу. Ми завжди готові розробити рішення, яке вам буде допомогати.",
-    },
-    {
-      number: "04",
-      title: "Команда підтримки",
-      content:
-        "Розробляємо платформи, системи, тощо для держави та бізнесу. Ми завжди готові розробити рішення, яке вам буде допомогати.",
-    },
-  ];
+  const [dropDownBlocks, setDropDownBlocks] = useState([]);
+
+  useEffect(() => {
+    if (lang === "UA")
+      setDropDownBlocks([
+        {
+          number: "01",
+          title: "розробка програмного забезпечення",
+          content:
+            "Розробляємо платформи, системи, тощо для держави та бізнесу. Ми завжди готові розробити рішення, яке вам буде допомогати.",
+        },
+        {
+          number: "02",
+          title: "UI/UX Дизайн",
+          content:
+            "Розробляємо платформи, системи, тощо для держави та бізнесу. Ми завжди готові розробити рішення, яке вам буде допомогати.",
+        },
+        {
+          number: "03",
+          title: "Digital Маркетинг",
+          content:
+            "Розробляємо платформи, системи, тощо для держави та бізнесу. Ми завжди готові розробити рішення, яке вам буде допомогати.",
+        },
+        {
+          number: "04",
+          title: "Команда підтримки",
+          content:
+            "Розробляємо платформи, системи, тощо для держави та бізнесу. Ми завжди готові розробити рішення, яке вам буде допомогати.",
+        },
+      ]);
+    else if (lang === "ENG")
+      setDropDownBlocks([
+        {
+          number: "01",
+          title: "software development",
+          content:
+            "Our IT department is on hand to develop web solutions and applications to meet your needs.",
+        },
+        // НЕ ЗАКОНЧЕНО
+
+        {
+          number: "02",
+          title: "UI/UX design",
+          content:
+            "Розробляємо платформи, системи, тощо для держави та бізнесу. Ми завжди готові розробити рішення, яке вам буде допомогати.",
+        },
+        {
+          number: "03",
+          title: "Digital MARKETING",
+          content:
+            "Our digital marketing team can assist you with whatever GEO you are focusing on for marketing.",
+        },
+        {
+          number: "04",
+          title: "support team",
+          content:
+            "We provide you with a highly qualified and responsible team to support the developed solution.",
+        },
+      ]);
+  }, [lang]);
 
   const openBlockHandler = (e) => {
     if (openedBlock === e.target.closest(".drop-down__block").id) {
@@ -44,7 +78,9 @@ const Services = () => {
   return (
     <Container>
       <div className="centered services-container">
-        <h1 className="section-header">Послуги</h1>
+        {lang === "UA" && <h1 className="section-header">Послуги</h1>}
+        {lang === "ENG" && <h1 className="section-header">Services</h1>}
+
         <div className="drop-down">
           {dropDownBlocks.map((block, index) => (
             <div

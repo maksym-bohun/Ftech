@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { colors } from "../../styles/colors";
 
-const Footer = () => {
+const Footer = ({ lang }) => {
   return (
     <Container>
       <div className="centered footer">
@@ -12,7 +12,8 @@ const Footer = () => {
         </div>
 
         <div className="footer__column--2">
-          <h2>Контакти</h2>
+          {lang === "UA" && <h2>Контакти</h2>}
+          {lang === "ENG" && <h2>сontacts</h2>}
           <div className="contacts">
             <div className="contacts__ukraine">
               <h4>Україна</h4>
@@ -23,20 +24,33 @@ const Footer = () => {
               <div>+38 (044) 344-23-90</div>
             </div>
             <div className="contacts__usa">
-              <h4>Україна</h4>
+              <h4>USA</h4>
               <div>
-                <div>Київ, вул.Звіринецька 63</div>
-                <div>01014</div>
+                <div>Bruce Way, North Highlands</div>
+                <div>CA 95660</div>
               </div>
-              <div>+38 (044) 344-23-90</div>
+              <div>+1 (279) 356-8085</div>
             </div>
           </div>
         </div>
 
         <div className="footer__column--3">
-          <h2>Посилання</h2>
-          <div>Проєкти</div>
-          <div>Карʼєра</div>
+          {lang === "UA" && (
+            <>
+              <h2>Посилання</h2>
+              <div>Проєкти</div>
+              <div>Карʼєра</div>
+              <div>Політика конфіденційності</div>
+            </>
+          )}
+          {lang === "ENG" && (
+            <>
+              <h2>links</h2>
+              <div>Projects</div>
+              <div>Careers </div>
+              <div>Політика конфіденційності</div>
+            </>
+          )}
         </div>
       </div>
     </Container>
@@ -55,6 +69,8 @@ const Container = styled.footer`
       font-weight: 700;
       line-height: 28.8px;
       text-transform: uppercase;
+      margin-top: 0;
+      padding-top: 2rem;
     }
 
     &__column--1 {
@@ -80,7 +96,7 @@ const Container = styled.footer`
       .contacts {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 5rem;
+        gap: 3rem;
 
         h4 {
           margin: 0;
@@ -97,6 +113,9 @@ const Container = styled.footer`
     }
 
     &__column--3 {
+      div {
+        margin-top: 0.5rem;
+      }
     }
   }
 `;

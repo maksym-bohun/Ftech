@@ -1,48 +1,80 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import { colors } from "../../styles/colors";
 
-const Reviews1 = () => {
-  const [headerFixed, setHeaderFixed] = useState(false);
-  const [headerFixedToBottom, setHeaderFixedToBottom] = useState(false);
+const Reviews1 = ({ lang }) => {
+  const [blocks, setBlocks] = useState([]);
 
-  const reviewsPageRef = useRef(null);
-  const headerRef = useRef(null);
-  const blocks = [
-    {
-      header: `Комунальна бюджетна установа "Контактний центр міста Києва"`,
-      text: [
-        `Велика подяка FTech за їх фантастичну командну роботу. Команда повністю виконала свою роботу, контракт № 48, підписаний 21 жовтня 2020 року, передбачав встановлення системи запису дзвінків з аналітикою мовлення в нашому програмному та апаратному забезпеченні.`,
-        `Ми були приємно вражені, що FTech перевершували наші очікування. Команда встигала вчасно, була надзвичайно надійною та дуже оперативною. А ще, вони завжди відповідали на поставленні запитання. Результатом ми залишилися задоволені.`,
-      ],
-    },
-    {
-      header: `Комунальна бюджетна установа "Контактний центр міста Києва"`,
-      text: [
-        `Велика подяка FTech за їх фантастичну командну роботу. Команда повністю виконала свою роботу, контракт № 48, підписаний 21 жовтня 2020 року, передбачав встановлення системи запису дзвінків з аналітикою мовлення в нашому програмному та апаратному забезпеченні.`,
-        `Ми були приємно вражені, що FTech перевершували наші очікування. Команда встигала вчасно, була надзвичайно надійною та дуже оперативною. А ще, вони завжди відповідали на поставленні запитання. Результатом ми залишилися задоволені.`,
-      ],
-    },
-    {
-      header: `Комунальна бюджетна установа "Контактний центр міста Києва"`,
-      text: [
-        `Велика подяка FTech за їх фантастичну командну роботу. Команда повністю виконала свою роботу, контракт № 48, підписаний 21 жовтня 2020 року, передбачав встановлення системи запису дзвінків з аналітикою мовлення в нашому програмному та апаратному забезпеченні.`,
-        `Ми були приємно вражені, що FTech перевершували наші очікування. Команда встигала вчасно, була надзвичайно надійною та дуже оперативною. А ще, вони завжди відповідали на поставленні запитання. Результатом ми залишилися задоволені.`,
-      ],
-    },
-    {
-      header: `Комунальна бюджетна установа "Контактний центр міста Києва"`,
-      text: [
-        `Велика подяка FTech за їх фантастичну командну роботу. Команда повністю виконала свою роботу, контракт № 48, підписаний 21 жовтня 2020 року, передбачав встановлення системи запису дзвінків з аналітикою мовлення в нашому програмному та апаратному забезпеченні.`,
-        `Ми були приємно вражені, що FTech перевершували наші очікування. Команда встигала вчасно, була надзвичайно надійною та дуже оперативною. А ще, вони завжди відповідали на поставленні запитання. Результатом ми залишилися задоволені.`,
-      ],
-    },
-  ];
+  useEffect(() => {
+    if (lang === "UA")
+      setBlocks([
+        {
+          header: `Комунальна бюджетна установа "Контактний центр міста Києва"`,
+          text: [
+            `Велика подяка FTech за їх фантастичну командну роботу. Команда повністю виконала свою роботу, контракт № 48, підписаний 21 жовтня 2020 року, передбачав встановлення системи запису дзвінків з аналітикою мовлення в нашому програмному та апаратному забезпеченні.`,
+            `Ми були приємно вражені, що FTech перевершували наші очікування. Команда встигала вчасно, була надзвичайно надійною та дуже оперативною. А ще, вони завжди відповідали на поставленні запитання. Результатом ми залишилися задоволені.`,
+          ],
+        },
+        {
+          header: `Комунальна бюджетна установа "Контактний центр міста Києва"`,
+          text: [
+            `Велика подяка FTech за їх фантастичну командну роботу. Команда повністю виконала свою роботу, контракт № 48, підписаний 21 жовтня 2020 року, передбачав встановлення системи запису дзвінків з аналітикою мовлення в нашому програмному та апаратному забезпеченні.`,
+            `Ми були приємно вражені, що FTech перевершували наші очікування. Команда встигала вчасно, була надзвичайно надійною та дуже оперативною. А ще, вони завжди відповідали на поставленні запитання. Результатом ми залишилися задоволені.`,
+          ],
+        },
+        {
+          header: `Комунальна бюджетна установа "Контактний центр міста Києва"`,
+          text: [
+            `Велика подяка FTech за їх фантастичну командну роботу. Команда повністю виконала свою роботу, контракт № 48, підписаний 21 жовтня 2020 року, передбачав встановлення системи запису дзвінків з аналітикою мовлення в нашому програмному та апаратному забезпеченні.`,
+            `Ми були приємно вражені, що FTech перевершували наші очікування. Команда встигала вчасно, була надзвичайно надійною та дуже оперативною. А ще, вони завжди відповідали на поставленні запитання. Результатом ми залишилися задоволені.`,
+          ],
+        },
+        {
+          header: `Комунальна бюджетна установа "Контактний центр міста Києва"`,
+          text: [
+            `Велика подяка FTech за їх фантастичну командну роботу. Команда повністю виконала свою роботу, контракт № 48, підписаний 21 жовтня 2020 року, передбачав встановлення системи запису дзвінків з аналітикою мовлення в нашому програмному та апаратному забезпеченні.`,
+            `Ми були приємно вражені, що FTech перевершували наші очікування. Команда встигала вчасно, була надзвичайно надійною та дуже оперативною. А ще, вони завжди відповідали на поставленні запитання. Результатом ми залишилися задоволені.`,
+          ],
+        },
+      ]);
+    else if (lang === "ENG")
+      setBlocks([
+        {
+          header: `Municipal Budgetary Institution "Kyiv City Contact Centre""`,
+          text: [
+            `Big thanks to FTech for their fantastic teamwork. They got the job done, Contract No. 48, signed on October 21, 2020, involved setting up a call recording system with speech analytics in our software and hardware.`,
+            `We're thrilled to say that FTech consistently went above and beyond. They were on time, super reliable, and very responsive. They're like a dependable friend, always there to help us out.`,
+          ],
+        },
+        {
+          header: `Municipal Budgetary Institution "Kyiv City Contact Centre""`,
+          text: [
+            `Big thanks to FTech for their fantastic teamwork. They got the job done, Contract No. 48, signed on October 21, 2020, involved setting up a call recording system with speech analytics in our software and hardware.`,
+            `We're thrilled to say that FTech consistently went above and beyond. They were on time, super reliable, and very responsive. They're like a dependable friend, always there to help us out.`,
+          ],
+        },
+        {
+          header: `Municipal Budgetary Institution "Kyiv City Contact Centre""`,
+          text: [
+            `Big thanks to FTech for their fantastic teamwork. They got the job done, Contract No. 48, signed on October 21, 2020, involved setting up a call recording system with speech analytics in our software and hardware.`,
+            `We're thrilled to say that FTech consistently went above and beyond. They were on time, super reliable, and very responsive. They're like a dependable friend, always there to help us out.`,
+          ],
+        },
+        {
+          header: `Municipal Budgetary Institution "Kyiv City Contact Centre""`,
+          text: [
+            `Big thanks to FTech for their fantastic teamwork. They got the job done, Contract No. 48, signed on October 21, 2020, involved setting up a call recording system with speech analytics in our software and hardware.`,
+            `We're thrilled to say that FTech consistently went above and beyond. They were on time, super reliable, and very responsive. They're like a dependable friend, always there to help us out.`,
+          ],
+        },
+      ]);
+  }, [lang]);
 
   return (
-    <Container ref={reviewsPageRef} className="centered">
+    <Container className="centered">
       <div className="sticky">
-        <h1 className="section-header ">Відгуки</h1>
+        {lang === "UA" && <h1 className="section-header ">Відгуки</h1>}
+        {lang === "ENG" && <h1 className="section-header ">Rewiews</h1>}
       </div>
       <div className="reviews">
         <div>&nbsp;</div>

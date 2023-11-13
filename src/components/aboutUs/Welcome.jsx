@@ -5,7 +5,7 @@ import MailImage from "./MailImage";
 
 import { colors } from "../../styles/colors";
 
-const Welcome = () => {
+const Welcome = ({ lang }) => {
   const [isImageVisible, setIsImageVisible] = useState(true);
   const [imageIsFixed, setImageIsFixed] = useState(false);
   const imageRef = useRef(null);
@@ -37,7 +37,6 @@ const Welcome = () => {
 
   useEffect(() => {
     if (!isImageVisible) {
-      console.log(imageRef.current);
       setImageIsFixed(true);
     } else setImageIsFixed(false);
     console.log(1);
@@ -46,15 +45,33 @@ const Welcome = () => {
   return (
     <Container>
       <div className="centered">
-        <h1 className="header">
-          Цифрове <span>вдосконалення</span> держави і бізнесу
-        </h1>
+        {lang === "UA" ? (
+          <h1 className="header">
+            Цифрове <span className="italic violet">вдосконалення</span> держави
+            і бізнесу
+          </h1>
+        ) : (
+          <h1 className="header">
+            Digital <span className="violet">improvement</span>{" "}
+            <span className="next-line"></span> of state and business
+          </h1>
+        )}
+
         <div className="text">
-          <p>
-            Розробка та впровадження галузевих IT рішень з метою цифровізації та
-            модернізації корпоративного ринку, державних і громадських структур
-          </p>
-          <MailImage />
+          {lang === "UA" ? (
+            <p>
+              Розробка та впровадження галузевих IT рішень з метою цифровізації
+              та модернізації корпоративного ринку, державних і громадських
+              структур
+            </p>
+          ) : (
+            <p>
+              Developing and implementing industry-specific IT solutions for
+              digitalizing and modernizing the corporate market, government, and
+              public institutions.
+            </p>
+          )}
+          <MailImage lang={lang} />
         </div>
       </div>
     </Container>
@@ -67,16 +84,16 @@ const Container = styled.section`
   align-items: center;
   justify-content: center;
 
+  .next-line {
+    margin-right: 15rem;
+  }
+
   .header {
     font-size: 4rem;
     text-transform: uppercase;
     font-weight: 900;
     line-height: 81.6px;
     font-size: 68px;
-    span {
-      color: ${colors.primaryViolet};
-      font-style: italic;
-    }
   }
 
   .text {

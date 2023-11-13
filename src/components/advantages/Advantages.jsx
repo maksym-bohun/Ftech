@@ -1,37 +1,66 @@
 import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
-import bottomFade from "./../../assets/bottomFade.png";
 import { colors } from "../../styles/colors";
 
-const Advantages = () => {
+const Advantages = ({ lang }) => {
   const list = useRef();
   const [overlayOpacity, setOverlayOpacity] = useState(1);
-  const blocks = [
-    {
-      header: "Відповідаємо високим технічним стандартам",
-      text: `Ми завжди встановлюємо високу планку. Наші продукти не лише мають бездоганний дизайн, вони також безпечні та ефективні в роботі, особливо у сферах, де існують суворі регуляції.`,
-    },
-    {
-      header: "робимо так, щоб все працювало для вас",
-      text: `Створення першокласної продукції - це лише початок. Ми тут, щоб допомогти вам запустити все у роботу. Наші експерти розробляють безперебійні процеси впровадження та вводять вашу команду в курс справи.`,
-    },
-    {
-      header: "підтримуємо вас 24/7",
-      text: `Розраховуйте на нас у будь-який час. Наша команда технічної підтримки знає продукти досконально, тому ви отримаєте швидку кваліфіковану допомогу, коли б вона не знадобилася.`,
-    },
-    {
-      header: "Знаходимо індивідуальний підхід",
-      text: `Ми враховуємо потреби кожного клієнта і завжди відкриті до кастомної розробки. Ваші потреби - на першому місці, і ми готові підлаштуватися під них.`,
-    },
-    {
-      header: "Майстри складних CRM-систем",
-      text: `Ми спеціалізуємося на побудові інтегрованих систем, включаючи облік будівництва та управління, які дають вам повний контроль та ефективність. Ми інтегруємо кожну частину вашого бізнесу, щоб він працював безперебійно..`,
-    },
-    {
-      header: "Новатори цифрової трансформації",
-      text: `Будучи одними з перших на ринку, ми заклали фундамент для цифрової трансформації та цифрування державних сервісів. Ми стояли біля витоків цифрової революції і продовжуємо бути її лідерами. Ваш успіх - наш пріоритет`,
-    },
-  ];
+  let blocks = [];
+
+  if (lang === "UA")
+    blocks = [
+      {
+        header: "Відповідаємо високим технічним стандартам",
+        text: `Ми завжди встановлюємо високу планку. Наші продукти не лише мають бездоганний дизайн, вони також безпечні та ефективні в роботі, особливо у сферах, де існують суворі регуляції.`,
+      },
+      {
+        header: "робимо так, щоб все працювало для вас",
+        text: `Створення першокласної продукції - це лише початок. Ми тут, щоб допомогти вам запустити все у роботу. Наші експерти розробляють безперебійні процеси впровадження та вводять вашу команду в курс справи.`,
+      },
+      {
+        header: "підтримуємо вас 24/7",
+        text: `Розраховуйте на нас у будь-який час. Наша команда технічної підтримки знає продукти досконально, тому ви отримаєте швидку кваліфіковану допомогу, коли б вона не знадобилася.`,
+      },
+      {
+        header: "Знаходимо індивідуальний підхід",
+        text: `Ми враховуємо потреби кожного клієнта і завжди відкриті до кастомної розробки. Ваші потреби - на першому місці, і ми готові підлаштуватися під них.`,
+      },
+      {
+        header: "Майстри складних CRM-систем",
+        text: `Ми спеціалізуємося на побудові інтегрованих систем, включаючи облік будівництва та управління, які дають вам повний контроль та ефективність. Ми інтегруємо кожну частину вашого бізнесу, щоб він працював безперебійно..`,
+      },
+      {
+        header: "Новатори цифрової трансформації",
+        text: `Будучи одними з перших на ринку, ми заклали фундамент для цифрової трансформації та цифрування державних сервісів. Ми стояли біля витоків цифрової революції і продовжуємо бути її лідерами. Ваш успіх - наш пріоритет`,
+      },
+    ];
+  else if (lang === "ENG")
+    blocks = [
+      {
+        header: "We're tech perfectionists",
+        text: `We're all about setting the bar high. Our products aren't just good; they're secure and efficient, even in places with strict rules.`,
+      },
+      {
+        header: "We make it work for you",
+        text: `Creating top-notch products is just the beginning. We're here to help you put them to work. Our experts develop smooth implementation processes and get your team up to speed.`,
+      },
+      {
+        header: "We've got your back 24/7",
+        text: `Count on us anytime. Our tech support team knows our products inside out, so you get quick, qualified help whenever needed.`,
+      },
+      {
+        header: "Your way, always",
+        text: `We're all ears. Your unique needs come first, and we're ready to customize to make it happen`,
+      },
+      {
+        header: "Masters of complex CRM systems",
+        text: `We specialize in creating systems that give you complete control and efficiency. We connect every part of your business to make it run smoothly.`,
+      },
+      {
+        header: "Pioneers in digital transformation",
+        text: `We were on the ground floor of the digital revolution, and we're still leading the charge. Your success is our priority.`,
+      },
+    ];
 
   const scrollHandler = (e) => {
     if (
@@ -49,7 +78,8 @@ const Advantages = () => {
   return (
     <Container>
       <div className="centered advantages">
-        <h1 className="section-header">Переваги</h1>
+        {lang === "UA" && <h1 className="section-header">Переваги</h1>}
+        {lang === "ENG" && <h1 className="section-header">Why choose us?</h1>}
         <div className="blocks-container">
           <div className="blocks-list" onScroll={scrollHandler} ref={list}>
             <div className="overlay" style={{ opacity: overlayOpacity }}></div>

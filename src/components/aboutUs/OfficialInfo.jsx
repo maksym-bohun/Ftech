@@ -3,21 +3,57 @@ import styled from "styled-components";
 import kyivLogo from "../../assets/kyiv-logo.png";
 import { colors } from "../../styles/colors";
 
-const OfficialInfo = () => {
+const OfficialInfo = ({ lang }) => {
   return (
     <Container className="centered">
       <div className="statistics ">
         <div>
-          <h3>5</h3> <span>Років досвіду</span>
+          {lang === "UA" && (
+            <>
+              <h3>5</h3> <span>Років досвіду</span>
+            </>
+          )}
+          {lang === "ENG" && (
+            <>
+              <h3>5</h3> <span>Years of experience</span>
+            </>
+          )}
         </div>
         <div>
-          <h3>30+</h3> <span>Клієнтів</span>
+          {lang === "UA" && (
+            <>
+              <h3>30+</h3> <span>Клієнтів</span>
+            </>
+          )}
+          {lang === "ENG" && (
+            <>
+              <h3>30+</h3> <span>Clients</span>
+            </>
+          )}
         </div>
         <div>
-          <h3>100К+</h3> <span>Задоволених громадян</span>
+          {lang === "UA" && (
+            <>
+              <h3>100К+</h3> <span>Задоволених громадян</span>
+            </>
+          )}
+          {lang === "ENG" && (
+            <>
+              <h3>100К+</h3> <span>Happy citizens</span>
+            </>
+          )}
         </div>
         <div>
-          <h3>10+</h3> <span>CRM систем</span>
+          {lang === "UA" && (
+            <>
+              <h3>10+</h3> <span>CRM систем</span>
+            </>
+          )}
+          {lang === "ENG" && (
+            <>
+              <h3>10+</h3> <span>CRM systems</span>
+            </>
+          )}
         </div>
       </div>
       {/* <div className="labels">

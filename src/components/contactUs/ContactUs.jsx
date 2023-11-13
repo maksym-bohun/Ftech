@@ -1,18 +1,44 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { colors } from "../../styles/colors";
 import { BsArrowUpRight } from "react-icons/bs";
 
-const ContactUs = () => {
+const ContactUs = ({ lang }) => {
   const [selectedInterests, setSelectedInterests] = useState([]);
-  const interests = [
-    "для держави",
-    "для бізнесу",
-    "розробка",
-    "Маркетинг",
-    "Підтримка",
-    "Дизайн",
-  ];
+  const [interests, setInterests] = useState([]);
+  const [placeholders, setPlaceholders] = useState([]);
+
+  useEffect(() => {
+    if (lang === "UA") {
+      setInterests([
+        "для держави",
+        "для бізнесу",
+        "розробка",
+        "Маркетинг",
+        "Підтримка",
+        "Дизайн",
+      ]);
+      setPlaceholders([
+        "Ваше імʼя*",
+        "Електронна пошта*",
+        "Розкажіть нам трохи більше про ваш проєкт",
+      ]);
+    } else if (lang === "ENG") {
+      setInterests([
+        "For Government",
+        "FOR BUSINESS",
+        "development",
+        "Marketing",
+        "SUPPORT",
+        "Design",
+      ]);
+      setPlaceholders([
+        "Your name* ",
+        "E-mail*",
+        "Tell us more about your project",
+      ]);
+    }
+  }, [lang]);
 
   const selectInterestHandler = (e) => {
     console.log(e.target.id);
@@ -28,24 +54,24 @@ const ContactUs = () => {
       ]);
   };
 
+  // НЕ ЗАКОНЧЕНО
   return (
     <Container>
       <div className="centered">
-        <h1 className="section-header">У вас є ідея?</h1>
+        {lang === "UA" && <h1 className="section-header">У вас є ідея?</h1>}
+        {lang === "ENG" && <h1 className="section-header">У вас є ідея?</h1>}
         <div className="contact-us">
           <div className="header">
-            <h2 className="green">Звʼяжітся з нами</h2>
+            {lang === "UA" && <h2 className="green">Звʼяжітся з нами</h2>}
+            {lang === "ENG" && <h2 className="green">contact us</h2>}
             <div className="header__email">info@ftech.com.ua</div>
           </div>
 
           <div className="form">
             <div className="inputs">
-              <input type="text" required placeholder="Ваше імʼя*" />
-              <input type="email" required placeholder="Електронна пошта*" />
-              <input
-                type="text"
-                placeholder="Розкажіть нам трохи більше про ваш проєкт"
-              />
+              <input type="text" required placeholder={placeholders[0]} />
+              <input type="email" required placeholder={placeholders[1]} />
+              <input type="text" placeholder={placeholders[2]} />
             </div>
 
             <div className="interests">

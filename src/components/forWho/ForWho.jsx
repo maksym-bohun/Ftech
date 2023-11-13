@@ -10,7 +10,7 @@ import plusIconYellow from "../../assets/plusIconYellow.svg";
 import squareIconYellow from "../../assets/squareIconYellow.svg";
 import starIconYellow from "../../assets/starIconYellow.svg";
 
-const ForWho = () => {
+const ForWho = ({ lang }) => {
   const [currentLabel, setCurrentLabel] = useState("state");
 
   const chooseLabelHandler = (e) => {
@@ -21,83 +21,137 @@ const ForWho = () => {
     state: [
       {
         icon: squareIconViolet,
-        content: (
-          <div>
-            Ми надаємо засоби для збору, аналізу, зберігання та <br />
-            оптимізації великих обʼємів даних, що допомагають вирішувати
-            завдання зручно <br />
-            та набагато ефективніше.
-          </div>
-        ),
+        content:
+          lang === "UA" ? (
+            <div>
+              Ми надаємо засоби для збору, аналізу, зберігання та <br />
+              оптимізації великих обʼємів даних, що допомагають вирішувати
+              завдання зручно <br />
+              та набагато ефективніше.
+            </div>
+          ) : (
+            <div>
+              We offer tools for collecting, analyzing, storing, and optimizing
+              extensive data, leading to more convenient and efficient
+              problem-solving.
+            </div>
+          ),
       },
       {
         icon: starIconViolet,
-        content: (
-          <div>
-            Наше програмне <br /> забезпечення спрямоване на покращення якості
-            обслуговування громадян <br /> а також оптимізацію адміністративних
-            процедур.
-          </div>
-        ),
+        content:
+          lang === "UA" ? (
+            <div>
+              Наше програмне <br /> забезпечення спрямоване на покращення якості
+              обслуговування громадян <br /> а також оптимізацію
+              адміністративних процедур.
+            </div>
+          ) : (
+            <div>
+              Our software focuses on enhancing customer service quality and
+              streamlining administrative procedures
+            </div>
+          ),
       },
       {
         icon: plusIconViolet,
-        content: (
-          <div>
-            Наші рішення забезпечують збереження повної історії взаємодії з
-            громадянами, роблять роботу державних органів більш прозорою та
-            ефективною.
-          </div>
-        ),
+        content:
+          lang === "UA" ? (
+            <div>
+              Наші рішення забезпечують збереження повної історії взаємодії з
+              громадянами, роблять роботу державних органів більш прозорою та
+              ефективною.
+            </div>
+          ) : (
+            <div>
+              Наші рішення забезпечують збереження повної історії взаємодії з
+              громадянами, роблять роботу державних органів більш прозорою та
+              ефективною.
+            </div>
+          ),
       },
       {
         icon: triangleIconViolet,
-        content: (
-          <div>
-            Крім того, ми гарантуємо надійний захист <br /> конфіденційної
-            інформації, <br />
-            щоб забезпечити безпеку <br /> даних громадян.
-          </div>
-        ),
+        content:
+          lang === "UA" ? (
+            <div>
+              Крім того, ми гарантуємо надійний захист <br /> конфіденційної
+              інформації, <br />
+              щоб забезпечити безпеку <br /> даних громадян.
+            </div>
+          ) : (
+            <div>
+              Крім того, ми гарантуємо надійний захист <br /> конфіденційної
+              інформації, <br />
+              щоб забезпечити безпеку <br /> даних громадян.
+            </div>
+          ),
       },
     ],
     business: [
       {
         icon: squareIconYellow,
-        content: (
-          <div>
-            FTech пропонує рішення, які сприяють оптимізації бізнес-процесів та
-            підвищенню продуктивності
-          </div>
-        ),
+        content:
+          lang === "UA" ? (
+            <div>
+              FTech пропонує рішення, які сприяють оптимізації бізнес-процесів
+              та підвищенню продуктивності
+            </div>
+          ) : (
+            <div>
+              FTech delivers solutions that empower businesses to streamline
+              workflows and boost productivity.
+            </div>
+          ),
       },
       {
         icon: starIconYellow,
-        content: (
-          <div>
-            Наше програмне
-            <br /> забезпечення надає повний контроль над взаємодією з клієнтами
-            і допомагає створювати індивідуальні підходи до кожного клієнта
-          </div>
-        ),
+        content:
+          lang === "UA" ? (
+            <div>
+              Наше програмне
+              <br /> забезпечення надає повний контроль над взаємодією з
+              клієнтами і допомагає створювати індивідуальні підходи до кожного
+              клієнта
+            </div>
+          ) : (
+            <div>
+              Our software ensures complete control over customer interactions,
+              fostering personalized approaches for each client.
+            </div>
+          ),
       },
       {
         icon: plusIconYellow,
-        content: (
-          <div>
-            Ми розуміємо важливість ефективного управління взаємодією з
-            клієнтами та розвитку продажів
-          </div>
-        ),
+        content:
+          lang === "UA" ? (
+            <div>
+              Ми розуміємо важливість ефективного управління взаємодією з
+              клієнтами та розвитку продажів
+            </div>
+          ) : (
+            <div>
+              Recognizing the significance of effective customer relationship
+              management and sales development, we designed our tools to help
+              you attain these goals, fortifying your competitive position in
+              the market.
+            </div>
+          ),
       },
       {
         icon: triangleIconYellow,
-        content: (
-          <div>
-            Наші інструменти допоможуть вам досягти цих цілей і <br /> зміцнити
-            вашу конкурентну позицію на ринку.
-          </div>
-        ),
+        content:
+          lang === "UA" ? (
+            <div>
+              Наші інструменти допоможуть вам досягти цих цілей і <br />{" "}
+              зміцнити вашу конкурентну позицію на ринку.
+            </div>
+          ) : (
+            <div>
+              Наші інструменти допоможуть вам досягти цих цілей і зміцнити вашу
+              конкурентну позицію на ринку.
+            </div>
+          ),
       },
     ],
   };
@@ -105,19 +159,31 @@ const ForWho = () => {
   return (
     <Container>
       <div className="centered">
-        <h1 className="section-header">Для кого</h1>
+        {lang === "UA" && <h1 className="section-header">Для кого</h1>}
+        {lang === "ENG" && <h1 className="section-header">Who is it for</h1>}
+
         <div className="labels">
           <div
             id="state"
             className={`label ${currentLabel === "state" ? "active" : ""}`}
           >
-            <span onClick={chooseLabelHandler}>Для державних установ</span>{" "}
+            {lang === "UA" && (
+              <span onClick={chooseLabelHandler}>Для державних установ</span>
+            )}
+            {lang === "ENG" && (
+              <span onClick={chooseLabelHandler}>For Government</span>
+            )}
           </div>
           <div
             id="business"
             className={`label ${currentLabel === "business" ? "active" : ""}`}
           >
-            <span onClick={chooseLabelHandler}>Для бізнесу</span>{" "}
+            {lang === "UA" && (
+              <span onClick={chooseLabelHandler}>Для бізнесу</span>
+            )}
+            {lang === "ENG" && (
+              <span onClick={chooseLabelHandler}>for Business</span>
+            )}
           </div>
           <div className="rectangle"></div>
         </div>

@@ -3,16 +3,36 @@ import styled from "styled-components";
 import { colors } from "../../styles/colors";
 import arrowIcon from "../../assets/arrowIcon.svg";
 
-const ConnectLine = () => {
+const ConnectLine = ({ lang }) => {
   return (
     <Container>
-      <div>зв`язатись з нами</div>
-      <img src={arrowIcon} alt="arrow icon" />
-      <div>зв`язатись з нами</div>
-      <img src={arrowIcon} alt="arrow icon" />
-      <div>зв`язатись з нами</div>
-      <img src={arrowIcon} alt="arrow icon" className="lg" />
-      <div className="lg">зв`язатись з нами</div>
+      {lang === "UA" && (
+        <>
+          {" "}
+          <div>зв`язатись з нами</div>
+          <img src={arrowIcon} alt="arrow icon" />
+          <div>зв`язатись з нами</div>
+          <img src={arrowIcon} alt="arrow icon" />
+          <div>зв`язатись з нами</div>
+          <img src={arrowIcon} alt="arrow icon" className="lg" />
+          <div className="lg">зв`язатись з нами</div>
+        </>
+      )}
+
+      {lang === "ENG" && (
+        <>
+          {" "}
+          <div>contact us</div>
+          <img src={arrowIcon} alt="arrow icon" />
+          <div>contact us</div>
+          <img src={arrowIcon} alt="arrow icon" />
+          <div>contact us</div>
+          <img src={arrowIcon} alt="arrow icon" />
+          <div>contact us</div>
+          <img src={arrowIcon} alt="arrow icon" className="lg" />
+          <div className="lg">contact us</div>
+        </>
+      )}
     </Container>
   );
 };

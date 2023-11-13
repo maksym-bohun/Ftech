@@ -6,58 +6,68 @@ import speedIcon from "../../assets/speedIcon.svg";
 import qualityIcon from "../../assets/qualityIcon.svg";
 import { colors } from "../../styles/colors";
 
-const Cards = () => {
+const Cards = ({ lang }) => {
+  const cards =
+    lang === "UA"
+      ? [
+          {
+            icon: ovalIcon,
+            header: "Гнучкість",
+            text: "Ми завжди адаптуємось до ваших вимог та дедлайнів, які можуть змінюватися.",
+          },
+          {
+            icon: unityIcon,
+            header: "Єдність",
+            text: `Ми працюємо як один добре налагоджений механізм. Блискавична комунікація всередині команди — наша суперсила.`,
+          },
+          {
+            icon: speedIcon,
+            header: "Швидкість",
+            text: "Ми розуміємо, що час важливий для вас. Тому забезпечуємо першокласну якість, і, що важливо — вчасно.",
+          },
+          {
+            icon: qualityIcon,
+            header: "Якість",
+            text: " Ми уважні до деталей. Кожна дрібниця має значення, і ми прагнемо не просто виправдати, а перевершити ваші очікування.",
+          },
+        ]
+      : [
+          {
+            icon: ovalIcon,
+            header: "Flexibility",
+            text: "We're all about adapting to your evolving requirements and deadlines. In the tech realm, being flexible is the key to success, and we're always ready to roll with the changes",
+          },
+          {
+            icon: unityIcon,
+            header: "Unity",
+            text: `We work as one well-oiled machine, working harmoniously towards a common goal. Our superpower? Lightning-fast communication within the team`,
+          },
+          {
+            icon: speedIcon,
+            header: "Speed",
+            text: "We get that time is precious. We're all about delivering top-notch quality without wasting a single moment",
+          },
+          {
+            icon: qualityIcon,
+            header: "Quality",
+            text: "We're sticklers for detail. Every little thing matters, and we're on a mission not just to meet but exceed your expectations",
+          },
+        ];
+
   return (
     <Container>
       <div className="centered cards-container">
-        <div className="card card--1">
-          <div className="image">
-            <img src={ovalIcon} alt="ovalIcon" />
+        {cards.map((card, index) => (
+          <div key={index} className={`card card--${index + 1}`}>
+            <div className="image">
+              <img src={card.icon} alt="unityIcon" />
+            </div>
+            <div className="text">
+              <h3>{card.header}</h3>
+              <p>{card.text}</p>
+            </div>
           </div>
-          <div className="text">
-            <h3>Гнучкість</h3>
-            <p>
-              Ми завжди адаптуємось до ваших вимог та дедлайнів, які можуть
-              змінюватися.
-            </p>
-          </div>
-        </div>
-        <div className="card card--2">
-          <div className="image">
-            <img src={unityIcon} alt="unityIcon" />
-          </div>
-          <div className="text">
-            <h3>Єдність</h3>
-            <p>
-              Ми працюємо як один добре налагоджений механізм. Блискавична
-              комунікація всередині команди — наша суперсила.
-            </p>
-          </div>
-        </div>
-        <div className="card card--3">
-          <div className="image">
-            <img src={speedIcon} alt="speedIcon" />
-          </div>
-          <div className="text">
-            <h3>Швидкість</h3>
-            <p>
-              Ми розуміємо, що час важливий для вас. Тому забезпечуємо
-              першокласну якість, і, що важливо — вчасно.
-            </p>
-          </div>
-        </div>
-        <div className="card card--4">
-          <div className="image">
-            <img src={qualityIcon} alt="qualityIcon" />
-          </div>
-          <div className="text">
-            <h3>Якість</h3>
-            <p>
-              Ми уважні до деталей. Кожна дрібниця має значення, і ми прагнемо
-              не просто виправдати, а перевершити ваші очікування.
-            </p>
-          </div>
-        </div>
+        ))}
       </div>
     </Container>
   );

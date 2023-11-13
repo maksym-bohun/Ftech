@@ -3,17 +3,29 @@ import styled from "styled-components";
 import { colors } from "../../styles/colors";
 import Cards from "./Cards";
 
-const WhyWe = () => {
+const WhyWe = ({ lang }) => {
   return (
     <Container>
       <div className="centered">
-        <h1 className="section-header">Чому обирають нас</h1>
-        <div className="heading">
-          <span className="violet italic">Ми пишаємося</span> нашим
-          професіоналізмом, відданістю та здатністю долати виклики
-        </div>
+        {lang === "UA" && <h1 className="section-header">Чому обирають нас</h1>}
+        {lang === "ENG" && (
+          <h1 className="section-header">Our winning approach</h1>
+        )}
+
+        {lang === "ENG" && (
+          <div className="heading">
+            <span className="violet italic">We are proud</span> of our team's
+            professionalism, dedication, and resilience.
+          </div>
+        )}
+        {lang === "UA" && (
+          <div className="heading">
+            <span className="violet italic">Ми пишаємося</span> нашим
+            професіоналізмом, відданістю та здатністю долати виклики
+          </div>
+        )}
       </div>
-      <Cards />
+      <Cards lang={lang} />
     </Container>
   );
 };

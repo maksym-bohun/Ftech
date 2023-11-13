@@ -3,11 +3,12 @@ import styled from "styled-components";
 import Welcome from "./Welcome";
 import OfficialInfo from "./OfficialInfo";
 
-const AboutUs = () => {
+const AboutUs = ({ lang }) => {
+  console.log("langggg", lang);
   return (
     <Container>
-      <Welcome />
-      <OfficialInfo />
+      <Welcome lang={lang} />
+      <OfficialInfo lang={lang} />
     </Container>
   );
 };

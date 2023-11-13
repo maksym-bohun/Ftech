@@ -2,20 +2,38 @@ import React from "react";
 import styled from "styled-components";
 import Services from "./Services";
 
-const WhoWeAre = () => {
+const WhoWeAre = ({ lang }) => {
   return (
     <Container>
       <div className="centered">
-        <h1 className="section-header">Хто ми?</h1>
-        <div className="description">
-          FTech first technologies –{" "}
-          <span className="green">Ваш вірний союзник</span> у розробці
-          програмного забезпечення та CRM-систем.{" "}
-          <span className="italic violet">Ми створюємо</span> бізнес-орієнтовані
-          <span className="next-line"></span> веб- та мобільні додатки і
-          пропонуємо їх бездоганне впровадження, експертну підтримку та
-          індивідуальні рекомендації.
-        </div>
+        {lang === "UA" && (
+          <>
+            <h1 className="section-header">Хто ми?</h1>
+            <div className="description">
+              FTech first technologies –{" "}
+              <span className="green">Ваш вірний союзник</span> у розробці
+              програмного забезпечення та CRM-систем.{" "}
+              <span className="italic violet">Ми створюємо</span>{" "}
+              бізнес-орієнтовані
+              <span className="next-line"></span> веб- та мобільні додатки і
+              пропонуємо їх бездоганне впровадження, експертну підтримку та
+              індивідуальні рекомендації.
+            </div>
+          </>
+        )}
+        {lang === "ENG" && (
+          <>
+            <h1 className="section-header">Get a closer look</h1>
+            <div className="description">
+              FTech first technologies is{" "}
+              <span className="green">your trusted ally</span> in software and
+              CRM development. <span className="italic violet">We craft</span>{" "}
+              business-centric web and mobile applications and offer their
+              flawless implementation, expert support, and individual
+              recommendations.
+            </div>
+          </>
+        )}
       </div>
       <Services />
     </Container>

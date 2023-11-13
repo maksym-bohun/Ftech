@@ -2,11 +2,13 @@ import React, { useRef, useState } from "react";
 import styled from "styled-components";
 import mailIconGradient from "../../assets/mailIconGradient.svg";
 import mailText from "../../assets/mailText.svg";
+import mailTextEng from "../../assets/mailTextEng.svg";
 import mailIcon from "../../assets/mailIcon.svg";
 
-const MailImage = ({ text = true }) => {
+const MailImage = ({ text = true, lang }) => {
   const [isHovered, setIsHovered] = useState(false);
   const imageRef = useRef(null);
+  console.log("langgg", lang);
 
   const handleMouseEnter = () => {
     setIsHovered(true);
@@ -34,10 +36,17 @@ const MailImage = ({ text = true }) => {
           alt="mail image"
         />
       </div>
-      {text && (
+      {text && lang === "UA" && (
         <img
           className="image__text"
           src={mailText}
+          alt="text above the image"
+        />
+      )}
+      {text && lang === "ENG" && (
+        <img
+          className="image__text left"
+          src={mailTextEng}
           alt="text above the image"
         />
       )}
@@ -69,6 +78,11 @@ const Container = styled.div`
     position: absolute;
     top: 0;
     animation: rotate 15s linear infinite;
+
+    &.left {
+      left: -2%;
+      top: -1%;
+    }
   }
 `;
 
