@@ -118,6 +118,17 @@ const Container = styled.footer`
       }
     }
   }
+
+  @media screen and (min-width: 1000px) and (max-width: 1400px) {
+    .footer {
+      grid-template-columns: 1fr 3fr;
+
+      &__column--3 {
+        grid-column: 2;
+        margin-top: -2rem;
+      }
+    }
+  }
 `;
 
 export default Footer;

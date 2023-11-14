@@ -4,35 +4,24 @@ import { colors } from "../../styles/colors";
 import arrowIcon from "../../assets/arrowIcon.svg";
 
 const ConnectLine = ({ lang }) => {
+  let text = "";
+
+  if (lang === "UA") text = "Звʼязатись з нами";
+  else if (lang === "ENG") text = "Contact us";
+
   return (
     <Container>
-      {lang === "UA" && (
-        <>
-          {" "}
-          <div>зв`язатись з нами</div>
-          <img src={arrowIcon} alt="arrow icon" />
-          <div>зв`язатись з нами</div>
-          <img src={arrowIcon} alt="arrow icon" />
-          <div>зв`язатись з нами</div>
-          <img src={arrowIcon} alt="arrow icon" className="lg" />
-          <div className="lg">зв`язатись з нами</div>
-        </>
-      )}
-
-      {lang === "ENG" && (
-        <>
-          {" "}
-          <div>contact us</div>
-          <img src={arrowIcon} alt="arrow icon" />
-          <div>contact us</div>
-          <img src={arrowIcon} alt="arrow icon" />
-          <div>contact us</div>
-          <img src={arrowIcon} alt="arrow icon" />
-          <div>contact us</div>
-          <img src={arrowIcon} alt="arrow icon" className="lg" />
-          <div className="lg">contact us</div>
-        </>
-      )}
+      <>
+        <div>{text}</div>
+        <img src={arrowIcon} alt="arrow icon" />
+        <div>{text}</div>
+        <img src={arrowIcon} alt="arrow icon" className="" />
+        <div className="md">{text}</div>
+        <div className="md--1">{text}</div>
+        <img src={arrowIcon} alt="arrow icon" className="md" />
+        <div className="lg">{text}</div>
+        <img src={arrowIcon} alt="arrow icon" className="lg" />
+      </>
     </Container>
   );
 };
@@ -57,9 +46,36 @@ const Container = styled.div`
     display: none;
   }
 
+  .md {
+    display: block;
+  }
+
+  .md--1 {
+    display: block;
+  }
+
   @media screen and (min-width: 1800px) {
     padding: 2rem;
     .lg {
+      display: block;
+    }
+  }
+
+  @media screen and (min-width: 1000px) and (max-width: 1250px) {
+    .md {
+      display: none;
+    }
+
+    .md--1 {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 1250px) and (max-width: 1400px) {
+    .md {
+      display: none;
+    }
+    .md--1 {
       display: block;
     }
   }

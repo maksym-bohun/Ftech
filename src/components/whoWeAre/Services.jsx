@@ -258,6 +258,66 @@ const Container = styled.div`
     width: 1500px;
     margin: 0 auto;
   }
+
+  @media screen and (min-width: 1000px) and (max-width: 1400px) {
+    height: 200px;
+    padding-bottom: 1rem;
+    width: 1000px;
+    margin: 8rem auto 0;
+
+    .frame {
+      font-size: 32px;
+      border-radius: 11px;
+      padding: 5px 24px;
+
+      &--1 {
+        left: 2px;
+        bottom: 2.2rem;
+      }
+
+      &--2 {
+        left: 7.6rem;
+        top: 3.8rem;
+      }
+
+      &--3 {
+        left: 19rem;
+        top: 1.2rem;
+      }
+
+      &--4 {
+        left: 20rem;
+        bottom: 3.2rem;
+      }
+
+      &--5 {
+        left: 28.6rem;
+      }
+
+      &--6 {
+        right: 17.5rem;
+        top: 1.2rem;
+      }
+
+      &--7 {
+        bottom: 2rem;
+      }
+
+      &--8 {
+        top: 2.2rem;
+        right: 10rem;
+      }
+
+      &--9 {
+        top: 2.6rem;
+        right: 2rem;
+      }
+
+      &--10 {
+        // right: 10rem;
+      }
+    }
+  }
 `;
 
 export default Services;

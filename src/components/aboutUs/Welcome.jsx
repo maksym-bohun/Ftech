@@ -6,42 +6,6 @@ import MailImage from "./MailImage";
 import { colors } from "../../styles/colors";
 
 const Welcome = ({ lang }) => {
-  const [isImageVisible, setIsImageVisible] = useState(true);
-  const [imageIsFixed, setImageIsFixed] = useState(false);
-  const imageRef = useRef(null);
-
-  useEffect(() => {
-    const options = {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.5, // Область видимости при которой сработает callback
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        setIsImageVisible(entry.isIntersecting);
-      });
-    }, options);
-
-    if (imageRef.current) {
-      observer.observe(imageRef.current);
-    }
-
-    // Отключаем observer при размонтировании компонента
-    return () => {
-      if (imageRef.current) {
-        observer.unobserve(imageRef.current);
-      }
-    };
-  }, []);
-
-  useEffect(() => {
-    if (!isImageVisible) {
-      setImageIsFixed(true);
-    } else setImageIsFixed(false);
-    console.log(1);
-  }, [isImageVisible]);
-
   return (
     <Container>
       <div className="centered">
@@ -51,7 +15,7 @@ const Welcome = ({ lang }) => {
             і бізнесу
           </h1>
         ) : (
-          <h1 className="header">
+          <h1 className="header english">
             Digital <span className="violet">improvement</span>{" "}
             <span className="next-line"></span> of state and business
           </h1>
@@ -89,7 +53,6 @@ const Container = styled.section`
   }
 
   .header {
-    font-size: 4rem;
     text-transform: uppercase;
     font-weight: 900;
     line-height: 81.6px;
@@ -109,6 +72,21 @@ const Container = styled.section`
       color: ${colors.lightColor};
       font-size: 24px;
       text-transform: uppercase;
+    }
+  }
+
+  @media screen and (min-width: 1000px) and (max-width: 1400px) {
+    .header {
+      line-height: 55.2px;
+      font-size: 46px;
+
+      &.english {
+        margin-right: 5rem;
+      }
+    }
+
+    .text {
+      margin-left: 8rem;
     }
   }
 `;

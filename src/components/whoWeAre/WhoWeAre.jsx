@@ -13,7 +13,10 @@ const WhoWeAre = ({ lang }) => {
               FTech first technologies –{" "}
               <span className="green">Ваш вірний союзник</span> у розробці
               програмного забезпечення та CRM-систем.{" "}
-              <span className="italic violet">Ми створюємо</span>{" "}
+              <span className="next-line"></span>
+              <span className="next-line"></span>
+              <span className="next-line"></span>
+              <span className="italic violet ">Ми створюємо</span>{" "}
               бізнес-орієнтовані
               <span className="next-line"></span> веб- та мобільні додатки і
               пропонуємо їх бездоганне впровадження, експертну підтримку та
@@ -65,6 +68,16 @@ const Container = styled.section`
 
     .description {
       margin-right: 17rem;
+    }
+  }
+
+  @media screen and (min-width: 1000px) and (max-width: 1400px) {
+    .next-line {
+      margin-right: 5rem;
+    }
+
+    .description {
+      margin-right: 3rem;
     }
   }
 `;

@@ -29,8 +29,11 @@ const AboutCompany = ({ lang }) => {
               Ukrainian technology leader that creates cutting-edge solutions
               that can transform the world in a technological way.
             </h2>
-            <h1>
-              <span className="italic violet"> We are transforming </span>{" "}
+            <h1 className="english">
+              <span className="italic violet english">
+                {" "}
+                We are transforming{" "}
+              </span>{" "}
               outdated processes. Crafting cutting-edge online services for
               smoother government and public interaction is what we do best.
             </h1>
@@ -67,6 +70,34 @@ const Container = styled.div`
 
     span {
       margin-left: 18rem;
+    }
+  }
+
+  @media screen and (min-width: 1000px) and (max-width: 1400px) {
+    h2 {
+      width: 440px;
+    }
+
+    h1 {
+      margin-top: 5rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      font-size: 46px;
+      line-height: 60px;
+      letter-spacing: 1.8%;
+      // margin-right: 1rem;
+
+      &.english {
+        font-size: 42px;
+      }
+
+      span {
+        margin-left: 8rem;
+
+        &.english {
+          margin-left: 9rem;
+        }
+      }
     }
   }
 `;

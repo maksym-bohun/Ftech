@@ -135,5 +135,12 @@ const Container = styled.div`
       transform: translateY(-5%);
     }
   }
+
+  @media screen and (min-width: 1000px) and (max-width: 1400px) {
+    .card {
+      width: 170px;
+      padding: 20px;
+    }
+  }
 `;
 export default Cards;

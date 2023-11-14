@@ -137,7 +137,7 @@ const Container = styled.section`
     .blocks-list {
       display: flex;
       flex-direction: column;
-      width: 100%;
+      // width: 100%;
       height: 76vh;
       overflow: scroll;
       overflow-x: hidden;
@@ -179,6 +179,20 @@ const Container = styled.section`
   @media screen and (min-width: 1800px) {
     .advantages {
       gap: 11rem;
+    }
+  }
+
+  @media screen and (min-width: 1000px) and (max-width: 1400px) {
+    padding: 0 2rem;
+    padding-bottom: 10rem;
+
+    .advantages {
+      gap: 2rem;
+
+      .blocks-list {
+        height: 90vh;
+        width: 90%;
+      }
     }
   }
 `;

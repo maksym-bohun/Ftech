@@ -187,6 +187,16 @@ const Container = styled.section`
       gap: 8rem;
     }
   }
+
+  @media screen and (min-width: 1000px) and (max-width: 1400px) {
+    .services-container {
+      .drop-down {
+        &__block {
+          grid-template-columns: 2fr 15fr 1fr;
+        }
+      }
+    }
+  }
 `;
 
 export default Services;

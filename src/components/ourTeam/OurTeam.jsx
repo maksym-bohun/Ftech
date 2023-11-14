@@ -76,6 +76,12 @@ const Container = styled.section`
   @media screen and (min-width: 1800px) {
     padding-bottom: 7rem;
   }
+
+  @media screen and (min-width: 1000px) and (max-width: 1400px) {
+    .content {
+      gap: 2rem;
+    }
+  }
 `;
 
 export default OurTeam;

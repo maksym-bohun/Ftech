@@ -84,6 +84,10 @@ const Container = styled.div`
       top: -1%;
     }
   }
+
+  @media screen and (min-width: 1000px) and (max-width: 1400px) {
+    margin-left: 0;
+  }
 `;
 
 export default MailImage;

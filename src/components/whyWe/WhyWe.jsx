@@ -55,6 +55,12 @@ const Container = styled.section`
       padding-left: 4rem;
     }
   }
+
+  @media screen and (min-width: 1000px) and (max-width: 1400px) {
+    .heading {
+      margin-right: 5rem;
+    }
+  }
 `;
 
 export default WhyWe;

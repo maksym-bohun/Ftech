@@ -66,6 +66,7 @@ const Main = ({
             className="triangle triangle--3"
           />
         </div>
+
         <Navigation lang={lang} />
         <div ref={aboutUsRef}>
           <AboutUs lang={lang} />

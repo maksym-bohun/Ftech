@@ -192,6 +192,22 @@ const Container = styled.section`
       }
     }
   }
+
+  @media screen and (min-width: 1000px) and (max-width: 1400px) {
+    .reviews {
+      > div:first-child {
+        width: 18%;
+
+        > div {
+          position: absolute;
+        }
+      }
+
+      .list-container {
+        width: 82%;
+      }
+    }
+  }
 `;
 
 export default Reviews1;

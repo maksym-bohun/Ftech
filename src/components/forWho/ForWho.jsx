@@ -24,10 +24,9 @@ const ForWho = ({ lang }) => {
         content:
           lang === "UA" ? (
             <div>
-              Ми надаємо засоби для збору, аналізу, зберігання та <br />
-              оптимізації великих обʼємів даних, що допомагають вирішувати
-              завдання зручно <br />
-              та набагато ефективніше.
+              Сприяємо налагодженню взаємодії між урядом та громадянами. Ми
+              оптимізуємо адміністративні процедури, де кожен крок — чіткий та
+              зрозумілий.
             </div>
           ) : (
             <div>
@@ -42,9 +41,9 @@ const ForWho = ({ lang }) => {
         content:
           lang === "UA" ? (
             <div>
-              Наше програмне <br /> забезпечення спрямоване на покращення якості
-              обслуговування громадян <br /> а також оптимізацію
-              адміністративних процедур.
+              Наше програмне забезпечення спрощує більшість адміністративних
+              процедур — це повна трансформація ведення збору, аналізу та
+              зберігання великих обсягів даних.
             </div>
           ) : (
             <div>
@@ -58,15 +57,15 @@ const ForWho = ({ lang }) => {
         content:
           lang === "UA" ? (
             <div>
-              Наші рішення забезпечують збереження повної історії взаємодії з
-              громадянами, роблять роботу державних органів більш прозорою та
-              ефективною.
+              Ми пропонуємо рішення, <span className="next-line"></span> що
+              систематизують адміністративні завдання,{" "}
+              <span className="next-line"></span> і при цьому приділяємо
+              особливу увагу безпеці даних.
             </div>
           ) : (
             <div>
-              Наші рішення забезпечують збереження повної історії взаємодії з
-              громадянами, роблять роботу державних органів більш прозорою та
-              ефективною.
+              We offer solutions that streamline administrative tasks while
+              placing a strong emphasis on data security
             </div>
           ),
       },
@@ -75,15 +74,15 @@ const ForWho = ({ lang }) => {
         content:
           lang === "UA" ? (
             <div>
-              Крім того, ми гарантуємо надійний захист <br /> конфіденційної
-              інформації, <br />
-              щоб забезпечити безпеку <br /> даних громадян.
+              Ми надаємо засоби для збору, аналізу, та оптимізації великих
+              обʼємів даних. Наше програмне забезпечення налагоджує
+              індивідуальний підхід до кожного клієнта.
             </div>
           ) : (
             <div>
-              Крім того, ми гарантуємо надійний захист <br /> конфіденційної
-              інформації, <br />
-              щоб забезпечити безпеку <br /> даних громадян.
+              We provide tools for collecting, analyzing, and optimizing large
+              volumes of data. Our software tailors an individual approach to
+              each client
             </div>
           ),
       },
@@ -99,8 +98,9 @@ const ForWho = ({ lang }) => {
             </div>
           ) : (
             <div>
-              FTech delivers solutions that empower businesses to streamline
-              workflows and boost productivity.
+              We foster interaction between the government and citizens. By
+              optimising administrative procedures, we make every step of
+              communication clear and understandable.
             </div>
           ),
       },
@@ -109,15 +109,15 @@ const ForWho = ({ lang }) => {
         content:
           lang === "UA" ? (
             <div>
-              Наше програмне
-              <br /> забезпечення надає повний контроль над взаємодією з
+              Наше програмне забезпечення надає повний контроль над взаємодією з
               клієнтами і допомагає створювати індивідуальні підходи до кожного
               клієнта
             </div>
           ) : (
             <div>
-              Our software ensures complete control over customer interactions,
-              fostering personalized approaches for each client.
+              Our software simplifies most administrative tasks - it is a
+              complete transformation of collecting, analysing and storing large
+              amounts of data.
             </div>
           ),
       },
@@ -131,10 +131,10 @@ const ForWho = ({ lang }) => {
             </div>
           ) : (
             <div>
-              Recognizing the significance of effective customer relationship
-              management and sales development, we designed our tools to help
-              you attain these goals, fortifying your competitive position in
-              the market.
+              We know that effective customer relationship management and sales
+              development are crucial, so we tailored our tools to assist you in
+              reaching these goals and boosting your competitive edge in the
+              market.
             </div>
           ),
       },
@@ -143,13 +143,15 @@ const ForWho = ({ lang }) => {
         content:
           lang === "UA" ? (
             <div>
-              Наші інструменти допоможуть вам досягти цих цілей і <br />{" "}
-              зміцнити вашу конкурентну позицію на ринку.
+              Наші інструменти допоможуть вам досягти цих цілей і зміцнити вашу
+              конкурентну позицію на ринку.
             </div>
           ) : (
             <div>
-              Наші інструменти допоможуть вам досягти цих цілей і зміцнити вашу
-              конкурентну позицію на ринку.
+              We deliver solutions that streamline administrative tasks and
+              maintain data security. Our software ensures complete control over
+              customer interactions, fostering personalized approaches for each
+              client.
             </div>
           ),
       },
@@ -207,6 +209,10 @@ const Container = styled.section`
     margin-bottom: 4rem;
   }
 
+  .next-line {
+    margin-right: 2rem;
+  }
+
   .labels {
     display: grid;
     grid-column-gap: 3rem;
@@ -256,7 +262,7 @@ const Container = styled.section`
     .container {
       background-color: ${colors.primaryDarkGray};
       padding: 16px 8px;
-      width: 21%;
+      width: 20.8%;
       height: 230px;
       font-size: 16px;
       line-height: 20.8px;
@@ -285,7 +291,7 @@ const Container = styled.section`
       height: 150px;
       border-radius: 50%;
       filter: blur(65px);
-      z-index: 3;
+      z-index: -1;
       border-radius: 50%;
     }
 
@@ -306,6 +312,15 @@ const Container = styled.section`
 
     &--business::after {
       box-shadow: 0px 0px 500px 70px #ffde03;
+    }
+  }
+
+  @media screen and (min-width: 1000px) and (max-width: 1400px) {
+    .containers {
+      .container {
+        height: 270px;
+        width: 22%;
+      }
     }
   }
 `;

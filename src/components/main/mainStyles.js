@@ -26,6 +26,7 @@ export const MainContainer = styled.main`
 
     .triangle {
       position: absolute;
+      z-index: 0;
     }
 
     &--1 {
@@ -118,6 +119,7 @@ export const MainContainer = styled.main`
     background-color: ${colors.lightColor};
     position: relative;
     color: ${colors.primaryDarkGray};
+    z-index: 2;
     &--1 {
       z-index: 2;
       .triangle {
@@ -176,6 +178,48 @@ export const MainContainer = styled.main`
 
       &--3 {
         margin-right: 10%;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1000px) and (max-width: 1400px) {
+    .triangle {
+      &--1 {
+        margin-left: -2.4rem;
+        margin-top: -3rem;
+      }
+
+      &--2 {
+        margin-top: 10rem;
+        margin-left: -10rem;
+      }
+
+      &--3 {
+        margin-top: -2rem;
+      }
+
+      &--4 {
+        margin-right: -16.4rem;
+      }
+
+      &--5 {
+        margin-left: -7rem;
+        transform: rotate(20deg);
+      }
+      &--6 {
+        margin-left: -12rem;
+        margin-top: 1rem;
+        transform: rotate(20deg);
+      }
+      &--7 {
+        transform: rotate(20deg);
+        margin-top: 13%;
+        margin-left: -11%;
+      }
+      &--8 {
+        transform: rotate(20deg);
+        margin-top: 13%;
+        margin-left: -20rem;
       }
     }
   }

@@ -62,7 +62,7 @@ const ContactUs = ({ lang }) => {
         {lang === "ENG" && <h1 className="section-header">У вас є ідея?</h1>}
         <div className="contact-us">
           <div className="header">
-            {lang === "UA" && <h2 className="green">Звʼяжітся з нами</h2>}
+            {lang === "UA" && <h2 className="green">Звʼяжіться з нами</h2>}
             {lang === "ENG" && <h2 className="green">contact us</h2>}
             <div className="header__email">info@ftech.com.ua</div>
           </div>
@@ -147,6 +147,7 @@ const Container = styled.section`
       flex-direction: column;
       margin-top: -1.4rem;
       width: 65%;
+      z-index: 2;
       .inputs {
         display: flex;
         flex-direction: column;
@@ -201,6 +202,7 @@ const Container = styled.section`
           line-height: 21.82px;
           transition: all 0.3s;
           border: 2px solid transparent;
+          z-index: 2;
 
           &:nth-child(3) {
             margin-right: 10rem;
@@ -260,6 +262,29 @@ const Container = styled.section`
             animation: rotateAndTranslateArrow 0.4s forwards;
           }
         }
+      }
+    }
+  }
+
+  @media screen and (min-width: 1000px) and (max-width: 1400px) {
+    .contact-us {
+      display: flex;
+      margin-top: 5rem;
+      gap: 4rem;
+
+      .header {
+        font-size: 18px;
+        line-height: 21.6px;
+        width: 25%;
+        h2 {
+          font-size: 36px;
+          line-height: 43.2px;
+          margin-bottom: 2rem;
+        }
+      }
+
+      .form {
+        width: 75%;
       }
     }
   }
