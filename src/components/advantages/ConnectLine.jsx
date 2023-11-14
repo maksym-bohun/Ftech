@@ -17,8 +17,9 @@ const ConnectLine = ({ lang }) => {
         <div>{text}</div>
         <img src={arrowIcon} alt="arrow icon" className="" />
         <div className="md">{text}</div>
-        <div className="md--1">{text}</div>
         <img src={arrowIcon} alt="arrow icon" className="md" />
+        {/* <div className="md--1">{text}</div>
+        <img src={arrowIcon} alt="arrow icon" className="md--1" /> */}
         <div className="lg">{text}</div>
         <img src={arrowIcon} alt="arrow icon" className="lg" />
       </>

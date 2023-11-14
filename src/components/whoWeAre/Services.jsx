@@ -74,60 +74,61 @@ const Container = styled.div`
       left: -0.2rem;
       background: linear-gradient(to right, #a7fcab, #b5c6e0);
       transition: all 0.5s;
-
-      &:hover {
-        transform: rotate(0deg);
-      }
-
-      &:hover + .frame--2 {
-        transform: rotate(15deg);
-        top: 3rem;
-      }
-
-      &:hover ~ .frame--3 {
-        transform: rotate(-7deg);
-        left: 32.5%;
-      }
-
-      &:hover ~ .frame--4 {
-        left: 27.5%;
-        bottom: 3rem;
-      }
-
-      &:hover ~ .frame--5 {
-        transform: rotate(-3deg);
-        left: 44%;
-        top: 75%;
-      }
-
-      &:hover ~ .frame--6 {
-        right: 27%;
-        top: 11%;
-        transform: rotate(10.19deg);
-      }
-
-      &:hover ~ .frame--7 {
-        right: 25%;
-        bottom: 18.5%;
-        transform: rotate(14.84deg);
-      }
-
-      &:hover ~ .frame--8 {
-        transform: rotate(-10.84deg);
-      }
-
-      &:hover ~ .frame--9 {
-        right: 2%;
-        top: 26%;
-        transform: rotate(9deg);
-      }
-
-      &:hover ~ .frame--10 {
-        right: 7%;
-        bottom: 7%;
-        transform: rotate(-11.85deg);
-      }
     }
+
+    //   &:hover {
+    //     transform: rotate(0deg);
+    //   }
+
+    //   &:hover + .frame--2 {
+    //     transform: rotate(15deg);
+    //     top: 3rem;
+    //   }
+
+    //   &:hover ~ .frame--3 {
+    //     transform: rotate(-7deg);
+    //     left: 32.5%;
+    //   }
+
+    //   &:hover ~ .frame--4 {
+    //     left: 27.5%;
+    //     bottom: 3rem;
+    //   }
+
+    //   &:hover ~ .frame--5 {
+    //     transform: rotate(-3deg);
+    //     left: 44%;
+    //     top: 75%;
+    //   }
+
+    //   &:hover ~ .frame--6 {
+    //     right: 27%;
+    //     top: 11%;
+    //     transform: rotate(10.19deg);
+    //   }
+
+    //   &:hover ~ .frame--7 {
+    //     right: 25%;
+    //     bottom: 18.5%;
+    //     transform: rotate(14.84deg);
+    //   }
+
+    //   &:hover ~ .frame--8 {
+    //     transform: rotate(-10.84deg);
+    //   }
+
+    //   &:hover ~ .frame--9 {
+    //     right: 2%;
+    //     top: 26%;
+    //     transform: rotate(9deg);
+    //   }
+
+    //   &:hover ~ .frame--10 {
+    //     right: 7%;
+    //     bottom: 7%;
+    //     transform: rotate(-11.85deg);
+    //   }
+    // }
 
     &--2 {
       transform: rotate(17.19deg);
@@ -135,66 +136,66 @@ const Container = styled.div`
       left: 10rem;
       transition: all 0.5s;
       background: linear-gradient(to right, #ffdf01, #e8f73a);
-
-      &:hover {
-        top: 9%;
-        left: 5%;
-        transform: rotate(0deg);
-      }
-
-      &:hover .frame--1 {
-        transform: rotate(91.5deg);
-        bottom: 2.8rem;
-        left: -2rem;
-      }
-
-      &:hover ~ .frame--3 {
-        transform: rotate(10deg);
-        left: 30.5%;
-        top: 10%;
-      }
-
-      &:hover ~ .frame--4 {
-        left: 24.5%;
-        bottom: 20%;
-        transform: rotate(25deg);
-      }
-
-      &:hover ~ .frame--5 {
-        transform: rotate(-5deg);
-        left: 47%;
-        top: 66.5%;
-      }
-
-      &:hover ~ .frame--6 {
-        right: 27%;
-        top: 2%;
-        transform: rotate(-6.19deg);
-      }
-
-      &:hover ~ .frame--7 {
-        right: 21%;
-        bottom: 21%;
-        transform: rotate(18.84deg);
-      }
-
-      &:hover ~ .frame--8 {
-        top: 5%;
-        transform: rotate(10.84deg);
-      }
-
-      &:hover ~ .frame--9 {
-        right: 2%;
-        top: 25%;
-        transform: rotate(-3deg);
-      }
-
-      &:hover ~ .frame--10 {
-        right: 2%;
-        bottom: 7%;
-        transform: rotate(-7.85deg);
-      }
     }
+    //   &:hover {
+    //     top: 9%;
+    //     left: 5%;
+    //     transform: rotate(0deg);
+    //   }
+
+    //   &:hover .frame--1 {
+    //     transform: rotate(91.5deg);
+    //     bottom: 2.8rem;
+    //     left: -2rem;
+    //   }
+
+    //   &:hover ~ .frame--3 {
+    //     transform: rotate(10deg);
+    //     left: 30.5%;
+    //     top: 10%;
+    //   }
+
+    //   &:hover ~ .frame--4 {
+    //     left: 24.5%;
+    //     bottom: 20%;
+    //     transform: rotate(25deg);
+    //   }
+
+    //   &:hover ~ .frame--5 {
+    //     transform: rotate(-5deg);
+    //     left: 47%;
+    //     top: 66.5%;
+    //   }
+
+    //   &:hover ~ .frame--6 {
+    //     right: 27%;
+    //     top: 2%;
+    //     transform: rotate(-6.19deg);
+    //   }
+
+    //   &:hover ~ .frame--7 {
+    //     right: 21%;
+    //     bottom: 21%;
+    //     transform: rotate(18.84deg);
+    //   }
+
+    //   &:hover ~ .frame--8 {
+    //     top: 5%;
+    //     transform: rotate(10.84deg);
+    //   }
+
+    //   &:hover ~ .frame--9 {
+    //     right: 2%;
+    //     top: 25%;
+    //     transform: rotate(-3deg);
+    //   }
+
+    //   &:hover ~ .frame--10 {
+    //     right: 2%;
+    //     bottom: 7%;
+    //     transform: rotate(-7.85deg);
+    //   }
+    // }
 
     &--3 {
       top: 1.6rem;

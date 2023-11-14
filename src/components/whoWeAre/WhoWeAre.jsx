@@ -10,14 +10,12 @@ const WhoWeAre = ({ lang }) => {
           <>
             <h1 className="section-header">Хто ми?</h1>
             <div className="description">
-              FTech first technologies –{" "}
+              FTech [first technologies] –{" "}
               <span className="green">Ваш вірний союзник</span> у розробці
               програмного забезпечення та CRM-систем.{" "}
-              <span className="next-line"></span>
-              <span className="next-line"></span>
-              <span className="next-line"></span>
               <span className="italic violet ">Ми створюємо</span>{" "}
               бізнес-орієнтовані
+              <span className="next-line"></span>
               <span className="next-line"></span> веб- та мобільні додатки і
               пропонуємо їх бездоганне впровадження, експертну підтримку та
               індивідуальні рекомендації.
