@@ -5,7 +5,7 @@ import mailText from "../../assets/mailText.svg";
 import mailTextEng from "../../assets/mailTextEng.svg";
 import mailIcon from "../../assets/mailIcon.svg";
 
-const MailImage = ({ text = true, lang }) => {
+const MailImage = ({ text = true, lang, className }) => {
   const [isHovered, setIsHovered] = useState(false);
   const imageRef = useRef(null);
   console.log("langgg", lang);
@@ -20,6 +20,7 @@ const MailImage = ({ text = true, lang }) => {
 
   return (
     <Container
+      className={className}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       ref={imageRef}
@@ -87,6 +88,15 @@ const Container = styled.div`
 
   @media screen and (min-width: 1000px) and (max-width: 1400px) {
     margin-left: 0;
+  }
+
+  @media screen and (min-width: 300px) and (max-width: 1000px) {
+    .image__text {
+      &.left {
+        left: 12%;
+        top: -1%;
+      }
+    }
   }
 `;
 

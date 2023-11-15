@@ -144,8 +144,8 @@ const Main = ({
       </div>
 
       <div className="light" style={{ padding: "3rem 0" }}>
-        <div style={{ height: "110vh", overflow: "scroll" }}>
-          <Reviews1 lang={lang} />
+        <div>
+          <Reviews lang={lang} />
         </div>
       </div>
 

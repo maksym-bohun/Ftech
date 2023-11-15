@@ -19,7 +19,6 @@ const Navigation = ({ lang }) => {
   ];
 
   const [showLanguagesContainer, setShowLanguagesContainer] = useState(false);
-  const [currentLang, setCurrentLang] = useState(languages[0]);
   const dispatch = useDispatch();
 
   const openLanguagesListHandler = () => {

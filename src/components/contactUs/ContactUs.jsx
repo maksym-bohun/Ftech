@@ -165,6 +165,8 @@ const Container = styled.section`
           outline: none;
           color: ${colors.lightColor};
           font-size: 24px;
+          word-wrap: break-word;
+          overflow-wrap: break-word;
 
           &:focus {
             border-color: ${colors.primaryGreen};
@@ -177,6 +179,9 @@ const Container = styled.section`
           &::placeholder {
             color: #484848;
             line-height: 31.2px;
+            width: 100%;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
           }
         }
       }
@@ -285,6 +290,103 @@ const Container = styled.section`
 
       .form {
         width: 75%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    padding-bottom: 4rem;
+
+    .section-header {
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    .contact-us {
+      display: flex;
+      flex-direction: column;
+      margin-top: 2rem;
+      gap: 2rem;
+
+      .header {
+        display: flex;
+        line-height: 21.6px;
+        width: 100%;
+        h2 {
+          width: 30%;
+          font-size: 24px;
+          line-height: 28.2px;
+          margin-bottom: 2rem;
+        }
+
+        &__email {
+          font-size: 18px;
+          margin-left: 4rem;
+        }
+      }
+
+      .form .inputs input:last-child {
+        padding-bottom: 2.4rem;
+      }
+
+      .form .inputs input:last-child::placeholder {
+        white-space: normal;
+        font-size: 24px;
+      }
+
+      .form .inputs input:last-child:focus::placeholder {
+        white-space: nowrap;
+      }
+
+      .form .inputs input:last-child:focus {
+        padding-bottom: 1rem;
+      }
+
+      .form {
+        width: 100%;
+      }
+    }
+
+    .contact-us .form {
+      .interests {
+        &__header {
+          margin: 1.4rem 0 0.2rem;
+          width: 100%;
+        }
+
+        gap: 1rem;
+        flex-wrap: wrap;
+
+        &__label {
+          &:nth-child(3) {
+            margin-right: 0rem;
+          }
+        }
+      }
+    }
+
+    .contact-us .form button {
+      align-self: center;
+    }
+  }
+
+  @media screen and (max-width: 390px) {
+    .contact-us {
+      .header {
+        display: flex;
+        flex-direction: column;
+        line-height: 21.6px;
+        width: 100%;
+        h2 {
+          width: 30%;
+          font-size: 24px;
+          line-height: 28.2px;
+          margin-bottom: 0;
+        }
+
+        &__email {
+          font-size: 18px;
+          margin-left: 0;
+        }
       }
     }
   }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { Navigation } from "./navigationStyles";
 
@@ -9,11 +9,18 @@ const NavigationUa = ({
   showLanguagesContainer,
   otherLang,
 }) => {
+  const [menuOpened, setMenuOpened] = useState(false);
+
+  const openMenuHandler = () => {
+    setMenuOpened(!menuOpened);
+    console.log(menuOpened);
+  };
+
   return (
-    <Navigation className="centered">
+    <Navigation className="centered container">
       <div className="logo">FTECH</div>
 
-      <div className="links">
+      {/* <div className="links">
         <ul className="list">
           <li>
             <a href="#">Проєкти</a>
@@ -49,6 +56,12 @@ const NavigationUa = ({
           </li>
         </ul>
         <button>Зв'язатись</button>
+      </div> */}
+      <div
+        className={`menu-btn ${menuOpened && "open"}`}
+        onClick={openMenuHandler}
+      >
+        <div className="menu-btn__burger"></div>
       </div>
     </Navigation>
   );

@@ -61,6 +61,24 @@ const Container = styled.section`
       margin-right: 5rem;
     }
   }
+
+  @media screen and (max-width: 1000px) {
+    .heading {
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 31.2px;
+      padding-left: 0;
+      padding-bottom: 2rem;
+    }
+  }
+
+  @media screen and (max-width: 390px) {
+    .heading {
+      font-size: 18px;
+      line-height: 23.4px;
+      margin-right: 2rem;
+    }
+  }
 `;
 
 export default WhyWe;

@@ -319,6 +319,84 @@ const Container = styled.div`
       }
     }
   }
+
+  @media screen and (max-width: 1000px) {
+    height: 200px;
+    padding-bottom: 1rem;
+    width: 390px;
+    margin: 5rem auto 0;
+
+    .frame {
+      border-radius: 8px;
+      padding: 4px 14px;
+      font-size: 24px;
+
+      &--1 {
+        //
+        left: 2px;
+        bottom: 10rem;
+      }
+
+      &--2 {
+        //
+        left: 14rem;
+        top: -1.4rem;
+      }
+
+      &--3 {
+        //
+        left: 0;
+        top: 4rem;
+        transform: rotate(-27deg);
+      }
+
+      &--4 {
+        //
+        left: 3.6rem;
+        bottom: 4.4rem;
+        transform: rotate(-11deg);
+      }
+
+      &--5 {
+        //
+        left: 0.4rem;
+        top: 9.6rem;
+      }
+
+      &--6 {
+        //
+        right: 0rem;
+        top: 3.9rem;
+        transform: rotate(-16deg);
+      }
+
+      &--7 {
+        //
+        bottom: 1.4rem;
+        right: 8.2rem;
+        transform: rotate(-5deg);
+      }
+
+      &--8 {
+        top: 1.2rem;
+        right: 6.6rem;
+        transform: rotate(0deg);
+      }
+
+      &--9 {
+        //
+        top: 6.4rem;
+        right: 0.6rem;
+      }
+
+      &--10 {
+        //
+        bottom: 0.4rem;
+        right: 0.4rem;
+        transform: rotate(8deg);
+      }
+    }
+  }
 `;
 
 export default Services;

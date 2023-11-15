@@ -58,6 +58,8 @@ const Footer = ({ lang }) => {
 };
 
 const Container = styled.footer`
+  overflow-x: hidden;
+
   .footer {
     display: grid;
     grid-template-columns: 5fr 11fr 6fr;
@@ -126,6 +128,48 @@ const Container = styled.footer`
       &__column--3 {
         grid-column: 2;
         margin-top: -2rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    .footer {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+
+      &__column--1 {
+        display: flex;
+        align-items: end;
+        h2 {
+          margin: 0;
+          padding: 0;
+        }
+        justify-content: space-between;
+      }
+
+      &__column--2 {
+        .contacts {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 2.4rem;
+        }
+      }
+    }
+
+    &__column--3 {
+      div {
+        margin-top: 0.5rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 390px) {
+    .footer {
+      &__column--1 {
+        display: block;
+        h2 {
+          margin-bottom: 1rem;
+        }
       }
     }
   }

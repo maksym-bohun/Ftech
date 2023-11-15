@@ -129,6 +129,29 @@ const Container = styled.section`
   @media screen and (min-width: 1800px) {
     padding-bottom: 5rem;
   }
+
+  @media screen and (max-width: 1000px) {
+    margin-top: 0;
+
+    .statistics {
+      margin-top: 2rem;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      justify-content: space-between;
+      gap: 1rem;
+      grid-column-gap: 1.2rem;
+    }
+  }
+
+  @media screen and (max-width: 390px) {
+    margin-top: 0;
+
+    .statistics {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+  }
 `;
 
 export default OfficialInfo;

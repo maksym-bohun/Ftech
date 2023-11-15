@@ -8,6 +8,21 @@ export const Navigation = styled.nav`
   padding-top: 1.8rem;
   color: ${colors.lightColor};
 
+  .container{
+    display: flex;
+    width: 100%:
+    align-items: center;
+    justify-content: space-between;
+
+    .logo{
+      width: 25%;
+    }
+
+    .links{
+      width: 75%;
+    }
+  }
+
   a:hover,
   a:active {
     animation: changeTextColor 0.5 ease-out forwards;
@@ -162,6 +177,55 @@ export const Navigation = styled.nav`
     font-weight: 700;
     & > span {
       color: ${colors.primaryBlue};
+    }
+  }
+
+  .menu-btn{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+
+
+    &__burger{
+      width: 46px;
+    height: 6px;
+    border-radius:  5px;
+    transition: all 0.5s ease-in-out;
+    background-color: ${colors.primaryViolet};
+    
+    &::before, &::after{
+      content: '';
+      position: absolute;
+      width: 46px;
+      height: 6px;
+      border-radius:  5px;
+      transition: all 0.5s ease-in-out;
+      background-color: ${colors.primaryViolet};
+    }
+
+    &::before{
+      transform: translateY(-13px); 
+    }
+    &::after{
+      transform: translateY(13px); 
+      }
+    }
+
+    &.open .menu-btn__burger{
+      transform: translateX(-50px);
+      background-color: transparent;
+    }
+
+    &.open .menu-btn__burger::before{
+      transform: rotate(45deg) translate(35px, -35px);
+    }
+    &.open .menu-btn__burger::after{
+      transform: rotate(-45deg) translate(35px, 35px);
     }
   }
 `;

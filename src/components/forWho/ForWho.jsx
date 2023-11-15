@@ -173,7 +173,9 @@ const ForWho = ({ lang }) => {
               <span onClick={chooseLabelHandler}>Для державних установ</span>
             )}
             {lang === "ENG" && (
-              <span onClick={chooseLabelHandler}>For Government</span>
+              <span onClick={chooseLabelHandler} className="english">
+                For Government
+              </span>
             )}
           </div>
           <div
@@ -181,10 +183,14 @@ const ForWho = ({ lang }) => {
             className={`label ${currentLabel === "business" ? "active" : ""}`}
           >
             {lang === "UA" && (
-              <span onClick={chooseLabelHandler}>Для бізнесу</span>
+              <span onClick={chooseLabelHandler}>
+                Для<div className="next-line--sm"></div> бізнесу
+              </span>
             )}
             {lang === "ENG" && (
-              <span onClick={chooseLabelHandler}>for Business</span>
+              <span onClick={chooseLabelHandler}>
+                for <div className="next-line--sm"></div> Business
+              </span>
             )}
           </div>
           <div className="rectangle"></div>
@@ -321,6 +327,59 @@ const Container = styled.section`
         height: 270px;
         width: 22%;
       }
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    padding-bottom: 4rem;
+    .next-line {
+      margin-right: 0;
+    }
+
+    .labels {
+      grid-column-gap: 1rem;
+      margin: 0 auto;
+      // width: 95%;
+
+      .next-line--sm {
+        margin-right: 2rem;
+      }
+
+      .label {
+        font-size: 1rem;
+        max-width: 10rem;
+
+        span {
+          padding-left: 0rem;
+
+          &.english {
+            padding-right: 5rem;
+          }
+        }
+      }
+
+      #business.active ~ .rectangle {
+        transform: translateX(calc(100% + 1rem));
+      }
+    }
+
+    .containers {
+      width: 100%;
+      flex-direction: column;
+      gap: 1rem;
+
+      .container {
+        margin: 0 auto;
+        width: 95%;
+        height: 160px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 390px) {
+    padding-bottom: 2rem;
+    .labels .label {
+      font-size: 14px;
     }
   }
 `;

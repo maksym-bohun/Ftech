@@ -208,6 +208,105 @@ const Container = styled.section`
       }
     }
   }
+
+  @media screen and (min-width: 390px) and (max-width: 1000px) {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    .sticky {
+      display: block;
+      .section-header {
+        margin: 0;
+        padding: 0;
+      }
+    }
+
+    .reviews {
+      padding-top: rem;
+      display: flex;
+      width: 100%;
+
+      > div:first-child {
+        display: none;
+      }
+
+      .list-container {
+        width: 100%;
+      }
+
+      .reviews__list {
+        position: relative;
+        overflow-y: scroll;
+        display: flex;
+        flex-direction: column;
+        margin-top: -3rem;
+        gap: 1rem;
+        //   margin-left: 15vh;
+        //   margin-right: -15vh;
+
+        .overlay {
+          background: linear-gradient(
+            to top,
+            ${colors.lightColor},
+            transparent 90%
+          );
+          opacity: 0.75;
+          position: absolute;
+          height: 15%;
+          pointer-events: none;
+          right: 0;
+          left: 0;
+          &--1 {
+            top: 0;
+          }
+          &--2 {
+            bottom: 0;
+          }
+
+          // box-shadow: 0px 10px -5px 50px ${colors.lightColor};
+        }
+
+        .block {
+          background-color: #fff;
+          padding: 20px 36px;
+          padding-right: 50px;
+          border-radius: 16px;
+
+          &:nth-child:(1) {
+            margin-top: 3rem;
+            color: red;
+          }
+
+          &:last-child {
+            margin-bottom: 3rem;
+          }
+
+          &__header {
+            padding: 0;
+            margin: 0;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 28.8px;
+            letter-spacing: 1.8%;
+            text-transform: uppercase;
+          }
+
+          &__text {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 1rem;
+            line-height: 20.8px;
+            letter-spacing: 1.8%;
+            p {
+              padding: 0;
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
 `;
 
 export default Reviews1;

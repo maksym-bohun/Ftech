@@ -35,7 +35,7 @@ const Welcome = ({ lang }) => {
               public institutions.
             </p>
           )}
-          <MailImage lang={lang} />
+          <MailImage lang={lang} className="mail-image--main" />
         </div>
       </div>
     </Container>
@@ -87,6 +87,37 @@ const Container = styled.section`
 
     .text {
       margin-left: 8rem;
+    }
+  }
+
+  @media screen and (min-width: 200px) and (max-width: 1000px) {
+    .header {
+      line-height: 38.4px;
+      font-size: 32px;
+    }
+
+    .text {
+      grid-template-columns: 1fr 1fr 1fr;
+      align-items: center;
+      line-height: 31.2px;
+      margin-left: 0;
+
+      p {
+        grid-column: 3/4;
+        width: 290px;
+        color: ${colors.lightColor};
+        font-size: 16px;
+        line-height: 20.8px;
+        text-transform: uppercase;
+      }
+
+      .mail-image--main {
+        grid-row: 2;
+        grid-column: 3;
+        transform: scale(80%);
+        padding-left: 2rem;
+        margin-top: -1rem;
+      }
     }
   }
 `;

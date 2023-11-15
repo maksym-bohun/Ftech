@@ -5,6 +5,7 @@ import { colors } from "../../styles/colors";
 const Advantages = ({ lang }) => {
   const list = useRef();
   const [overlayOpacity, setOverlayOpacity] = useState(1);
+  const [listIsFull, setListIsFull] = useState(false);
   let blocks = [];
 
   if (lang === "UA")
@@ -62,6 +63,11 @@ const Advantages = ({ lang }) => {
       },
     ];
 
+  const showMoreAdvantagesHandler = () => {
+    setListIsFull(true);
+    console.log("list full");
+  };
+
   const scrollHandler = (e) => {
     if (
       list.current.scrollHeight -
@@ -81,7 +87,11 @@ const Advantages = ({ lang }) => {
         {lang === "UA" && <h1 className="section-header">Переваги</h1>}
         {lang === "ENG" && <h1 className="section-header">Why choose us?</h1>}
         <div className="blocks-container">
-          <div className="blocks-list" onScroll={scrollHandler} ref={list}>
+          <div
+            className={`blocks-list ${listIsFull ? "list-full" : ""}`}
+            onScroll={scrollHandler}
+            ref={list}
+          >
             <div className="overlay" style={{ opacity: overlayOpacity }}></div>
             {blocks.map((block, index) => (
               <div className="block" key={index}>
@@ -91,6 +101,14 @@ const Advantages = ({ lang }) => {
             ))}
           </div>
         </div>
+
+        <button
+          onClick={showMoreAdvantagesHandler}
+          className={`show-more ${listIsFull ? "hidden" : ""}`}
+        >
+          {lang === "UA" && "Показати ще"}
+          {lang === "ENG" && "Show more"}
+        </button>
       </div>
     </Container>
   );
@@ -103,6 +121,10 @@ const Container = styled.section`
   position: relative;
   padding-bottom: 20rem;
   overflow: hidden;
+
+  .show-more {
+    display: none;
+  }
 
   .advantages {
     display: grid;
@@ -193,6 +215,67 @@ const Container = styled.section`
         height: 90vh;
         width: 90%;
       }
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    padding-bottom: 10rem;
+    .advantages {
+      grid-template-columns: 1fr;
+      gap: 0;
+
+      h1 {
+        padding: 0;
+      }
+
+      .overlay {
+        height: 15%;
+      }
+
+      .blocks-list {
+        // width: 100%;
+        height: 120vh;
+        overflow: hidden;
+
+        &.list-full {
+          height: 100% !important;
+
+          & > .overlay {
+            display: none;
+          }
+        }
+
+        .block {
+          flex-direction: column;
+          gap: 1rem;
+
+          &__header {
+            width: 100%;
+            font-size: 16px;
+            line-height: 19.2px;
+          }
+
+          &__text {
+            margin: 0;
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .show-more {
+      display: block;
+      background: ${colors.lightColor};
+      color: ${colors.primaryDarkGray};
+
+      &.hidden {
+        display: none;
+      }
+    }
+    .show-more:hover {
+      border: 1px solid ${colors.lightColor};
+      color: ${colors.lightColor};
+      background: inherit;
     }
   }
 `;

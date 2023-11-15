@@ -15,25 +15,25 @@ const Services = ({ lang }) => {
           number: "01",
           title: "розробка програмного забезпечення",
           content:
-            "Розробляємо платформи, системи, тощо для держави та бізнесу. Ми завжди готові розробити рішення, яке вам буде допомогати.",
+            "Наш ІТ-відділ розробить веб-рішення та додатки відповідно до ваших потреб.",
         },
         {
           number: "02",
           title: "UI/UX Дизайн",
           content:
-            "Розробляємо платформи, системи, тощо для держави та бізнесу. Ми завжди готові розробити рішення, яке вам буде допомогати.",
+            "За потреби ми також можемо розробити сучасний UI/UX дизайн, відповідно до вашого проєкту.",
         },
         {
           number: "03",
           title: "Digital Маркетинг",
           content:
-            "Розробляємо платформи, системи, тощо для держави та бізнесу. Ми завжди готові розробити рішення, яке вам буде допомогати.",
+            "Наша команда цифрового маркетингу може допомогти вам з будь-яким ГЕО, на якому ви зосереджуєтесь для ваших проєктів.",
         },
         {
           number: "04",
           title: "Команда підтримки",
           content:
-            "Розробляємо платформи, системи, тощо для держави та бізнесу. Ми завжди готові розробити рішення, яке вам буде допомогати.",
+            "Ми надаємо вам висококваліфіковану та відповідальну службу підтримки для супроводу розробленого рішення.",
         },
       ]);
     else if (lang === "ENG")
@@ -44,13 +44,11 @@ const Services = ({ lang }) => {
           content:
             "Our IT department is on hand to develop web solutions and applications to meet your needs.",
         },
-        // НЕ ЗАКОНЧЕНО
-
         {
           number: "02",
           title: "UI/UX design",
           content:
-            "Розробляємо платформи, системи, тощо для держави та бізнесу. Ми завжди готові розробити рішення, яке вам буде допомогати.",
+            "Either additionally or separately, we will develop a modern UI/UX design to suit your solution.",
         },
         {
           number: "03",
@@ -89,9 +87,16 @@ const Services = ({ lang }) => {
               className="drop-down__block"
               onClick={openBlockHandler}
             >
-              <div className="drop-down__block__number">{block.number}.</div>
-              <div className="drop-down__block__text">
+              <div className="top">
+                <div className="drop-down__block__number">{block.number}.</div>
                 <div className="drop-down__block__title">{block.title}</div>
+                <img
+                  src={openedBlock == index ? shevronTop : shevronDown}
+                  alt="shevron down"
+                />
+              </div>
+
+              <div className="text">
                 <div
                   className={`drop-down__content ${
                     openedBlock == index ? "" : "hidden"
@@ -100,10 +105,6 @@ const Services = ({ lang }) => {
                   {block.content}
                 </div>
               </div>
-              <img
-                src={openedBlock == index ? shevronTop : shevronDown}
-                alt="shevron down"
-              />
             </div>
           ))}
         </div>
@@ -133,20 +134,26 @@ const Container = styled.section`
       flex-direction: column;
 
       &__block {
-        display: grid;
-        grid-template-columns: 1fr 7fr 3fr;
-        padding: 2rem 0 1rem 0;
         border-bottom: 1px solid ${colors.primaryDarkGray};
         cursor: pointer;
+
+        .top {
+          display: grid;
+          grid-template-columns: 1fr 7fr 3fr;
+          padding: 2rem 0;
+        }
 
         &:first-child {
           border-top: 1px solid ${colors.primaryDarkGray};
         }
 
-        &__text {
-          display: flex;
-          flex-direction: column;
-          gap: 1.4rem;
+        .text {
+          display: grid;
+          grid-template-columns: 1fr 7fr 3fr;
+
+          .drop-down__content {
+            grid-column: 2;
+          }
         }
 
         &__number,
@@ -186,6 +193,21 @@ const Container = styled.section`
     .services-container {
       gap: 8rem;
     }
+
+    .services-container {
+      .drop-down {
+        &__block {
+          .text {
+            display: grid;
+            grid-template-columns: 1fr 10fr 1fr;
+
+            .drop-down__content {
+              grid-column: 2;
+            }
+          }
+        }
+      }
+    }
   }
 
   @media screen and (min-width: 1000px) and (max-width: 1400px) {
@@ -193,6 +215,72 @@ const Container = styled.section`
       .drop-down {
         &__block {
           grid-template-columns: 2fr 15fr 1fr;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    .services-container {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+
+      .drop-down {
+        &__block {
+          .text {
+            display: grid;
+            grid-template-columns: 1fr 7fr 1fr;
+            gap: 1rem;
+
+            .drop-down__content {
+              grid-column: 1/4;
+            }
+          }
+
+          &__number,
+          &__title {
+            font-size: 16px;
+            line-height: 19.2px;
+          }
+
+          &__title {
+            text-transform: uppercase;
+          }
+
+          .hidden {
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+            padding-bottom: 0;
+            transition: all 0.3s;
+          }
+
+          img {
+            justify-self: end;
+          }
+        }
+        &__content {
+          max-height: 100px; /* Достаточно большое значение */
+          overflow: hidden;
+          transition: max-height 0.8s, opacity 1s;
+          padding-bottom: 1rem;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 390px) {
+    .services-container .drop-down {
+      &__block {
+        &__number,
+        &__title {
+          font-size: 14px;
+        }
+
+        img {
+          justify-self: end;
+          width: 18px;
+          height: 18px;
         }
       }
     }

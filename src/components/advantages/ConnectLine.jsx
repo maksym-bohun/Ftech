@@ -14,8 +14,8 @@ const ConnectLine = ({ lang }) => {
       <>
         <div>{text}</div>
         <img src={arrowIcon} alt="arrow icon" />
-        <div>{text}</div>
-        <img src={arrowIcon} alt="arrow icon" className="" />
+        <div className="sm">{text}</div>
+        <img src={arrowIcon} alt="arrow icon" className="sm" />
         <div className="md">{text}</div>
         <img src={arrowIcon} alt="arrow icon" className="md" />
         {/* <div className="md--1">{text}</div>
@@ -43,6 +43,7 @@ const Container = styled.div`
   padding: 1rem 0;
   transform: rotate(2deg);
   z-index: 10;
+  margin-bottom: 2rem;
   .lg {
     display: none;
   }
@@ -52,6 +53,10 @@ const Container = styled.div`
   }
 
   .md--1 {
+    display: block;
+  }
+
+  .sm {
     display: block;
   }
 
@@ -78,6 +83,36 @@ const Container = styled.div`
     }
     .md--1 {
       display: block;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    font-size: 2rem;
+    justify-content: space-around;
+
+    .sm,
+    .md,
+    .md--1 {
+      display: none;
+    }
+  }
+  @media screen and (min-width: 500px) and (max-width: 700px) {
+    font-size: 1.2rem;
+    justify-content: space-around;
+
+    .sm,
+    .md--1 {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 700px) and (max-width: 1000px) {
+    font-size: 1.6rem;
+    justify-content: space-around;
+
+    .sm,
+    .md--1 {
+      display: none;
     }
   }
 `;

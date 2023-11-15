@@ -3,8 +3,12 @@ import styled from "styled-components";
 
 export const MainContainer = styled.main`
   font-family: "Nunito Sans", sans-serif;
-  overflow-x: hidden;
   margin: 0;
+
+  .scroll {
+    max-height: 110vh;
+    overflow: scroll;
+  }
 
   .mail-image {
     position: fixed;
@@ -23,6 +27,7 @@ export const MainContainer = styled.main`
   .dark {
     background: ${colors.primaryDarkGray};
     position: relative;
+    overflow-x: hidden;
 
     .triangle {
       position: absolute;
@@ -52,6 +57,7 @@ export const MainContainer = styled.main`
     &--2 {
       background: ${colors.primaryDarkGray};
       min-height: 49.5rem;
+      overflow: hidden;
 
       .triangle {
         z-index: 1;
@@ -77,6 +83,8 @@ export const MainContainer = styled.main`
     }
 
     &--3 {
+      overflow: hidden;
+
       * {
         z-index: 2;
       }
@@ -121,6 +129,8 @@ export const MainContainer = styled.main`
     color: ${colors.primaryDarkGray};
     z-index: 2;
     &--1 {
+      overflow-x: hidden;
+
       z-index: 2;
       .triangle {
         position: absolute;
@@ -221,6 +231,149 @@ export const MainContainer = styled.main`
         margin-top: 13%;
         margin-left: -20rem;
       }
+    }
+  }
+
+  @media screen and (min-width: 390px) and (max-width: 1000px) {
+    .mail-image {
+      bottom: -1%;
+      right: -15%;
+      z-index: 100;
+      transform: scale(40%);
+      opacity: 1;
+      transition: all 0.3s;
+    }
+
+    .triangle {
+      &--1 {
+        transform: scale(70%);
+        left: -10rem;
+        top: -2rem;
+      }
+
+      &--2 {
+        transform: scale(70%);
+        left: -12rem;
+      }
+
+      &--3 {
+        transform: scale(70%) translate(16rem, -14rem);
+        // left: -12rem;
+      }
+
+      &--4 {
+        transform: scale(30%) translate(1200px, 12rem);
+      }
+
+      &--5 {
+        opacity: 0;
+      }
+
+      &--6 {
+        opacity: 0;
+      }
+
+      &--7 {
+        opacity: 0;
+      }
+
+      &--8 {
+        opacity: 0;
+      }
+
+      &--9 {
+        transform: translateX(-10rem);
+      }
+
+      &--10 {
+        opacity: 0;
+      }
+
+      &--11 {
+        transform: translate(-20rem, 14rem);
+      }
+      &--12 {
+        opacity: 0;
+      }
+      &--13 {
+        transform: translate(-15rem, 0);
+      }
+    }
+    .scroll {
+      max-height: 40rem;
+      overflow: hidden;
+    }
+  }
+
+  @media screen and (max-width: 390px) {
+    .mail-image {
+      bottom: -1%;
+      right: -15%;
+      z-index: 100;
+      transform: scale(40%);
+      opacity: 1;
+      transition: all 0.3s;
+    }
+
+    overflow-x: hidden;
+    .triangle {
+      &--1 {
+        transform: scale(70%);
+        left: -10rem;
+        top: -2rem;
+      }
+
+      &--2 {
+        transform: scale(70%);
+        left: -12rem;
+      }
+
+      &--3 {
+        transform: scale(70%) translate(16rem, -14rem);
+        // left: -12rem;
+      }
+
+      &--4 {
+        transform: scale(30%) translate(1200px, 12rem);
+      }
+
+      &--5 {
+        opacity: 0;
+      }
+
+      &--6 {
+        opacity: 0;
+      }
+
+      &--7 {
+        opacity: 0;
+      }
+
+      &--8 {
+        opacity: 0;
+      }
+
+      &--9 {
+        transform: translateX(-10rem);
+      }
+
+      &--10 {
+        opacity: 0;
+      }
+
+      &--11 {
+        transform: translate(-20rem, 14rem);
+      }
+      &--12 {
+        opacity: 0;
+      }
+      &--13 {
+        transform: translate(-15rem, 0);
+      }
+    }
+    .scroll {
+      max-height: 40rem;
+      overflow: hidden;
     }
   }
 `;

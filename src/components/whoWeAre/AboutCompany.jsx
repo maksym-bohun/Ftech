@@ -79,12 +79,6 @@ const Container = styled.div`
     }
 
     h1 {
-      margin-top: 5rem;
-      font-weight: 400;
-      text-transform: uppercase;
-      font-size: 46px;
-      line-height: 60px;
-      letter-spacing: 1.8%;
       // margin-right: 1rem;
 
       &.english {
@@ -97,6 +91,34 @@ const Container = styled.div`
         &.english {
           margin-left: 9rem;
         }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    padding-bottom: 3rem;
+
+    h2 {
+      width: 100%;
+      padding-top: 70px;
+    }
+
+    h1 {
+      margin-top: 3rem;
+      font-size: 22px;
+      line-height: 31px;
+      letter-spacing: 1.8%;
+
+      span {
+        margin-left: 0rem;
+      }
+
+      &.english {
+        margin-right: 3rem;
+      }
+
+      .english {
+        margin-left: 0;
       }
     }
   }

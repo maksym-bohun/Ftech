@@ -142,5 +142,20 @@ const Container = styled.div`
       padding: 20px;
     }
   }
+
+  @media screen and (max-width: 1000px) {
+    .cards-container {
+      flex-direction: column;
+      gap: 1.4rem;
+
+      .card {
+        width: 90%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-rows: 2fr 3fr;
+        gap: 0rem;
+      }
+    }
+  }
 `;
 export default Cards;
