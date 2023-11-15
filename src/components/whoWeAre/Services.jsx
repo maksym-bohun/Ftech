@@ -319,8 +319,69 @@ const Container = styled.div`
       }
     }
   }
-
   @media screen and (max-width: 1000px) {
+    height: 200px;
+    padding-bottom: 1rem;
+    width: 390px;
+    margin: 5rem auto 0;
+
+    .frame {
+      border-radius: 8px;
+      padding: 4px 14px;
+      font-size: 24px;
+
+      &--1 {
+        left: -12rem;
+        bottom: 1.2rem;
+      }
+
+      &--2 {
+        left: -7rem;
+        top: 6.6rem;
+      }
+
+      &--3 {
+        top: 5rem;
+        left: 1.6rem;
+      }
+
+      &--4 {
+        left: 1.6rem;
+        bottom: 1.4rem;
+      }
+
+      &--5 {
+        left: 9.6rem;
+        top: 10.4rem;
+      }
+
+      &--6 {
+        right: 3.6rem;
+        top: 5.2rem;
+      }
+
+      &--7 {
+        bottom: 1rem;
+        right: -1rem;
+      }
+
+      &--8 {
+        right: -3rem;
+        top: 5.4rem;
+      }
+
+      &--9 {
+        right: -10rem;
+        top: 5rem;
+      }
+
+      &--10 {
+        right: -10rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 760px) {
     height: 200px;
     padding-bottom: 1rem;
     width: 390px;

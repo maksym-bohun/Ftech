@@ -184,12 +184,12 @@ const ForWho = ({ lang }) => {
           >
             {lang === "UA" && (
               <span onClick={chooseLabelHandler}>
-                Для<div className="next-line--sm"></div> бізнесу
+                Для<span className="next-line--sm"></span> бізнесу
               </span>
             )}
             {lang === "ENG" && (
               <span onClick={chooseLabelHandler}>
-                for <div className="next-line--sm"></div> Business
+                for <span className="next-line--sm english"></span> Business
               </span>
             )}
           </div>
@@ -331,6 +331,46 @@ const Container = styled.section`
   }
 
   @media screen and (max-width: 1000px) {
+    padding-bottom: 4rem;
+
+    .labels {
+      grid-column-gap: 3rem;
+      border-bottom: 1px solid ${colors.primaryDarkGray};
+      .label {
+        text-transform: uppercase;
+        font-size: 1.5rem;
+
+        span {
+          padding: 0rem;
+          cursor: pointer;
+        }
+
+        .next-line--sm {
+          margin-right: 15rem;
+
+          &.english {
+            margin: 0;
+          }
+        }
+
+        &.active {
+          font-weight: 700;
+        }
+      }
+    }
+    .containers {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 2rem;
+
+      .container {
+        width: 95%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 760px) {
     padding-bottom: 4rem;
     .next-line {
       margin-right: 0;

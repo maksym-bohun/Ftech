@@ -67,7 +67,7 @@ const ContactUs = ({ lang }) => {
             <div className="header__email">info@ftech.com.ua</div>
           </div>
 
-          <div className="form">
+          <div className={`form ${lang === "ENG" ? "english" : ""}`}>
             <div className="inputs">
               <input type="text" required placeholder={placeholders[0]} />
               <input type="email" required placeholder={placeholders[1]} />
@@ -295,6 +295,68 @@ const Container = styled.section`
   }
 
   @media screen and (max-width: 1000px) {
+    .contact-us {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      margin-top: 2rem;
+      gap: 2rem;
+
+      .header {
+        line-height: 21.6px;
+        width: 100%;
+        h2 {
+          width: 100%;
+          font-size: 36px;
+          line-height: 43.2px;
+        }
+
+        &__email {
+          font-size: 18px;
+        }
+      }
+      .form {
+        width: 100%;
+
+        .interests {
+          &__header {
+            margin: 1.4rem 0 0.2rem;
+            width: 100%;
+          }
+
+          display: flex;
+          gap: 1rem;
+          flex-wrap: wrap;
+
+          &__label {
+            &:nth-child(3) {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+    .form .inputs input:last-child {
+      padding-bottom: 2.4rem;
+    }
+
+    .form .inputs input:last-child::placeholder {
+      white-space: normal;
+      font-size: 24px;
+    }
+
+    .form .inputs input:last-child:focus::placeholder {
+      white-space: nowrap;
+    }
+
+    .form .inputs input:last-child:focus {
+      padding-bottom: 1rem;
+    }
+    .form.english .inputs input:last-child {
+      padding-bottom: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 760px) {
     padding-bottom: 4rem;
 
     .section-header {

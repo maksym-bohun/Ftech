@@ -64,6 +64,16 @@ const Container = styled.section`
 
   @media screen and (max-width: 1000px) {
     .heading {
+      margin: 0;
+      padding: 0;
+      margin-bottom: 5rem;
+
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 760px) {
+    .heading {
       font-size: 24px;
       font-weight: 400;
       line-height: 31.2px;

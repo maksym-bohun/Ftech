@@ -196,6 +196,23 @@ const Container = styled.section`
   }
 
   @media screen and (max-width: 1000px) {
+    grid-template-columns: 1fr 4fr;
+
+    .reviews {
+      position: relative;
+
+      &__container {
+        .block {
+          &__header {
+            font-size: 20px;
+            line-height: 24.8px;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 760px) {
     padding-top: 0;
     grid-template-columns: 1fr;
     overflow: hidden;

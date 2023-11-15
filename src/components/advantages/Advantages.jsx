@@ -219,6 +219,52 @@ const Container = styled.section`
   }
 
   @media screen and (max-width: 1000px) {
+    padding-bottom: 7rem;
+
+    h1 {
+      line-height: 20px;
+    }
+
+    .advantages {
+      display: grid;
+      grid-template-columns: 2fr 9fr;
+      gap: 2rem;
+
+      .blocks-list {
+        height: 35rem;
+        width: 100%;
+      }
+
+      .blocks-list {
+        display: flex;
+        flex-direction: column;
+        // width: 100%;
+        height: 76vh;
+        overflow: scroll;
+        overflow-x: hidden;
+
+        .block {
+          width: 100%;
+          display: grid;
+          grid-template-columns: 2fr 3fr;
+          gap: 1rem;
+          padding: 2rem 1rem 2rem 0;
+          border-bottom: 1px solid ${colors.lightColor};
+
+          &__header {
+            width: 100%;
+          }
+
+          &__text {
+            margin: 0;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 760px) {
     padding-bottom: 10rem;
     .advantages {
       grid-template-columns: 1fr;

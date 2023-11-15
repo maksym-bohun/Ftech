@@ -222,6 +222,18 @@ const Container = styled.section`
 
   @media screen and (max-width: 1000px) {
     .services-container {
+      gap: 3rem;
+      .drop-down {
+        &__content {
+          grid-column: 1/4 !important;
+          padding-right: 2rem;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 760px) {
+    .services-container {
       grid-template-columns: 1fr;
       gap: 2rem;
 

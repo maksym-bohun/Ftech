@@ -134,6 +134,17 @@ const Container = styled.section`
     margin-top: 0;
 
     .statistics {
+      margin-top: 4rem;
+      justify-content: space-between;
+      gap: 1rem;
+      grid-column-gap: 1.2rem;
+    }
+  }
+
+  @media screen and (max-width: 760px) {
+    margin-top: 0;
+
+    .statistics {
       margin-top: 2rem;
       display: grid;
       grid-template-columns: 2fr 1fr;

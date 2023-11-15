@@ -75,7 +75,7 @@ const Container = styled.section`
     }
   }
 
-  @media screen and (min-width: 1000px) and (max-width: 1400px) {
+  @media screen and (max-width: 1400px) {
     .header {
       line-height: 55.2px;
       font-size: 46px;
@@ -90,18 +90,35 @@ const Container = styled.section`
     }
   }
 
-  @media screen and (min-width: 200px) and (max-width: 1000px) {
-    .header {
-      line-height: 38.4px;
-      font-size: 32px;
-    }
-
+  @media screen and (max-width: 1000px) {
     .text {
       grid-template-columns: 1fr 1fr 1fr;
       align-items: center;
       line-height: 31.2px;
       margin-left: 0;
 
+      p {
+        grid-column: 2/4;
+        width: 545px;
+        font-size: 24px;
+        line-height: 31.2px;
+      }
+
+      .mail-image--main {
+        grid-column: 3/4;
+        padding-left: 2rem;
+        margin-left: 5rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 760px) {
+    .header {
+      line-height: 38.4px;
+      font-size: 32px;
+    }
+
+    .text {
       p {
         grid-column: 3/4;
         width: 290px;

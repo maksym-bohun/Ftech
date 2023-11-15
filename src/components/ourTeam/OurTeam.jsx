@@ -11,7 +11,7 @@ const OurTeam = ({ lang }) => {
         {lang === "ENG" && <div className="section-header">Our team </div>}
 
         <div className={`content ${lang === "ENG" && "content--english"}`}>
-          <img src={officeImage} alt="our office" />
+          <img src={officeImage} alt="our office" className="image" />
           <img
             src={officeImageMobile}
             alt="our office"
@@ -85,18 +85,40 @@ const Container = styled.section`
     padding-bottom: 7rem;
   }
 
-  @media screen and (min-width: 1000px) and (max-width: 1400px) {
+  @media screen and (max-width: 1400px) {
     .content {
       gap: 2rem;
     }
   }
 
   @media screen and (max-width: 1000px) {
+    .image--mobile {
+      display: none !important;
+    }
+
+    .next-line {
+      margin: 0 !important;
+    }
+
+    .content {
+      .text {
+        font-size: 22px;
+        line-height: 31px;
+        margin-right: 2rem;
+      }
+
+      .image {
+        display: block;
+      }
+    }
+  }
+
+  @media screen and (max-width: 760px) {
     padding-bottom: 4rem;
     max-height: 34rem;
 
     .content {
-      img {
+      .image {
         display: none;
       }
       .image--mobile {

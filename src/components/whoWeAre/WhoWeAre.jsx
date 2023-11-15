@@ -12,8 +12,9 @@ const WhoWeAre = ({ lang }) => {
             <div className="description">
               FTech [first technologies] –{" "}
               <span className="green">Ваш вірний союзник</span> у розробці
-              програмного забезпечення <div className="next-line--sm"></div> та
-              CRM-систем. <span className="italic violet ">Ми створюємо</span>{" "}
+              програмного забезпечення <span className="next-line--sm"></span>{" "}
+              та CRM-систем.{" "}
+              <span className="italic violet ">Ми створюємо</span>{" "}
               бізнес-орієнтовані
               <span className="next-line sm"></span>
               <span className="next-line sm"></span> веб- та мобільні додатки і
@@ -45,6 +46,7 @@ const Container = styled.section`
   margin-bottom: 0;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 
   .description {
     padding-top: 1rem;
@@ -58,6 +60,10 @@ const Container = styled.section`
 
   .next-line {
     margin-right: 4rem;
+  }
+
+  .next-line--sm {
+    margin: 0;
   }
 
   @media screen and (min-width: 1800px) {
@@ -80,6 +86,19 @@ const Container = styled.section`
   }
 
   @media screen and (max-width: 1000px) {
+    .description {
+      padding-top: 1rem;
+      font-size: 36px;
+      line-height: 46px;
+      margin-right: 0;
+    }
+
+    .next-line {
+      margin-right: 7rem;
+    }
+  }
+
+  @media screen and (max-width: 760px) {
     .description {
       padding-top: 1rem;
       font-size: 20px;

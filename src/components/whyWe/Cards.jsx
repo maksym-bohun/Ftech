@@ -145,6 +145,18 @@ const Container = styled.div`
 
   @media screen and (max-width: 1000px) {
     .cards-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .card {
+      width: 90%;
+    }
+  }
+
+  @media screen and (max-width: 760px) {
+    .cards-container {
       flex-direction: column;
       gap: 1.4rem;
 

@@ -86,11 +86,20 @@ const Container = styled.div`
     }
   }
 
-  @media screen and (min-width: 1000px) and (max-width: 1400px) {
+  @media screen and (max-width: 1400px) {
     margin-left: 0;
   }
 
-  @media screen and (min-width: 300px) and (max-width: 1000px) {
+  @media screen and (max-width: 1000px) {
+    .image__text {
+      &.left {
+        left: 12%;
+        top: -1%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 760px) {
     .image__text {
       &.left {
         left: 12%;

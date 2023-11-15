@@ -99,6 +99,30 @@ const Container = styled.div`
     padding-bottom: 3rem;
 
     h2 {
+    }
+
+    h1 {
+      margin-top: 6rem;
+      letter-spacing: 1.8%;
+
+      span {
+        margin-left: 0rem;
+      }
+
+      &.english {
+        margin-right: 3rem;
+      }
+
+      .english {
+        margin-left: 0;
+      }
+    }
+  }
+
+  @media screen and (max-width: 760px) {
+    padding-bottom: 3rem;
+
+    h2 {
       width: 100%;
       padding-top: 70px;
     }

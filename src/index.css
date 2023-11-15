@@ -221,7 +221,13 @@ body {
   }
 }
 
-@media screen and (min-width: 390px) and (max-width: 1000px) {
+@media screen and (max-width: 1000px) {
+  .centered {
+    width: 688px;
+  }
+}
+
+@media screen and (max-width: 760px) {
   .centered {
     width: 370px;
   }
