@@ -101,6 +101,7 @@ const Reviews1 = ({ lang }) => {
 const Container = styled.section`
   position: relative;
   padding: 1rem auto;
+  overflow: hidden;
 
   .reviews {
     padding-top: 7rem;
@@ -193,7 +194,7 @@ const Container = styled.section`
     }
   }
 
-  @media screen and (min-width: 1000px) and (max-width: 1400px) {
+  @media screen and (max-width: 1400px) {
     .reviews {
       > div:first-child {
         width: 18%;
@@ -209,7 +210,7 @@ const Container = styled.section`
     }
   }
 
-  @media screen and (min-width: 390px) and (max-width: 1000px) {
+  @media screen and (max-width: 1000px) {
     display: grid;
     grid-template-columns: 1fr;
 

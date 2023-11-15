@@ -271,7 +271,7 @@ const Container = styled.section`
     }
   }
 
-  @media screen and (min-width: 1000px) and (max-width: 1400px) {
+  @media screen and (max-width: 1400px) {
     .contact-us {
       display: flex;
       margin-top: 5rem;

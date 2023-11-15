@@ -192,7 +192,7 @@ export const MainContainer = styled.main`
     }
   }
 
-  @media screen and (min-width: 1000px) and (max-width: 1400px) {
+  @media screen and (max-width: 1400px) {
     .triangle {
       &--1 {
         margin-left: -2.4rem;
@@ -234,7 +234,10 @@ export const MainContainer = styled.main`
     }
   }
 
-  @media screen and (min-width: 390px) and (max-width: 1000px) {
+  @media screen and (max-width: 1000px) {
+  }
+
+  @media screen and (max-width: 760px) {
     .mail-image {
       bottom: -1%;
       right: -15%;
@@ -252,13 +255,12 @@ export const MainContainer = styled.main`
       }
 
       &--2 {
-        transform: scale(70%);
-        left: -12rem;
+        transform: scale(70%) translateX(-10rem);
+        left: -1rem;
       }
 
       &--3 {
         transform: scale(70%) translate(16rem, -14rem);
-        // left: -12rem;
       }
 
       &--4 {
@@ -325,7 +327,7 @@ export const MainContainer = styled.main`
 
       &--2 {
         transform: scale(70%);
-        left: -12rem;
+        left: -9rem;
       }
 
       &--3 {

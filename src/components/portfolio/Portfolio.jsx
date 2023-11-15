@@ -1,252 +1,371 @@
 import React from "react";
 import styled from "styled-components";
 import { colors } from "../../styles/colors";
+import eRoad from "../../assets/eRoad.svg";
+import mayorsService from "../../assets/mayorsService.svg";
+import kiberSecurity from "../../assets/kiberSecurity.svg";
+import eCherga from "../../assets/eCherga.svg";
+import { BsArrowUpRight } from "react-icons/bs";
 
-const Portfolio = () => {
-  const items = [
-    <div className="card">
-      <div className="card__side card__side--front"></div>
-      <div className="card__side card__side--back">
-        <div className="content">
-          <h3>ТИПУ ХОВЕР</h3>
-          <p>
-            А тут текст ще про опис шо ми їбать ведемо провект от і до кароче
-            можна ще по пунктах шось перечисліть в стілі:
-          </p>
-          <ul>
-            <li>пункт 1 тут ще буков трекба</li>
-            <li>пункт 2 букви</li>
-            <li>пункт 3 шось там я хз</li>
-            <li>пункт 4 бла блабла</li>
-          </ul>
-          <p>
-            тут шото ще текст я хз шо писать бла бла бла бла треба більше інфи і
-            копірайтер якийсь я хз блабалбла пес патро байрактар
-          </p>
-          <button>Дивитись</button>
-        </div>
-      </div>
-    </div>,
-
-    <div className="card">
-      <div className="card__side card__side--front"></div>
-      <div className="card__side card__side--back">
-        <div className="content">
-          <h3>ТИПУ ХОВЕР</h3>
-          <p>
-            А тут текст ще про опис шо ми їбать ведемо провект от і до кароче
-            можна ще по пунктах шось перечисліть в стілі:
-          </p>
-          <ul>
-            <li>пункт 1 тут ще буков трекба</li>
-            <li>пункт 2 букви</li>
-            <li>пункт 3 шось там я хз</li>
-            <li>пункт 4 бла блабла</li>
-          </ul>
-          <p>
-            тут шото ще текст я хз шо писать бла бла бла бла треба більше інфи і
-            копірайтер якийсь я хз блабалбла пес патро байрактар
-          </p>
-          <button>Дивитись</button>
-        </div>
-      </div>
-    </div>,
-
-    <div className="card">
-      <div className="card__side card__side--front"></div>
-      <div className="card__side card__side--back">
-        <div className="content">
-          <h3>ТИПУ ХОВЕР</h3>
-          <p>
-            А тут текст ще про опис шо ми їбать ведемо провект от і до кароче
-            можна ще по пунктах шось перечисліть в стілі:
-          </p>
-          <ul>
-            <li>пункт 1 тут ще буков трекба</li>
-            <li>пункт 2 букви</li>
-            <li>пункт 3 шось там я хз</li>
-            <li>пункт 4 бла блабла</li>
-          </ul>
-          <p>
-            тут шото ще текст я хз шо писать бла бла бла бла треба більше інфи і
-            копірайтер якийсь я хз блабалбла пес патро байрактар
-          </p>
-          <button>Дивитись</button>
-        </div>
-      </div>
-    </div>,
-
-    <div className="card">
-      <div className="card__side card__side--front"></div>
-      <div className="card__side card__side--back">
-        <div className="content">
-          <h3>ТИПУ ХОВЕР</h3>
-          <p>
-            А тут текст ще про опис шо ми їбать ведемо провект от і до кароче
-            можна ще по пунктах шось перечисліть в стілі:
-          </p>
-          <ul>
-            <li>пункт 1 тут ще буков трекба</li>
-            <li>пункт 2 букви</li>
-            <li>пункт 3 шось там я хз</li>
-            <li>пункт 4 бла блабла</li>
-          </ul>
-          <p>
-            тут шото ще текст я хз шо писать бла бла бла бла треба більше інфи і
-            копірайтер якийсь я хз блабалбла пес патро байрактар
-          </p>
-          <button>Дивитись</button>
-        </div>
-      </div>
-    </div>,
-
-    <div className="card">
-      <div className="card__side card__side--front"></div>
-      <div className="card__side card__side--back">
-        <div className="content">
-          <h3>ТИПУ ХОВЕР</h3>
-          <p>
-            А тут текст ще про опис шо ми їбать ведемо провект от і до кароче
-            можна ще по пунктах шось перечисліть в стілі:
-          </p>
-          <ul>
-            <li>пункт 1 тут ще буков трекба</li>
-            <li>пункт 2 букви</li>
-            <li>пункт 3 шось там я хз</li>
-            <li>пункт 4 бла блабла</li>
-          </ul>
-          <p>
-            тут шото ще текст я хз шо писать бла бла бла бла треба більше інфи і
-            копірайтер якийсь я хз блабалбла пес патро байрактар
-          </p>
-          <button>Дивитись</button>
-        </div>
-      </div>
-    </div>,
-  ];
+const Portfolio = ({ lang }) => {
+  const showMoreProjectsHandler = () => {};
 
   return (
-    <Container>
-      <h2>Портфоліо</h2>
-      <h1>
-        МИ ДАЄМО БІЛЬШЕ, НІЖ ВИ ОЧІКУЄТЕ, БО ШУКАЄМО РІШЕННЯ, ЯКЕ{" "}
-        <span>ПРАЦЮЄ НА 100%</span>
-      </h1>
+    <Container className="centered">
+      <h1 className="section-header">Портфоліо</h1>
+      <div className="e-road">
+        <img src={eRoad} alt="E-road demo" className="e-road__image" />
+        <div className="e-road__description">
+          <div className="text">
+            <h2>E-road</h2>
+            <p>
+              Це система для автоматизації всього циклу будівництва та
+              експлуатації дорожньої мережі країни. Наша інтегрована система
+              планування передбачає організацію збору даних про об'єкти, що
+              потребують ремонту або нового будівництва, визначення пріоритетів
+              на основі експертних оцінок та зовнішніх автоматизованих систем.
+            </p>
+          </div>
+          <a href="#" className="more-detail">
+            <span> детальніше</span>
+            <div className="image">
+              <BsArrowUpRight size={32} strokeWidth={0.6} />
+            </div>
+          </a>
+        </div>
+      </div>
 
-      <div className="carousel">{items.map((item) => item)}</div>
+      <div className="projects">
+        <div className="project">
+          <div className="project__side project__side--front">
+            <h2> Служба мера Києва - 1551 CRM-система</h2>
+            <img
+              src={mayorsService}
+              alt="Служба мера Києва - 1551 CRM-система"
+            />
+          </div>
+          <div className="project__side project__side--back">
+            <h2> Служба мера Києва - 1551 CRM-система</h2>
+            <a href="#" className="more-detail">
+              <span> детальніше</span>
+              <div className="image">
+                <BsArrowUpRight size={32} strokeWidth={0.6} />
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div className="project">
+          <div className="project__side project__side--front">
+            <h2>нкцк - Національна система кібербезпеки</h2>
+            <img
+              src={kiberSecurity}
+              alt="нкцк - Національна система кібербезпеки"
+            />
+          </div>
+          <div className="project__side project__side--back">
+            <h2>нкцк - Національна система кібербезпеки</h2>
+            <a href="#" className="more-detail">
+              <span> детальніше</span>
+              <div className="image">
+                <BsArrowUpRight size={32} strokeWidth={0.6} />
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div className="project">
+          <div className="project__side project__side--front">
+            <h2>
+              Агенство відновлення - <span className="next-line--sm"></span>
+              е-черга
+            </h2>
+            <img src={eCherga} alt="Агенство відновлення - е-черга" />
+          </div>
+          <div className="project__side project__side--back">
+            <h2>
+              Агенство відновлення - <span className="next-line--sm"></span>
+              е-черга
+            </h2>
+            <a href="#" className="more-detail">
+              <span> детальніше</span>
+              <div className="image">
+                <BsArrowUpRight size={32} strokeWidth={0.6} />
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <button onClick={showMoreProjectsHandler} className="show-more ">
+        {lang === "UA" && "Показати ще"}
+        {lang === "ENG" && "Show more"}
+      </button>
     </Container>
   );
 };
 
 const Container = styled.section`
-  margin: 5rem 0 10rem 0;
-  width: 90vw;
-  margin-right: 0;
-  overflow-x: hidden;
-
-  .carousel {
-    width: 90vw;
+  .more-detail {
     display: flex;
-    gap: 2rem;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    padding: 0 5rem 2rem 0;
-
-    &::-webkit-scrollbar {
-      height: 8px;
-      background-color: ${colors.primaryGray};
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 24px;
+    gap: 1rem;
+    align-self: flex-end;
+    padding: 0.5rem 0;
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: ${colors.primaryDarkGray};
     }
-
-    &::-webkit-scrollbar-thumb {
-      background-color: ${colors.primaryBlue};
-      border-radius: 10px;
-      width: 24px;
+    .image {
+      height: 50px;
+      width: 50px;
+      background-color: ${colors.primaryYellow};
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 
-  .card {
-    display: inline-block;
-    margin: 5rem 0 5rem 0;
-    height: 38.5rem;
-    min-width: 460px;
-    perspective: 150rem;
-    -moz-perspective: 150rem;
-    position: relative;
+  .show-more{
+    background-color: ${colors.primaryDarkGray};
+    margin-top: 5rem;
+    
+    &:hover{
+      transform: scale(101%);
+      cursor: pointer;
+    }
+  }
+    
 
-    &__side {
-      height: 100%;
-      transition: all 0.8s ease;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      -webkit-backface-visibility: hidden;
-      backface-visibility: hidden;
-      border-radius: 25px;
-      overflow: hidden;
-      box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+    .e-road {
+      display: flex;
+      gap: 3rem;
+      .text{
+        h2{
+        text-transform: uppercase;}
+      }
+    }
 
-      .content {
-        padding: 2rem;
-        font-size: 1.2rem;
-        h3 {
-          font-size: 2rem;
-          margin: 0 0 1rem 0;
+    &__image {
+      width: 640px;
+    }
+
+    &__description {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+
+  .projects {
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.6rem;
+    min-height: 20rem;
+
+    .project {
+      perspective: 150rem;
+      -moz-perspective: 150rem;
+      position: relative;
+      max-width: 20rem;
+
+      &__side {
+        transition: all 0.8s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+        padding: 1rem;
+        display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+        &--front {
+          background-color: ${colors.secondaryDarkGray};
+          
+          align-items: center;
+          padding-bottom: 0;
+          gap: 1rem;
+          width: 100%;
         }
 
-        button {
-          margin: 3.8rem 40% 1rem 60%;
-          background-color: transparent;
-          border: 1px solid #fff;
-          padding: 1rem 2rem;
-          border-radius: 10px;
-          font-size: 1rem;
-          text-transform: uppercase;
-          font-weight: 600;
-          transition: all 0.3s;
+        &--back {
+          transform: rotateY(180deg);
+          background-color: ${colors.secondaryDarkGray};
+          width: 100%;
+          height: 100%;
+         
+        
 
-          &:hover {
-            color: ${colors.primaryBlue};
-            cursor: pointer;
-            background-color: #fff;
+          .more-detail{
+            span{
+              color: ${colors.lightColor}
+            }
+           align-self: flex-start;
           }
         }
       }
 
-      &--front {
-        background-color: ${colors.primaryGray};
+      &:hover .project__side--front {
+        transform: rotateY(-180deg);
       }
 
-      &--back {
-        background-color: ${colors.primaryBlue};
-        transform: rotateY(180deg);
+      &:hover .project__side--back {
+        transform: rotateY(0);
+      }
+
+      h2 {
+        color: ${colors.lightColor};
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 23px;
+        line-height: 28.8px;
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+
+  
+  @media screen  and (max-width: 1400px) {
+    .e-road {
+      flex-direction: column;
+
+      &__description{
+        display: flex;
+        gap: 2rem;
+        justify-content: space-between;
+        .text{
+          width: 580px;
+        }
       }
     }
 
-    &:hover .card__side--front {
-      transform: rotateY(-180deg);
-    }
+    .projects .project{
+      transform: scale(95%);
 
-    &:hover .card__side--back {
-      transform: rotateY(0);
+      &__side{
+        padding: 0.5rem;
+        padding-bottom: 0;
+         
+      }
     }
   }
-  h2 {
-    color: ${colors.primaryBlue};
-    margin-bottom: 3rem;
-    text-transform: uppercase;
-    font-weight: 800;
+
+  @media screen  and (max-width: 1000px) {
+
+    .e-road{
+     .text{
+      width: 50%;
+     }
+
+     .more-detail{
+      *{ font-size: 24px;}
+
+      .image{
+        height: 50px !important;
+        width: 50px !important;
+      }
+
+      svg{
+        height: 32px;
+        width: 32px;
+      }
+     }
+    }
+
+    .more-detail {
+      *{
+        font-size: 18px;
+      }
+
+      svg{
+        height: 24px;
+        width: 24px;
+      }
+
+      .image {
+        height: 30px !important;
+        width: 30px !important;
+        border-radius: 50%;
+      }
+    }
+
+    .projects .project{
+      &__side{
+        padding: 0.5rem;
+        padding-bottom: 0;
+        height: 19rem;
+
+        h2{
+          font-size: 19px;
+        }
+
+        .next-line--sm{
+          margin-right: 3rem;
+        }
+        &--front{
+          
+          img{
+            width: 200px;
+          }
+        }
+      }
+    }
   }
 
-  h1 {
-    color: #000;
-    width: 90%;
-    font-size: 2.6rem;
-    line-height: 3.2rem;
+  @media screen  and (max-width: 760px) {
+    .e-road{
+      .text{
+       width: 50%;
+      }
+      &__description{
+        flex-direction: column;
 
-    span {
-      color: ${colors.primaryBlue};
+        .text{
+          width: 100%;
+        }
+
+        .more-detail{
+          align-self: center;
+        }
+      }
+    }
+
+    .projects{
+      grid-template-columns: 1fr 1fr;
+
+      .project:nth-child(n+3) {
+        display: none; 
+      }
+
+      &.all-projects .project:nth-child(n+3) {
+        display: flex; 
+      }
+    }
+  }
+
+  @media screen  and (max-width: 390px) {
+    .projects{
+      grid-template-columns: 1fr ;
+      min-height: 30rem;
+
+      .project{
+        &__side{
+          max-height: 14rem;
+        }
+      }
     }
   }
 `;
+
 export default Portfolio;

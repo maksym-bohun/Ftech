@@ -29,6 +29,7 @@ import Footer from "../footer/Footer";
 import MailImage from "../aboutUs/MailImage";
 import Navigation from "../navigation/Navigation";
 import { MainContainer } from "./mainStyles";
+import Portfolio from "../portfolio/Portfolio";
 
 const Main = ({
   mailImageRef,
@@ -114,6 +115,7 @@ const Main = ({
       </div>
 
       <div className="light">
+        <Portfolio lang={lang} />
         <Services lang={lang} />
       </div>
 

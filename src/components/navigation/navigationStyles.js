@@ -5,14 +5,97 @@ export const Navigation = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 1.8rem;
   color: ${colors.lightColor};
 
+  >div{
+    width: 100%;
+
+    .menu{
+      transition: all 0.5s;
+      display: flex;
+        flex-direction: column;
+        align-items: center;
+      max-height: 100%;
+
+      button{
+        width: 90%;
+        margin: 3rem 0 2rem;
+      }
+
+      .list{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+      }
+      
+      &--hidden{
+        opacity: 0;
+        pointer-events: none;
+        max-height: 0;
+      }
+    }
+  }
+
+  .menu-opened{
+    background-color: ${colors.secondaryDarkGray};
+    transition: all 0.3s;
+
+    .menu{
+      transition: all 0.5s;
+      display: flex;
+        flex-direction: column;
+        align-items: center;
+      max-height: 100%;
+
+      button{
+        width: 90%;
+        margin: 3rem 0 2rem;
+      }
+
+      .list{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+      }
+      
+    }
+  }
+
+  button {
+    width: 168px;
+    height: 51px;
+    font-size: 18px;
+    background-color: ${colors.primaryViolet};
+    border: none;
+    color: ${colors.primaryDarkGray};
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 12px;
+    transition: all 0.3s;
+
+    &: hover {
+      cursor: pointer;
+      box-shadow: 0 0 18px 0 #7a37ff;
+    }
+
+    &:active {
+      background-color: #9c6bff;
+    }
+  }
+
+
   .container{
+    padding-top: 1.8rem;
+    
+
     display: flex;
-    width: 100%:
+    // width: 100%;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 
     .logo{
       width: 25%;
@@ -146,28 +229,7 @@ export const Navigation = styled.nav`
     margin-right: 1.6rem;
     align-items: center;
 
-    & > button {
-      width: 168px;
-      height: 51px;
-      font-size: 18px;
-      background-color: ${colors.primaryViolet};
-      border: none;
-      color: ${colors.primaryDarkGray};
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      border-radius: 12px;
-      transition: all 0.3s;
-
-      &: hover {
-        cursor: pointer;
-        box-shadow: 0 0 18px 0 #7a37ff;
-      }
-
-      &:active {
-        background-color: #9c6bff;
-      }
-    }
+    
   }
 
   .logo {
@@ -189,6 +251,7 @@ export const Navigation = styled.nav`
     height: 60px;
     cursor: pointer;
     transition: all 0.5s ease-in-out;
+    display: none;
 
 
     &__burger{
@@ -228,4 +291,25 @@ export const Navigation = styled.nav`
       transform: rotate(-45deg) translate(35px, 35px);
     }
   }
+
+  @media screen and (max-width: 1000px){
+      .links{
+        gap: 0;
+
+        .list{
+          gap: 0;
+        }
+      }
+  }
+
+  @media screen and (max-width: 760px){
+    .menu-btn{
+      display: flex;
+    }
+
+    .links{
+      display: none;
+    }
+  }
+
 `;
