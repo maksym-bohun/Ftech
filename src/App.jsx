@@ -1,56 +1,34 @@
 import { useEffect, useRef, useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Main from "./components/main/Main";
+import { changeLanguage } from "./store/slices/languageSlice";
+import CaseStudyPage from "./pages/CaseStudyPage";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Main />,
+  },
+  { path: "/caseStudy/:projectName", element: <CaseStudyPage /> },
+]);
 
 function App() {
-  const aboutUsRef = useRef(null);
-  const mailImageRef = useRef(null);
-  const [mailImageIsVisible, setMailImageIsVisible] = useState(false);
-  const [mailBounce, setMailBounce] = useState(false);
-  const [currentLang, setCurrentLang] = useState("UA");
-
-  const language = useSelector((state) => state.language);
-
-  setInterval(() => {
-    setMailBounce(true);
-  }, 20000);
-
-  setInterval(() => {
-    setMailBounce(false);
-  }, 22100);
-
-  const scrollHandler = () => {
-    if (window.scrollY > aboutUsRef.current.scrollHeight - 100)
-      setMailImageIsVisible(true);
-    else {
-      setMailImageIsVisible(false);
-    }
-  };
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    window.addEventListener("scroll", scrollHandler);
+    const userLanguage = navigator.language || navigator.userLanguage;
 
-    return () => {
-      window.removeEventListener("scroll", scrollHandler);
-    };
+    if (userLanguage.startsWith("en")) {
+      dispatch(changeLanguage("ENG"));
+    } else if (userLanguage.startsWith("uk")) {
+      dispatch(changeLanguage("UA"));
+    } else {
+      dispatch(changeLanguage("ENG"));
+    }
   }, []);
 
-  useEffect(() => {
-    setCurrentLang(language.name);
-    console.log(language);
-  }, [language]);
-
-  useEffect(() => {}, [currentLang]);
-
-  return (
-    <Main
-      lang={language.name}
-      mailImageRef={mailImageRef}
-      aboutUsRef={aboutUsRef}
-      mailImageIsVisible={mailImageIsVisible}
-      mailBounce={mailBounce}
-    />
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

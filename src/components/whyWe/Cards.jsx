@@ -136,14 +136,14 @@ const Container = styled.div`
     }
   }
 
-  @media screen and (min-width: 1000px) and (max-width: 1400px) {
+  @media screen and (max-width: 1400px) {
     .card {
       width: 170px;
       padding: 20px;
     }
   }
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 999px) {
     .cards-container {
       display: grid;
       grid-template-columns: 1fr 1fr;

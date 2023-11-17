@@ -6,32 +6,47 @@ import mayorsService from "../../assets/mayorsService.svg";
 import kiberSecurity from "../../assets/kiberSecurity.svg";
 import eCherga from "../../assets/eCherga.svg";
 import { BsArrowUpRight } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const Portfolio = ({ lang }) => {
   const showMoreProjectsHandler = () => {};
 
   return (
     <Container className="centered">
-      <h1 className="section-header">Портфоліо</h1>
+      {lang === "UA" && <h1 className="section-header">Портфоліо</h1>}
+      {lang === "ENG" && <h1 className="section-header">Portfolio</h1>}
       <div className="e-road">
         <img src={eRoad} alt="E-road demo" className="e-road__image" />
         <div className="e-road__description">
           <div className="text">
             <h2>E-road</h2>
-            <p>
-              Це система для автоматизації всього циклу будівництва та
-              експлуатації дорожньої мережі країни. Наша інтегрована система
-              планування передбачає організацію збору даних про об'єкти, що
-              потребують ремонту або нового будівництва, визначення пріоритетів
-              на основі експертних оцінок та зовнішніх автоматизованих систем.
-            </p>
+            {lang === "UA" && (
+              <p>
+                Це система для автоматизації всього циклу будівництва та
+                експлуатації дорожньої мережі країни. Наша інтегрована система
+                планування передбачає організацію збору даних про об'єкти, що
+                потребують ремонту або нового будівництва, визначення
+                пріоритетів на основі експертних оцінок та зовнішніх
+                автоматизованих систем.
+              </p>
+            )}
+            {lang === "ENG" && (
+              <p>
+                E-road: A system for automating the entire cycle of construction
+                and operation of the country's road network. Our integrated
+                planning system includes the organisation of data collection on
+                objects requiring repair or new construction, prioritisation
+                based on expert opinions, and external automated systems.
+              </p>
+            )}
           </div>
-          <a href="#" className="more-detail">
-            <span> детальніше</span>
+          <Link to="caseStudy/e-road" className="more-detail">
+            {lang === "UA" && <span> детальніше</span>}
+            {lang === "ENG" && <span> read more</span>}
             <div className="image">
               <BsArrowUpRight size={32} strokeWidth={0.6} />
             </div>
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -46,12 +61,16 @@ const Portfolio = ({ lang }) => {
           </div>
           <div className="project__side project__side--back">
             <h2> Служба мера Києва - 1551 CRM-система</h2>
-            <a href="#" className="more-detail">
-              <span> детальніше</span>
+            <Link
+              to="/caseStudy/служба-підримки-мера-києва"
+              className="more-detail"
+            >
+              {lang === "UA" && <span> детальніше</span>}
+              {lang === "ENG" && <span> read more</span>}
               <div className="image">
                 <BsArrowUpRight size={32} strokeWidth={0.6} />
               </div>
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -65,12 +84,16 @@ const Portfolio = ({ lang }) => {
           </div>
           <div className="project__side project__side--back">
             <h2>нкцк - Національна система кібербезпеки</h2>
-            <a href="#" className="more-detail">
-              <span> детальніше</span>
+            <Link
+              to="/caseStudy/національна-система-кібербезпеки"
+              className="more-detail"
+            >
+              {lang === "UA" && <span> детальніше</span>}
+              {lang === "ENG" && <span> read more</span>}
               <div className="image">
                 <BsArrowUpRight size={32} strokeWidth={0.6} />
               </div>
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -78,21 +101,22 @@ const Portfolio = ({ lang }) => {
           <div className="project__side project__side--front">
             <h2>
               Агенство відновлення - <span className="next-line--sm"></span>
-              е-черга
+              є-черга
             </h2>
             <img src={eCherga} alt="Агенство відновлення - е-черга" />
           </div>
           <div className="project__side project__side--back">
             <h2>
               Агенство відновлення - <span className="next-line--sm"></span>
-              е-черга
+              є-черга
             </h2>
-            <a href="#" className="more-detail">
-              <span> детальніше</span>
+            <Link to="/caseStudy/є-черга" className="more-detail">
+              {lang === "UA" && <span> детальніше</span>}
+              {lang === "ENG" && <span> read more</span>}
               <div className="image">
                 <BsArrowUpRight size={32} strokeWidth={0.6} />
               </div>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -252,16 +276,17 @@ const Container = styled.section`
 
     .projects .project{
       transform: scale(95%);
+      height: 100% !important;
 
       &__side{
         padding: 0.5rem;
         padding-bottom: 0;
-         
+         height: 100%;
       }
     }
   }
 
-  @media screen  and (max-width: 1000px) {
+  @media screen  and (max-width: 999px) {
 
     .e-road{
      .text{
@@ -304,7 +329,8 @@ const Container = styled.section`
       &__side{
         padding: 0.5rem;
         padding-bottom: 0;
-        height: 19rem;
+        // height: 19rem;
+        height: 100%;
 
         h2{
           font-size: 19px;

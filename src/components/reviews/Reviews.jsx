@@ -194,7 +194,7 @@ const Container = styled.section`
     }
   }
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 999px) {
     grid-template-columns: 1fr 4fr;
 
     .reviews {

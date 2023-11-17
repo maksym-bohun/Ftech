@@ -204,7 +204,7 @@ const Container = styled.section`
     }
   }
 
-  @media screen and (min-width: 1000px) and (max-width: 1400px) {
+  @media screen and (max-width: 1400px) {
     padding: 0 2rem;
     padding-bottom: 10rem;
 
@@ -218,7 +218,7 @@ const Container = styled.section`
     }
   }
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 999px) {
     padding-bottom: 7rem;
 
     h1 {

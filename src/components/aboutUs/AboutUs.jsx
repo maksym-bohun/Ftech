@@ -4,7 +4,6 @@ import Welcome from "./Welcome";
 import OfficialInfo from "./OfficialInfo";
 
 const AboutUs = ({ lang }) => {
-  console.log("langggg", lang);
   return (
     <Container>
       <Welcome lang={lang} />

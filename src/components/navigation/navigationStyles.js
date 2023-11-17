@@ -2,10 +2,20 @@ import styled from "styled-components";
 import { colors } from "../../styles/colors";
 
 export const Navigation = styled.nav`
+  position: fixed;
+  left: 50%;
+  z-index: 100;
+  // background-color: red;
   display: flex;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
   color: ${colors.lightColor};
+
+  .fixed{
+    position: fixed;
+  }
+  
 
   >div{
     width: 100%;
@@ -17,9 +27,11 @@ export const Navigation = styled.nav`
         align-items: center;
       max-height: 100%;
 
-      button{
+      .button{
         width: 90%;
         margin: 3rem 0 2rem;
+    display: block;
+
       }
 
       .list{
@@ -48,9 +60,11 @@ export const Navigation = styled.nav`
         align-items: center;
       max-height: 100%;
 
-      button{
+      .button{
         width: 90%;
         margin: 3rem 0 2rem;
+      display: flex;
+
       }
 
       .list{
@@ -63,7 +77,10 @@ export const Navigation = styled.nav`
     }
   }
 
-  button {
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 168px;
     height: 51px;
     font-size: 18px;
@@ -76,9 +93,11 @@ export const Navigation = styled.nav`
     border-radius: 12px;
     transition: all 0.3s;
 
-    &: hover {
+
+    &:hover, &:active {
       cursor: pointer;
       box-shadow: 0 0 18px 0 #7a37ff;
+      background-color: ${colors.primaryViolet} !important;
     }
 
     &:active {
@@ -86,24 +105,18 @@ export const Navigation = styled.nav`
     }
   }
 
+ 
 
   .container{
-    padding-top: 1.8rem;
-    
-
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     display: flex;
-    // width: 100%;
     align-items: center;
     justify-content: space-between;
     position: relative;
 
-    .logo{
-      width: 25%;
-    }
-
-    .links{
-      width: 75%;
-    }
+    
   }
 
   a:hover,
@@ -111,10 +124,18 @@ export const Navigation = styled.nav`
     animation: changeTextColor 0.5 ease-out forwards;
   }
 
+ 
+
   a:link,
   a:visited {
     text-decoration: none;
     color: ${colors.lightColor};
+  }
+
+  a.button:hover, a.button:active {
+    animation: none;
+    cursor: pointer;
+    box-shadow: 0 0 18px 0 #7a37ff;
   }
 
   .list {
@@ -184,7 +205,10 @@ export const Navigation = styled.nav`
       flex-direction: column;
       border-radius: 12px;
       position: relative;
-      width: 5.4rem;
+      min-width: 5.4rem;
+      padding: 0;
+      margin-right: 2rem;
+
 
       img {
         width: 21px;
@@ -198,7 +222,8 @@ export const Navigation = styled.nav`
         display: flex;
         gap: 0.5rem;
         align-items: center;
-        width: 5.4rem;
+        min-width: 5.4rem;
+        padding: 12px 24px;
       }
       &__triangle {
         font-size: 0.6rem;
@@ -237,9 +262,6 @@ export const Navigation = styled.nav`
     font-size: 2rem;
     letter-spacing: 1px;
     font-weight: 700;
-    & > span {
-      color: ${colors.primaryBlue};
-    }
   }
 
   .menu-btn{
@@ -292,7 +314,7 @@ export const Navigation = styled.nav`
     }
   }
 
-  @media screen and (max-width: 1000px){
+  @media screen and (max-width: 999px){
       .links{
         gap: 0;
 
@@ -303,6 +325,10 @@ export const Navigation = styled.nav`
   }
 
   @media screen and (max-width: 760px){
+    .language{
+      margin: 0 !important;
+    }
+
     .menu-btn{
       display: flex;
     }

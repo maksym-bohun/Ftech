@@ -73,20 +73,21 @@ const Container = styled.div`
     }
   }
 
-  @media screen and (min-width: 1000px) and (max-width: 1400px) {
+  @media screen and (max-width: 1400px) {
     h2 {
       width: 440px;
     }
 
     h1 {
       // margin-right: 1rem;
+      // font-size: 42px;
 
       &.english {
         font-size: 42px;
       }
 
       span {
-        margin-left: 8rem;
+        margin-left: 12rem;
 
         &.english {
           margin-left: 9rem;
@@ -95,7 +96,7 @@ const Container = styled.div`
     }
   }
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 999px) {
     padding-bottom: 3rem;
 
     h2 {
@@ -129,7 +130,7 @@ const Container = styled.div`
 
     h1 {
       margin-top: 3rem;
-      font-size: 22px;
+      font-size: 22px !important;
       line-height: 31px;
       letter-spacing: 1.8%;
 
@@ -141,8 +142,8 @@ const Container = styled.div`
         margin-right: 3rem;
       }
 
-      .english {
-        margin-left: 0;
+      &.english {
+        margin-left: 0 !important;
       }
     }
   }

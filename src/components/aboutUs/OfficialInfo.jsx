@@ -130,7 +130,7 @@ const Container = styled.section`
     padding-bottom: 5rem;
   }
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 999px) {
     margin-top: 0;
 
     .statistics {

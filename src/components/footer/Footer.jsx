@@ -154,11 +154,12 @@ const Container = styled.footer`
           gap: 2.4rem;
         }
       }
-    }
 
-    &__column--3 {
-      div {
-        margin-top: 0.5rem;
+      &__column--3 {
+        grid-column: 1;
+        div {
+          margin-top: 0.5rem;
+        }
       }
     }
   }

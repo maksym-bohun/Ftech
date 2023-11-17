@@ -210,7 +210,7 @@ const Container = styled.section`
     }
   }
 
-  @media screen and (min-width: 1000px) and (max-width: 1400px) {
+  @media screen and (max-width: 1400px) {
     .services-container {
       .drop-down {
         &__block {
@@ -220,7 +220,7 @@ const Container = styled.section`
     }
   }
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 999px) {
     .services-container {
       gap: 3rem;
       .drop-down {

@@ -10,7 +10,7 @@ const ConnectLine = ({ lang }) => {
   else if (lang === "ENG") text = "Contact us";
 
   return (
-    <Container>
+    <Container href="#contactUs">
       <>
         <div>{text}</div>
         <img src={arrowIcon} alt="arrow icon" />
@@ -27,7 +27,7 @@ const ConnectLine = ({ lang }) => {
   );
 };
 
-const Container = styled.div`
+const Container = styled.a`
   width: 100vw;
   position: absolute;
   background: linear-gradient(to right, #a0ef93, #d9ff6f);
@@ -44,6 +44,7 @@ const Container = styled.div`
   transform: rotate(2deg);
   z-index: 10;
   margin-bottom: 2rem;
+  text-decoration: none;
   .lg {
     display: none;
   }
@@ -67,7 +68,7 @@ const Container = styled.div`
     }
   }
 
-  @media screen and (min-width: 1000px) and (max-width: 1250px) {
+  @media screen and (min-width: 999px) and (max-width: 1250px) {
     .md {
       display: none;
     }
@@ -106,7 +107,7 @@ const Container = styled.div`
     }
   }
 
-  @media screen and (min-width: 700px) and (max-width: 1000px) {
+  @media screen and (min-width: 700px) and (max-width: 999px) {
     font-size: 1.6rem;
     justify-content: space-around;
 

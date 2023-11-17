@@ -91,7 +91,7 @@ const Container = styled.section`
     }
   }
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 999px) {
     .image--mobile {
       display: none !important;
     }
@@ -149,13 +149,13 @@ const Container = styled.section`
     }
   }
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 999px) {
     .content {
       img {
         display: none;
       }
       .image--mobile {
-        display: block;
+        display: block !important;
         width: 320px;
         height: 175px;
         object-fit: cover;

@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { colors } from "../../styles/colors";
 import { BsArrowUpRight } from "react-icons/bs";
 
-const ContactUs = ({ lang }) => {
+const ContactUs = ({ lang, ref }) => {
   const [selectedInterests, setSelectedInterests] = useState([]);
   const [interests, setInterests] = useState([]);
   const [placeholders, setPlaceholders] = useState([]);
@@ -56,7 +56,7 @@ const ContactUs = ({ lang }) => {
 
   // НЕ ЗАКОНЧЕНО
   return (
-    <Container>
+    <Container id="contactUs" ref={ref}>
       <div className="centered">
         {lang === "UA" && <h1 className="section-header">У вас є ідея?</h1>}
         {lang === "ENG" && <h1 className="section-header">У вас є ідея?</h1>}
@@ -75,7 +75,12 @@ const ContactUs = ({ lang }) => {
             </div>
 
             <div className="interests">
-              <div className="interests__header">Мене цікавить..</div>
+              {lang === "UA" && (
+                <div className="interests__header">Мене цікавить..</div>
+              )}
+              {lang === "ENG" && (
+                <div className="interests__header">I am interested in..</div>
+              )}
               {interests.map((interest, index) => {
                 return (
                   <div
@@ -98,7 +103,10 @@ const ContactUs = ({ lang }) => {
                 size={20}
                 strokeWidth={0.5}
               />
-              <span className="button__text">відправити</span>
+              {lang === "UA" && (
+                <span className="button__text">відправити</span>
+              )}
+              {lang === "ENG" && <span className="button__text">send</span>}
             </button>
           </div>
         </div>
@@ -238,11 +246,13 @@ const Container = styled.section`
         line-height: 24.55px;
         background-color: ${colors.primaryYellow};
         padding: 12px 18px;
+        width: 200px;
         color: ${colors.primaryDarkGray};
         border: none;
         border-radius: 16px;
         text-transform: uppercase;
         display: flex;
+        justify-content: center;
         align-items: center;
         gap: 0.8rem;
         align-self: start;
@@ -294,7 +304,7 @@ const Container = styled.section`
     }
   }
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 999px) {
     .contact-us {
       display: grid;
       grid-template-columns: 1fr 3fr;

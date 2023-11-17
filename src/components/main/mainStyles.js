@@ -2,7 +2,6 @@ import { colors } from "../../styles/colors";
 import styled from "styled-components";
 
 export const MainContainer = styled.main`
-  font-family: "Nunito Sans", sans-serif;
   margin: 0;
 
   .scroll {
@@ -12,8 +11,8 @@ export const MainContainer = styled.main`
 
   .mail-image {
     position: fixed;
-    bottom: 5%;
-    right: -1%;
+    bottom: 20%;
+    right: 8%;
     z-index: 100;
     transform: scale(70%);
     opacity: 1;
@@ -36,12 +35,13 @@ export const MainContainer = styled.main`
 
     &--1 {
       background: linear-gradient(to bottom, #1c1c1c, #1c1c1c 60%, #36353c);
+      padding-top: 5rem;
 
       .triangle {
         z-index: 1;
 
         &--2 {
-          top: 26.5rem;
+          top: 31.5rem;
         }
         &--3 {
           right: -10%;
@@ -232,15 +232,29 @@ export const MainContainer = styled.main`
         margin-left: -20rem;
       }
     }
+    .mail-image {
+      bottom: 15%;
+      right: 13%;
+      z-index: 100;
+      opacity: 1;
+      transition: all 0.3s;
+    }
   }
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 999px) {
+    .mail-image {
+      bottom: 15%;
+      right: 18%;
+      z-index: 100;
+      opacity: 1;
+      transition: all 0.3s;
+    }
   }
 
   @media screen and (max-width: 760px) {
     .mail-image {
-      bottom: -1%;
-      right: -15%;
+      bottom: 13%;
+      right: 20%;
       z-index: 100;
       transform: scale(40%);
       opacity: 1;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import AboutUs from "../aboutUs/AboutUs";
 import backgroundTriangle1 from "../../assets/backgroundTriangle1.svg";
 import backgroundTriangle2 from "../../assets/backgroundTriangle2.svg";
@@ -23,21 +23,60 @@ import Services from "../services/Services";
 import ConnectLine from "../advantages/ConnectLine";
 import OurTeam from "../ourTeam/OurTeam";
 import Reviews from "../reviews/Reviews";
-import Reviews1 from "../reviews/Reviews1";
 import ContactUs from "../contactUs/ContactUs";
 import Footer from "../footer/Footer";
 import MailImage from "../aboutUs/MailImage";
 import Navigation from "../navigation/Navigation";
 import { MainContainer } from "./mainStyles";
 import Portfolio from "../portfolio/Portfolio";
+import { useSelector } from "react-redux";
 
-const Main = ({
-  mailImageRef,
-  aboutUsRef,
-  mailImageIsVisible,
-  mailBounce,
-  lang,
-}) => {
+const Main = () => {
+  const language = useSelector((state) => state.language);
+  const lang = language.name;
+
+  const aboutUsRef = useRef(null);
+  const mailImageRef = useRef(null);
+  const navRef = useRef(null);
+  const [mailImageIsVisible, setMailImageIsVisible] = useState(false);
+  const [mailBounce, setMailBounce] = useState(false);
+
+  let lastScrollY = 0;
+
+  setInterval(() => {
+    setMailBounce(true);
+  }, 20000);
+
+  setInterval(() => {
+    setMailBounce(false);
+  }, 22100);
+
+  const scrollHandler = () => {
+    // NAVIGATION
+    if (lastScrollY < window.scrollY) {
+      navRef.current?.classList.add("nav--hidden");
+      console.log(navRef.current);
+    } else {
+      navRef.current?.classList.remove("nav--hidden");
+    }
+    lastScrollY = window.scrollY;
+
+    // MAIL ICON
+    if (window.scrollY > aboutUsRef.current?.scrollHeight - 100)
+      setMailImageIsVisible(true);
+    else {
+      setMailImageIsVisible(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", scrollHandler);
+
+    return () => {
+      window.removeEventListener("scroll", scrollHandler);
+    };
+  }, []);
+
   return (
     <MainContainer>
       {mailImageIsVisible && (
@@ -45,9 +84,11 @@ const Main = ({
           className={`mail-image ${mailBounce ? "animated" : ""} `}
           ref={mailImageRef}
         >
-          <MailImage text={false} />
+          <MailImage text={false} lang={lang} />
         </div>
       )}
+
+      <Navigation navRef={navRef} lang={lang} />
 
       <div className="dark dark--1">
         <div>
@@ -68,7 +109,6 @@ const Main = ({
           />
         </div>
 
-        <Navigation lang={lang} />
         <div ref={aboutUsRef}>
           <AboutUs lang={lang} />
         </div>

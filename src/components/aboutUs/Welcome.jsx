@@ -90,7 +90,7 @@ const Container = styled.section`
     }
   }
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 999px) {
     .text {
       grid-template-columns: 1fr 1fr 1fr;
       align-items: center;

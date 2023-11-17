@@ -8,7 +8,6 @@ import mailIcon from "../../assets/mailIcon.svg";
 const MailImage = ({ text = true, lang, className }) => {
   const [isHovered, setIsHovered] = useState(false);
   const imageRef = useRef(null);
-  console.log("langgg", lang);
 
   const handleMouseEnter = () => {
     setIsHovered(true);
@@ -24,6 +23,7 @@ const MailImage = ({ text = true, lang, className }) => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       ref={imageRef}
+      href="#contactUs"
     >
       <div className="image__icons">
         <img
@@ -55,7 +55,7 @@ const MailImage = ({ text = true, lang, className }) => {
   );
 };
 
-const Container = styled.div`
+const Container = styled.a`
   height: 12rem;
   width: 12rem;
   z-index: 10;
@@ -90,7 +90,7 @@ const Container = styled.div`
     margin-left: 0;
   }
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 999px) {
     .image__text {
       &.left {
         left: 12%;

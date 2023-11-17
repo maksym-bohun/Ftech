@@ -260,10 +260,10 @@ const Container = styled.div`
     margin: 0 auto;
   }
 
-  @media screen and (min-width: 1000px) and (max-width: 1400px) {
+  @media screen and (min-width: 999px) and (max-width: 1400px) {
     height: 200px;
     padding-bottom: 1rem;
-    width: 1000px;
+    width: 999px;
     margin: 8rem auto 0;
 
     .frame {
@@ -319,7 +319,7 @@ const Container = styled.div`
       }
     }
   }
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 999px) {
     height: 200px;
     padding-bottom: 1rem;
     width: 390px;

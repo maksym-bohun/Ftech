@@ -210,7 +210,7 @@ const Container = styled.section`
     }
   }
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 999px) {
     display: grid;
     grid-template-columns: 1fr;
 

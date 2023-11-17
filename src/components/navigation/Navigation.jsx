@@ -6,7 +6,7 @@ import { changeLanguage } from "../../store/slices/languageSlice";
 import NavigationUa from "./NavigationUa";
 import NavigationEng from "./NavigationEng";
 
-const Navigation = ({ lang }) => {
+const Navigation = ({ lang, className, navRef }) => {
   const languages = [
     {
       name: "UA",
@@ -41,25 +41,28 @@ const Navigation = ({ lang }) => {
     setShowLanguagesContainer(false);
   };
 
-  console.log(" LANG", lang);
   return (
     <>
       {lang === "UA" && (
         <NavigationUa
+          className={className}
           openLanguagesListHandler={openLanguagesListHandler}
           selectLanguage={selectLanguage}
           currentLang={languages[0]}
           showLanguagesContainer={showLanguagesContainer}
           otherLang={languages[1]}
+          navRef={navRef}
         />
       )}
       {lang === "ENG" && (
         <NavigationEng
+          className={className}
           openLanguagesListHandler={openLanguagesListHandler}
           selectLanguage={selectLanguage}
           currentLang={languages[1]}
           otherLang={languages[0]}
           showLanguagesContainer={showLanguagesContainer}
+          navRef={navRef}
         />
       )}
     </>

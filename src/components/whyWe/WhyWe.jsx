@@ -44,9 +44,10 @@ const Container = styled.section`
     line-height: 46.8px;
     letter-spacing: 1.8%;
     margin: 0 auto;
-    padding-left: 9rem;
+    padding-left: 10rem;
+    width: 670px;
     padding-top: 1rem;
-    padding-bottom: 7rem;
+    padding-bottom: 5rem;
   }
 
   @media screen and (min-width: 1800px) {
@@ -56,13 +57,13 @@ const Container = styled.section`
     }
   }
 
-  @media screen and (min-width: 1000px) and (max-width: 1400px) {
+  @media screen and (max-width: 1400px) {
     .heading {
       margin-right: 5rem;
     }
   }
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 999px) {
     .heading {
       margin: 0;
       padding: 0;

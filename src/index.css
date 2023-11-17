@@ -3,6 +3,7 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 :root {
@@ -80,6 +81,16 @@ body {
   z-index: 10;
   transition: all 0.3s;
   border: 2px solid transparent;
+}
+
+.nav {
+  transform: translateX(-50%);
+  transition: transform 0.5s;
+  background-color: #1c1c1c;
+}
+
+.nav--hidden {
+  transform: translateX(-50%) translateY(-7rem);
 }
 
 /* .fixed {
@@ -197,13 +208,13 @@ body {
   }
 }
 
-@media screen and (min-width: 1000px) and (max-width: 1400px) {
+@media screen and (min-width: 999px) and (max-width: 1400px) {
   .centered {
     width: 920px;
   }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 999px) {
   @keyframes bounce {
     0%,
     20%,
@@ -223,7 +234,7 @@ body {
   }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 999px) {
   .centered {
     width: 688px;
   }

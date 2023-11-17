@@ -321,7 +321,7 @@ const Container = styled.section`
     }
   }
 
-  @media screen and (min-width: 1000px) and (max-width: 1400px) {
+  @media screen and (max-width: 1400px) {
     .containers {
       .container {
         height: 270px;
@@ -330,7 +330,7 @@ const Container = styled.section`
     }
   }
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 999px) {
     padding-bottom: 4rem;
 
     .labels {

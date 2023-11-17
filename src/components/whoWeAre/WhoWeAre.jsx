@@ -75,7 +75,7 @@ const Container = styled.section`
     }
   }
 
-  @media screen and (min-width: 1000px) and (max-width: 1400px) {
+  @media screen and (max-width: 1400px) {
     .next-line {
       margin-right: 5rem;
     }
@@ -85,7 +85,7 @@ const Container = styled.section`
     }
   }
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 999px) {
     .description {
       padding-top: 1rem;
       font-size: 36px;
