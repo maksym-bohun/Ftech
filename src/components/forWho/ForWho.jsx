@@ -57,10 +57,8 @@ const ForWho = ({ lang }) => {
         content:
           lang === "UA" ? (
             <div>
-              Ми пропонуємо рішення, <span className="next-line"></span> що
-              систематизують адміністративні завдання,{" "}
-              <span className="next-line"></span> і при цьому приділяємо
-              особливу увагу безпеці даних.
+              Ми пропонуємо рішення, що систематизують адміністративні завдання,{" "}
+              і при цьому приділяємо особливу увагу безпеці даних.
             </div>
           ) : (
             <div>
@@ -366,6 +364,7 @@ const Container = styled.section`
 
       .container {
         width: 95%;
+        height: 240px;
       }
     }
   }
@@ -405,13 +404,13 @@ const Container = styled.section`
 
     .containers {
       width: 100%;
-      flex-direction: column;
-      gap: 1rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
 
       .container {
-        margin: 0 auto;
         width: 95%;
-        height: 160px;
+        height: 190px;
       }
     }
   }

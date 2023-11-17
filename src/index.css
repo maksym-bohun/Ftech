@@ -158,6 +158,27 @@ body {
   }
 }
 
+@keyframes rotateAndTranslateArrowEnglish {
+  0% {
+    transform: translateX(-0.1rem) rotate(45deg);
+  }
+
+  /* 20% {
+    transform: translateX(1rem) rotate(45deg);
+  } */
+
+  80% {
+    transform: translateX(700%) rotate(45deg);
+    z-index: 0;
+  }
+
+  100% {
+    transform: translateX(500%) rotate(45deg);
+    stroke: #fee45c;
+    stroke-width: 1;
+  }
+}
+
 @keyframes translateButtonText {
   0% {
     transform: translateX(0);

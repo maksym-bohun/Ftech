@@ -1,12 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import { colors } from "../../styles/colors";
 import { BsArrowUpRight } from "react-icons/bs";
+import validator from "validator";
+import { useNavigate } from "react-router-dom";
 
 const ContactUs = ({ lang, ref }) => {
   const [selectedInterests, setSelectedInterests] = useState([]);
   const [interests, setInterests] = useState([]);
   const [placeholders, setPlaceholders] = useState([]);
+  const [inputs, setInputs] = useState({ name: "", email: "", project: "" });
+  const nameInputRef = useRef(null);
+  const emailInputRef = useRef(null);
+  const projectInputRef = useRef(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (lang === "UA") {
@@ -41,8 +48,6 @@ const ContactUs = ({ lang, ref }) => {
   }, [lang]);
 
   const selectInterestHandler = (e) => {
-    console.log(e.target.id);
-    console.log(selectedInterests);
     if (selectedInterests.includes(interests[e.target.id])) {
       setSelectedInterests((prevInterests) =>
         prevInterests.filter((interest) => interest !== interests[e.target.id])
@@ -54,7 +59,39 @@ const ContactUs = ({ lang, ref }) => {
       ]);
   };
 
-  // НЕ ЗАКОНЧЕНО
+  const submitForm = (e) => {
+    e.preventDefault();
+    let isValid = true;
+
+    if (validator.isEmpty(inputs.name)) {
+      nameInputRef.current?.classList.add("invalid");
+      isValid = false;
+    }
+    if (!validator.isEmail(inputs.email)) {
+      emailInputRef.current?.classList.add("invalid");
+      isValid = false;
+    }
+
+    if (isValid) {
+      console.log("valid");
+      navigate("/formSubmitted");
+    }
+  };
+
+  const changeInputHandler = (e) => {
+    const { name, value } = e.target;
+    if (name === "name") {
+      nameInputRef.current?.classList.remove("invalid");
+    }
+    if (name === "email") {
+      emailInputRef.current?.classList.remove("invalid");
+    } else {
+      emailInputRef.current?.classList.add("invalid");
+    }
+
+    setInputs({ ...inputs, [name]: value });
+  };
+
   return (
     <Container id="contactUs" ref={ref}>
       <div className="centered">
@@ -67,11 +104,32 @@ const ContactUs = ({ lang, ref }) => {
             <div className="header__email">info@ftech.com.ua</div>
           </div>
 
-          <div className={`form ${lang === "ENG" ? "english" : ""}`}>
+          <form
+            className={`form ${lang === "ENG" ? "english" : ""}`}
+            onSubmit={submitForm}
+          >
             <div className="inputs">
-              <input type="text" required placeholder={placeholders[0]} />
-              <input type="email" required placeholder={placeholders[1]} />
-              <input type="text" placeholder={placeholders[2]} />
+              <input
+                onChange={changeInputHandler}
+                name="name"
+                type="text"
+                placeholder={placeholders[0]}
+                ref={nameInputRef}
+              />
+              <input
+                onChange={changeInputHandler}
+                name="email"
+                type="email"
+                placeholder={placeholders[1]}
+                ref={emailInputRef}
+              />
+              <input
+                onChange={changeInputHandler}
+                name="project"
+                type="text"
+                placeholder={placeholders[2]}
+                ref={projectInputRef}
+              />
             </div>
 
             <div className="interests">
@@ -97,7 +155,7 @@ const ContactUs = ({ lang, ref }) => {
               })}
             </div>
 
-            <button type="submit">
+            <button type="submit" className={lang === "ENG" ? "english" : ""}>
               <BsArrowUpRight
                 className="button__icon"
                 size={20}
@@ -108,7 +166,7 @@ const ContactUs = ({ lang, ref }) => {
               )}
               {lang === "ENG" && <span className="button__text">send</span>}
             </button>
-          </div>
+          </form>
         </div>
       </div>
     </Container>
@@ -156,6 +214,7 @@ const Container = styled.section`
       margin-top: -1.4rem;
       width: 65%;
       z-index: 2;
+
       .inputs {
         display: flex;
         flex-direction: column;
@@ -275,6 +334,10 @@ const Container = styled.section`
           .button__icon {
             // transform: translateY(-50%) rotate(45deg);
             animation: rotateAndTranslateArrow 0.4s forwards;
+          }
+
+          &.english .button__icon {
+            animation: rotateAndTranslateArrowEnglish 0.4s forwards;
           }
         }
       }

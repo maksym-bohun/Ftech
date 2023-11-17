@@ -4,6 +4,7 @@ import Main from "./components/main/Main";
 import { changeLanguage } from "./store/slices/languageSlice";
 import CaseStudyPage from "./pages/CaseStudyPage";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Greeting from "./pages/Greeting";
 
 const router = createBrowserRouter([
   {
@@ -11,6 +12,7 @@ const router = createBrowserRouter([
     element: <Main />,
   },
   { path: "/caseStudy/:projectName", element: <CaseStudyPage /> },
+  { path: "/formSubmitted", element: <Greeting /> },
 ]);
 
 function App() {

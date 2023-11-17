@@ -63,7 +63,7 @@ export const Navigation = styled.nav`
       .button{
         width: 90%;
         margin: 3rem 0 2rem;
-      display: flex;
+        display: flex;
 
       }
 
@@ -132,6 +132,13 @@ export const Navigation = styled.nav`
     color: ${colors.lightColor};
   }
 
+
+
+  a.button:link, a.button:visited {
+    color: ${colors.primaryDarkGray} !important;
+    font-weight: 800;
+  }
+  
   a.button:hover, a.button:active {
     animation: none;
     cursor: pointer;

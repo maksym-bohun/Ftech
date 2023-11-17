@@ -55,7 +55,6 @@ const Main = () => {
     // NAVIGATION
     if (lastScrollY < window.scrollY) {
       navRef.current?.classList.add("nav--hidden");
-      console.log(navRef.current);
     } else {
       navRef.current?.classList.remove("nav--hidden");
     }
