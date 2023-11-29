@@ -67,6 +67,7 @@ const Container = styled.div`
     min-height: 20rem;
     img {
       width: 90%;
+      // height: 100%;
     }
 
     h2 {

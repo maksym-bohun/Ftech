@@ -17,7 +17,8 @@ const OtherProjects = ({ lang, currentProject }) => {
 
   return (
     <Container className="centered">
-      <h1 className="section-header">Інші проєкти</h1>
+      {lang === "UA" && <h1 className="section-header">Інші проєкти</h1>}
+      {lang === "ENG" && <h1 className="section-header">Other projects</h1>}
       <div className="container">
         {otherProjects.map((project, index) => (
           <Card
@@ -34,6 +35,7 @@ const OtherProjects = ({ lang, currentProject }) => {
 };
 
 const Container = styled.div`
+  margin-bottom: 15rem;
   .section-header {
     color: ${colors.primaryDarkGray};
   }

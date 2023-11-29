@@ -34,7 +34,7 @@ const NavigationUa = ({
             <div className="links">
               <ul className="list">
                 <li>
-                  <a href="#">Проєкти</a>
+                  <a href="#portfolio">Проєкти</a>
                 </li>
                 <li>
                   <Link to="/career">Карʼєра</Link>

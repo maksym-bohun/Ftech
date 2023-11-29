@@ -16,7 +16,6 @@ const WhoWeAre = ({ lang }) => {
               та CRM-систем.{" "}
               <span className="italic violet ">Ми створюємо</span>{" "}
               бізнес-орієнтовані
-              <span className="next-line sm"></span>
               <span className="next-line sm"></span> веб- та мобільні додатки і
               пропонуємо їх бездоганне впровадження, експертну підтримку та
               індивідуальні рекомендації.
@@ -59,7 +58,7 @@ const Container = styled.section`
   }
 
   .next-line {
-    margin-right: 4rem;
+    margin-right: 6rem;
   }
 
   .next-line--sm {
@@ -77,7 +76,7 @@ const Container = styled.section`
 
   @media screen and (max-width: 1400px) {
     .next-line {
-      margin-right: 5rem;
+      margin-right: 0rem;
     }
 
     .description {
@@ -94,7 +93,7 @@ const Container = styled.section`
     }
 
     .next-line {
-      margin-right: 7rem;
+      margin-right: 0rem;
     }
   }
 
@@ -106,12 +105,13 @@ const Container = styled.section`
       margin-right: 0;
     }
 
+    .next-line,
     .next-line.sm {
       margin: 0;
     }
 
     .next-line--sm {
-      margin-right: 2rem;
+      margin-right: 0;
     }
   }
 `;

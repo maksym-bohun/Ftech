@@ -16,17 +16,14 @@ export const projects = [
     headerPreview: { UA: "E-road", ENG: "E-road" },
     header: {
       UA: "«E-road» - підтримка інфраструктури автомобільних доріг",
-      ENG: "«E-road» - підтримка інфраструктури автомобільних доріг",
+      ENG: '"E-road" - maintenance of road infrastructure',
     },
     headingSecondary: {
       UA: ` Управління та підтримка складних процесів будівництва та експлуатації
         автомобільних доріг вимагали системи, що спростить планування, контроль
         за процесами будівництва, та надасть можливість аналізувати та
         вдосконалювати робочі процеси.`,
-      ENG: ` Управління та підтримка складних процесів будівництва та експлуатації
-        автомобільних доріг вимагали системи, що спростить планування, контроль
-        за процесами будівництва, та надасть можливість аналізувати та
-        вдосконалювати робочі процеси.`,
+      ENG: `Managing and maintaining the complex processes of road construction and operation required a system that would simplify planning control of construction processes, and provide the ability to analyze and improve workflows.`,
     },
     text: {
       UA: (
@@ -109,79 +106,76 @@ export const projects = [
       ),
       ENG: (
         <div>
-          <h5>Управління інфраструктурою автомобільних доріг України</h5>
+          <h5>Road Infrastructure Management in Ukraine</h5>
           <p>
-            Система для повної автоматизації життєвого циклу будівництва та
-            експлуатації автомобільних доріг країни, яка включає:
+            A system for complete automation of the life cycle of construction
+            and operation of the country's roads, which includes:
           </p>
           <ol>
             <li>
-              Систему планування:
+              Planning system:
               <ul className="dashed">
                 <li>
-                  Збір і пріоритезація об'єктів для ремонту та будівництва доріг
-                  з використанням експертної думки та автоматизованих систем.
+                  Collecting and prioritizing objects for road repair and
+                  construction using expert opinion and automated systems.
                 </li>
-                <li>Формування планів у залежності від фінансування.</li>
+                <li>Formation of plans depending on funding.</li>
               </ul>
             </li>
             <li>
-              Систему супроводження ремонтних робіт:{" "}
+              A system of maintenance of repair works:
               <ul className="dashed">
                 <li>
-                  Контроль за етапами ремонту та контроль якості виконання
-                  робіт.
+                  Control over the stages of repairs and quality control of the
+                  work.
                 </li>
               </ul>
             </li>
             <li>
-              Cистему експлуатаційного утримання:{" "}
+              Maintenance system:
               <ul className="dashed">
-                <li>Планування та контроль витрат на утримання доріг.</li>
-                <li>CRM-система для обробки позаштатних ситуацій.</li>
+                <li>Planning and control of road maintenance costs.</li>
+                <li>CRM system for handling emergencies.</li>
               </ul>
             </li>
             <li>
-              {" "}
-              Систему контролю закупівель та договорів:{" "}
+              Procurement and contract control system:
               <ul className="dashed">
-                <li>Управління закупівлями та контроль договорів.</li>
+                <li>Procurement management and contract control.</li>
               </ul>
             </li>
             <li>
-              {" "}
-              GIS-модуль:{" "}
+              GIS module:
               <ul className="dashed">
-                <li>Візуалізація об'єктів на мапі для аналізу.</li>
+                <li>Visualization of objects on a map for analysis.</li>
               </ul>
             </li>
             <li>
-              {" "}
-              Аналіз WIM обладнання:{" "}
+              WIM equipment analysis:
               <ul className="dashed">
                 <li>
-                  Аналіз транспортних даних для покращення якості дорожньої
-                  інфраструктури.
+                  Analysis of transport data to improve the quality of road
+                  infrastructure.
                 </li>
               </ul>
             </li>
           </ol>
-          <h5>Результати:</h5>
+          <h5>Results:</h5>
           <p>
-            «E-road» стала важливою платформою для Управління Дорожнього
-            Господарства, полегшуючи процеси планування та управління для
-            підтримки й оптимізації дорожньої інфраструктури України. Ця
-            інтегрована платформа виконує широкий спектр функцій й забезпечує
-            виконання основних завдань і процесів у сфері обслуговування
-            дорожньої інфраструктури. Це включає прийом та реєстрацію звернень,
-            визначення стану доріг, передачу звернень на виконавців, а також
-            аналіз та контроль за даними про перевезення вантажу.
+            "E-road" has become an important platform for the Ukrainian Road
+            Agency, facilitating planning and management processes to maintain
+            and optimize Ukraine's road infrastructure. This integrated platform
+            performs a wide range of functions and ensures the fulfillment of
+            crucial tasks and processes in road infrastructure maintenance. The
+            system includes accepting and registering requests, determining road
+            conditions, transferring requests to contractors, and analyzing and
+            monitoring cargo transportation data.
           </p>
           <p>
-            В рамках воєнного стану Платформа «E-road» має на меті розширити
-            функціонал, спростивши користування для укладання договорів на
-            будівництво та експлуатацію WIM, а також формування звітів та
-            динамічного відображення інформації.
+            As part of martial law, the E-road platform aims to expand its
+            functionality, simplifying the use for concluding contracts for the
+            construction and operation of WIM and generating reports and dynamic
+            information displays.
           </p>
         </div>
       ),
@@ -196,18 +190,18 @@ export const projects = [
         "WEB-додаток",
         "Онлайн підтримка",
         "WIM-обладнання",
-        "1к + користувачів",
+        "1к+ користувачів",
       ],
       ENG: [
-        "Для держави",
-        "CRM cистема",
-        "Сайт",
+        "For the state",
+        "CRM system",
+        "Site",
         "Android",
         "iOS",
-        "WEB-додаток",
-        "Онлайн підтримка",
-        "WIM-обладнання",
-        "1к + користувачів",
+        "WEB application",
+        "Online support",
+        "WIM equipment",
+        "1k+ users",
       ],
     },
   },
@@ -231,8 +225,8 @@ export const projects = [
     text: {
       UA: (
         <div>
-          <h3>Особливості:</h3>
-          <ul>
+          <h5>Особливості:</h5>
+          <ul className="dashed">
             <li>
               Взаємодія з мешканцями: подача звернень через телефон, мобільний
               додаток, веб-сайт, чат-боти тощо.
@@ -248,8 +242,8 @@ export const projects = [
             </li>
           </ul>
 
-          <h3>Внесок у розвиток:</h3>
-          <ul>
+          <h5>Внесок у розвиток:</h5>
+          <ul className="dashed">
             <li>
               Технологічні інновації: впровадження системи запису розмов з
               аналітикою мови для аналізу та оптимізації обробки звернень.
@@ -261,8 +255,8 @@ export const projects = [
             </li>
           </ul>
 
-          <h3>Технічні деталі:</h3>
-          <ul>
+          <h5>Технічні деталі:</h5>
+          <ul className="dashed">
             <li>
               Інтеграція: Взаємодія з сайтом, мобільними додатками (Android,
               iOS), чат-ботами (Телеграм, Viber).
@@ -273,8 +267,8 @@ export const projects = [
               прийому до 15 000 вхідних дзвінків за добу.
             </li>
           </ul>
-          <h3>Результати:</h3>
-          <ul>
+          <h5>Результати:</h5>
+          <ul className="dashed">
             <li>
               Обсяг роботи: Обробка до 40 тисяч звернень щоденно в пікові
               періоди.
@@ -304,8 +298,8 @@ export const projects = [
       ),
       ENG: (
         <div>
-          <h3>Features:</h3>
-          <ul>
+          <h5>Features:</h5>
+          <ul className="dashed">
             <li>
               Interaction with residents: submission of appeals via phone,
               mobile application, website, chatbots, etc.
@@ -321,8 +315,8 @@ export const projects = [
             </li>
           </ul>
 
-          <h3>Development impact:</h3>
-          <ul>
+          <h5>Development impact:</h5>
+          <ul className="dashed">
             <li>
               Technological innovations: implementing a call recording system
               with speech analytics to analyze and optimize the processing of
@@ -335,8 +329,8 @@ export const projects = [
             </li>
           </ul>
 
-          <h3>Tech details:</h3>
-          <ul>
+          <h5>Tech details:</h5>
+          <ul className="dashed">
             <li>
               Integration: Interaction with the website, mobile applications
               (Android, iOS), and chatbots (Telegram, Viber).
@@ -347,8 +341,8 @@ export const projects = [
               receive up to 15,000 incoming calls daily.
             </li>
           </ul>
-          <h3>Results:</h3>
-          <ul>
+          <h5>Results:</h5>
+          <ul className="dashed">
             <li>
               Scope of work: Processing up to 40,000 calls daily during peak
               periods.
@@ -389,18 +383,18 @@ export const projects = [
         "WEB-додаток",
         "Онлайн підтримка",
         "Чат боти",
-        "10к + користувачів",
+        "10к+ користувачів",
       ],
       ENG: [
         "Для держави",
-        "CRM cистема",
-        "Сайт",
+        "CRM system",
+        "Site",
         "Android",
         "iOS",
-        "WEB-додаток",
-        "Онлайн підтримка",
-        "Чат боти",
-        "10к + користувачів",
+        "WEB application",
+        "Online support",
+        "Chat bots",
+        "10k+ users",
       ],
     },
   },
@@ -426,86 +420,47 @@ export const projects = [
     text: {
       UA: (
         <div>
-          <h5>Управління інфраструктурою автомобільних доріг України</h5>
-          <p>
-            Система для повної автоматизації життєвого циклу будівництва та
-            експлуатації автомобільних доріг країни, яка включає:
-          </p>
+          <h4>Основні характеристики:</h4>
+          <ul className="dashed">
+            <li>
+              Ефективне управління чергою: водії можуть контролювати рух черги
+              та прогнозувати час перетину.
+            </li>
+            <li>
+              Підвищена прозорість та систематизація правил: забезпечення
+              однакових стандартів роботи прикордонних пунктів пропуску.
+            </li>
+          </ul>
+
+          <h4>Вражаючий результат:</h4>
           <ol>
             <li>
-              Основні характеристики:
-              <ul className="dashed">
-                <li>
-                  Збір і пріоритезація об'єктів для ремонту та будівництва доріг
-                  з використанням експертної думки та автоматизованих систем.
-                </li>
-                <li>Формування планів у залежності від фінансування.</li>
-              </ul>
+              Оптимізація часу: зменшення часу очікування для водіїв та
+              перевізників.
             </li>
             <li>
-              Систему супроводження ремонтних робіт:{" "}
-              <ul className="dashed">
-                <li>
-                  Контроль за етапами ремонту та контроль якості виконання
-                  робіт.
-                </li>
-              </ul>
+              Підвищення координації: покращення процесів бронювання та виїзду
+              автотранспорту через кордон.
             </li>
             <li>
-              Cистему експлуатаційного утримання:{" "}
-              <ul className="dashed">
-                <li>Планування та контроль витрат на утримання доріг.</li>
-                <li>CRM-система для обробки позаштатних ситуацій.</li>
-              </ul>
-            </li>
-            <li>
-              {" "}
-              Систему контролю закупівель та договорів:{" "}
-              <ul className="dashed">
-                <li>Управління закупівлями та контроль договорів.</li>
-              </ul>
-            </li>
-            <li>
-              {" "}
-              GIS-модуль:{" "}
-              <ul className="dashed">
-                <li>Візуалізація об'єктів на мапі для аналізу.</li>
-              </ul>
-            </li>
-            <li>
-              {" "}
-              Аналіз WIM обладнання:{" "}
-              <ul className="dashed">
-                <li>
-                  Аналіз транспортних даних для покращення якості дорожньої
-                  інфраструктури.
-                </li>
-              </ul>
+              Інтеграція з іншими системами: підключення до інших пунктів
+              пропуску та інформаційних систем для спільного використання даних.
             </li>
           </ol>
-          <h5>Результати:</h5>
           <p>
-            «E-road» стала важливою платформою для Управління Дорожнього
-            Господарства, полегшуючи процеси планування та управління для
-            підтримки й оптимізації дорожньої інфраструктури України. Ця
-            інтегрована платформа виконує широкий спектр функцій й забезпечує
-            виконання основних завдань і процесів у сфері обслуговування
-            дорожньої інфраструктури. Це включає прийом та реєстрацію звернень,
-            визначення стану доріг, передачу звернень на виконавців, а також
-            аналіз та контроль за даними про перевезення вантажу.
-          </p>
-          <p>
-            В рамках воєнного стану Платформа «E-road» має на меті розширити
-            функціонал, спростивши користування для укладання договорів на
-            будівництво та експлуатацію WIM, а також формування звітів та
-            динамічного відображення інформації.
+            Запис до черги може здійснюватися онлайн та безкоштовно, що значно
+            спрощує та прискорює процес перетину кордону водіями. Щодня в
+            систему надходить від 10 до 40 тисяч звернень, кожне з яких
+            контролює спеціальна група. Планується модернізація та розширення
+            функціональності системи для підключення інших пунктів пропуску та
+            інтеграції з іншими інформаційними системами.
           </p>
         </div>
       ),
       ENG: (
         <div>
-          <h3>Core features:</h3>
-          <ul>
+          <h4>Core features:</h4>
+          <ul className="dashed">
             <li>
               Efficient queue management: drivers can monitor queue movement and
               predict crossing times.
@@ -515,7 +470,8 @@ export const projects = [
               uniform standards of operation of border crossing points.
             </li>
           </ul>
-          <h3>Amazing result:</h3>
+
+          <h4>Amazing result:</h4>
           <ol>
             <li>
               Time optimisation: reduced waiting time for drivers and carriers.
@@ -549,19 +505,17 @@ export const projects = [
         "iOS",
         "WEB-додаток",
         "Онлайн підтримка",
-        "Чат боти",
-        "10к + користувачів",
+        "100к + користувачів",
       ],
       ENG: [
-        "Для держави",
-        "CRM cистема",
-        "Сайт",
+        "For the state",
+        "CRM system",
+        "Site",
         "Android",
         "iOS",
-        "WEB-додаток",
-        "Онлайн підтримка",
-        "Чат боти",
-        "10к + користувачів",
+        "WEB application",
+        "Online support",
+        "100к + users",
       ],
     },
   },

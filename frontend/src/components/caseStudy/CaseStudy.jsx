@@ -42,6 +42,27 @@ const Container = styled.section`
     }
   }
 
+  ul {
+    list-style: none;
+    padding-left: 0.5rem;
+  }
+
+  ul.dashed {
+    list-style-type: none;
+  }
+  ul.dashed > li {
+    text-indent: -5px;
+  }
+  ul.dashed > li:before {
+    content: "-";
+    text-indent: -5px;
+    margin-right: 0.5rem;
+  }
+
+  ol {
+    padding-left: 1.5rem;
+  }
+
   .container > div.centered {
     display: grid;
     grid-template-columns: 5fr 3fr;
@@ -77,17 +98,6 @@ const Container = styled.section`
           ul {
             margin: 0;
             padding-left: 5px;
-          }
-          ul.dashed {
-            list-style-type: none;
-          }
-          ul.dashed > li {
-            text-indent: -5px;
-          }
-          ul.dashed > li:before {
-            content: "-";
-            text-indent: -5px;
-            margin-right: 0.5rem;
           }
         }
       }

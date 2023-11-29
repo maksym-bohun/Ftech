@@ -1,21 +1,11 @@
-import { useEffect, useRef, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
 import Main from "./components/main/Main";
 import { changeLanguage } from "./store/slices/languageSlice";
 import CaseStudyPage from "./pages/CaseStudyPage";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Greeting from "./pages/Greeting";
 import CareerPage from "./pages/CareerPage";
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Main />,
-  },
-  { path: "/caseStudy/:projectName", element: <CaseStudyPage /> },
-  { path: "/formSubmitted", element: <Greeting /> },
-  { path: "/career", element: <CareerPage /> },
-]);
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   const dispatch = useDispatch();
@@ -32,7 +22,16 @@ function App() {
     }
   }, []);
 
-  return <RouterProvider router={router} />;
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/career" element={<CareerPage />} />
+        <Route path="/formSubmitted" element={<Greeting />} />
+        <Route path="/caseStudy/:projectName" element={<CaseStudyPage />} />
+      </Routes>
+    </Router>
+  );
 }
 
 export default App;

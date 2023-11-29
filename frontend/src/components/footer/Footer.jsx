@@ -39,7 +39,7 @@ const Footer = ({ lang }) => {
           {lang === "UA" && (
             <>
               <h2>Посилання</h2>
-              <div>Проєкти</div>
+              <a href="#portfolio">Проєкти</a>
               <Link to="/career">Карʼєра</Link>
               <div>Політика конфіденційності</div>
             </>
@@ -47,7 +47,7 @@ const Footer = ({ lang }) => {
           {lang === "ENG" && (
             <>
               <h2>links</h2>
-              <div>Projects</div>
+              <a href="#portfolio">Projects</a>
               <Link to="/career">Careers</Link>
               <div>Privacy Policy</div>
             </>
@@ -60,7 +60,7 @@ const Footer = ({ lang }) => {
 
 const Container = styled.footer`
   overflow-x: hidden;
-
+  background-color: #111111;
   a {
     color: inherit;
     text-decoration: none;

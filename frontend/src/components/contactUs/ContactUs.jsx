@@ -243,6 +243,10 @@ const Container = styled.section`
       .inputs {
         display: flex;
         flex-direction: column;
+        input:-internal-autofill-selected {
+          -webkit-text-fill-color: ${colors.lightColor};
+          -webkit-box-shadow: inset 0 0 0 50px ${colors.primaryDarkGray};
+        }
 
         input {
           border: 0;
@@ -373,6 +377,10 @@ const Container = styled.section`
           svg {
             stroke-width: 1px;
             animation: rotateAndTranslateArrows 3s infinite !important;
+          }
+
+          &:hover {
+            background-color: ${colors.primaryYellow};
           }
         }
       }

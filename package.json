@@ -1,0 +1,10 @@
+{
+  "scripts":{
+	"start": "concurrently \"npm start\" \"cd frontend && npm run dev\""
+},
+  "dependencies": {
+    "concurrently": "^8.2.2",
+    "pg": "^8.11.3",
+    "sequelize": "^6.35.1"
+  }
+}

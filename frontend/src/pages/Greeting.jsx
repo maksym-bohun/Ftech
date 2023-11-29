@@ -84,6 +84,7 @@ const Container = styled.main`
   min-height: 100vh;
   position: relative;
   background-color: ${colors.primaryDarkGray};
+  overflow: hidden;
 
   .text-container {
     display: flex;
@@ -152,15 +153,108 @@ const Container = styled.main`
     }
   }
 
+  @media screen and (min-width: 1790px) {
+    .text-container {
+      .next-line {
+        margin-right: 100rem;
+      }
+    }
+  }
+
   @media screen and (max-width: 999px) {
     .text-container {
+      .next-line {
+        margin: 0;
+      }
+
       h1 {
         font-size: 46px;
         font-weight: 900;
         line-height: 61.6px;
         text-transform: uppercase;
         z-index: 10;
-        margin-top: 280px;
+        margin-top: 250px;
+      }
+      a:link,
+      a:visited {
+        margin-bottom: 240px;
+      }
+    }
+    .triangle {
+      position: absolute;
+      &--14 {
+        right: 0;
+        top: -5rem;
+      }
+      &--15 {
+        bottom: 13rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 760px) {
+    .text-container {
+      h1 {
+        font-size: 42px;
+        line-height: 55.6px;
+        text-transform: uppercase;
+        z-index: 10;
+        margin-top: 250px;
+      }
+    }
+    .triangle {
+      &--15 {
+        bottom: 13rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 490px) {
+    .text-container {
+      h1 {
+        font-size: 36px;
+        line-height: 43.6px;
+        text-transform: uppercase;
+        z-index: 10;
+        margin-top: 250px;
+      }
+      a:link,
+      a:visited {
+        margin-bottom: 120px;
+      }
+    }
+    .triangle {
+      &--15 {
+        display: none;
+      }
+    }
+  }
+
+  @media screen and (max-width: 360px) {
+    .text-container {
+      width: 90%;
+      h1 {
+        font-size: 24px;
+        line-height: 36.6px;
+        text-transform: uppercase;
+        z-index: 10;
+        margin-top: 250px;
+      }
+
+      a:link,
+      a:visited {
+        font-size: 14px;
+        font-weight: 700;
+        padding: 8px 12px;
+        border-radius: 12px;
+      }
+    }
+    .triangle {
+      &--14 {
+        top: -11rem;
+      }
+      &--15 {
+        display: none;
       }
     }
   }
