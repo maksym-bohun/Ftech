@@ -43,7 +43,8 @@ const Container = styled.a`
   padding: 1rem 0;
   transform: rotate(2deg);
   z-index: 10;
-  margin-bottom: 2rem;
+  margin-bottom: 1.6rem;
+  width: 100%;
   text-decoration: none;
   .lg {
     display: none;

@@ -34,7 +34,7 @@ const NavigationUa = ({
             <div className="links">
               <ul className="list">
                 <li>
-                  <a href="#">Projects</a>
+                  <a href="/#portfolio">Projects</a>
                 </li>
                 <li>
                   <Link to="/career">Career</Link>
@@ -83,7 +83,7 @@ const NavigationUa = ({
         <div className={`menu ${menuOpened ? "" : "menu--hidden"}`}>
           <ul className="list">
             <li>
-              <a href="#portfolio">Projects</a>
+              <a href="/#portfolio">Projects</a>
             </li>
             <li>
               <Link to="/career">Career</Link>

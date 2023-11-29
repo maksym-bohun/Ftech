@@ -39,7 +39,7 @@ const Footer = ({ lang }) => {
           {lang === "UA" && (
             <>
               <h2>Посилання</h2>
-              <a href="#portfolio">Проєкти</a>
+              <a href="/#portfolio">Проєкти</a>
               <Link to="/career">Карʼєра</Link>
               <div>Політика конфіденційності</div>
             </>
@@ -47,7 +47,7 @@ const Footer = ({ lang }) => {
           {lang === "ENG" && (
             <>
               <h2>links</h2>
-              <a href="#portfolio">Projects</a>
+              <Link to="/#portfolio">Projects</Link>
               <Link to="/career">Careers</Link>
               <div>Privacy Policy</div>
             </>

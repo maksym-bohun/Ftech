@@ -30,6 +30,8 @@ import Navigation from "../navigation/Navigation";
 import { MainContainer } from "./mainStyles";
 import Portfolio from "../portfolio/Portfolio";
 import { useSelector } from "react-redux";
+import { redirect, useLocation } from "react-router-dom";
+import { colors } from "../../styles/colors";
 
 const Main = () => {
   const language = useSelector((state) => state.language);
@@ -40,8 +42,16 @@ const Main = () => {
   const navRef = useRef(null);
   const [mailImageIsVisible, setMailImageIsVisible] = useState(false);
   const [mailBounce, setMailBounce] = useState(false);
+  const location = useLocation();
 
   let lastScrollY = 0;
+
+  useEffect(() => {
+    if (location.hash === "#portfolio") {
+      window.location.hash = "";
+      window.location.hash = "portfolio";
+    }
+  }, []);
 
   setInterval(() => {
     setMailBounce(true);
@@ -125,7 +135,7 @@ const Main = () => {
         <WhyWe lang={lang} />
       </div>
 
-      <div className="dark dark--2">
+      <div className={`dark dark--2 ${lang === "ENG" ? "eng" : ""}`}>
         <div>
           <img
             src={backgroundTriangle5}
@@ -150,8 +160,24 @@ const Main = () => {
         </div>
 
         <Advantages lang={lang} />
+      </div>
+
+      <div
+        style={{
+          position: "relative",
+          height: "10rem",
+          overflow: "hidden",
+          backgroundColor: colors.primaryDarkGray,
+        }}
+      >
         <ConnectLine lang={lang} />
       </div>
+
+      {/* <div className="dark" style={{ padding: "3rem 0" }}>
+        <div>
+          <Advantages lang={lang} />
+        </div>
+      </div> */}
 
       <div className="light">
         <Portfolio lang={lang} />

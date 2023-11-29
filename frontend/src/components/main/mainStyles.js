@@ -24,9 +24,9 @@ export const MainContainer = styled.main`
   }
 
   .dark {
-    background: ${colors.primaryDarkGray};
+    background-color: ${colors.primaryDarkGray};
     position: relative;
-    overflow-x: hidden;
+    z-index: 2;
 
     .triangle {
       position: absolute;
@@ -36,6 +36,7 @@ export const MainContainer = styled.main`
     &--1 {
       background: linear-gradient(to bottom, #1c1c1c, #1c1c1c 60%, #36353c);
       padding-top: 5rem;
+      overflow-x: hidden;
 
       .triangle {
         z-index: 1;
@@ -55,9 +56,9 @@ export const MainContainer = styled.main`
     }
 
     &--2 {
-      background: ${colors.primaryDarkGray};
-      min-height: 49.5rem;
-      overflow: hidden;
+      background-color: ${colors.primaryDarkGray};
+      position: relative;
+      color: ${colors.lightColor};
 
       .triangle {
         z-index: 1;
@@ -67,7 +68,7 @@ export const MainContainer = styled.main`
           left: -5.5%;
         }
         &--6 {
-          top: 23%;
+          top: 21%;
           left: -5.5%;
         }
         &--7 {
@@ -75,9 +76,27 @@ export const MainContainer = styled.main`
           left: 13%;
         }
         &--8 {
-          top: 49%;
-          top: 51%;
+          top: 48%;
           left: 2%;
+        }
+      }
+
+      &.eng {
+        .triangle {
+          z-index: 1;
+
+          &--6 {
+            top: 24.5%;
+            left: -4.5%;
+          }
+          &--7 {
+            top: 24.5%;
+            left: 14%;
+          }
+          &--8 {
+            top: 59.5%;
+            left: 3.5%;
+          }
         }
       }
     }
@@ -110,6 +129,8 @@ export const MainContainer = styled.main`
     }
 
     &--4 {
+      overflow-x: hidden;
+
       .triangle {
         &--12 {
           right: -4rem;
@@ -128,6 +149,7 @@ export const MainContainer = styled.main`
     position: relative;
     color: ${colors.primaryDarkGray};
     z-index: 2;
+
     &--1 {
       overflow-x: hidden;
 

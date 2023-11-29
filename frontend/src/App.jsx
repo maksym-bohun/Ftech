@@ -23,7 +23,7 @@ function App() {
   }, []);
 
   return (
-    <Router>
+    <Router basename="/">
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/career" element={<CareerPage />} />

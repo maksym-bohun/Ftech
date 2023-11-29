@@ -1,11 +1,8 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import styled from "styled-components";
 import { colors } from "../../styles/colors";
 
 const Advantages = ({ lang }) => {
-  const list = useRef();
-  const [overlayOpacity, setOverlayOpacity] = useState(1);
-  const [listIsFull, setListIsFull] = useState(false);
   let blocks = [];
 
   if (lang === "UA")
@@ -24,11 +21,11 @@ const Advantages = ({ lang }) => {
       },
       {
         header: "Знаходимо індивідуальний підхід",
-        text: `Ми враховуємо потреби кожного клієнта і завжди відкриті до кастомної розробки. Ваші потреби - на першому місці, і ми готові підлаштуватися під них.`,
+        text: ` Ми враховуємо потреби кожного клієнта і завжди відкриті до кастомної розробки. Ваші потреби - на першому місці, і ми готові підлаштуватися під них.`,
       },
       {
         header: "Майстри складних CRM-систем",
-        text: `Ми спеціалізуємося на побудові інтегрованих систем, включаючи облік будівництва та управління, які дають вам повний контроль та ефективність. Ми інтегруємо кожну частину вашого бізнесу, щоб він працював безперебійно..`,
+        text: `Ми спеціалізуємося на побудові інтегрованих систем, включаючи облік будівництва та управління, які дають вам повний контроль та ефективність. Ми інтегруємо кожну частину вашого бізнесу, щоб він працював безперебійно.`,
       },
       {
         header: "Новатори цифрової трансформації",
@@ -51,118 +48,65 @@ const Advantages = ({ lang }) => {
       },
       {
         header: "Your way, always",
-        text: `We're all ears. Your unique needs come first, and we're ready to customize to make it happen`,
+        text: `We're all ears. Your unique needs come first, and we're ready to customize to make it happen.`,
       },
       {
         header: "Masters of complex CRM systems",
-        text: `We specialize in creating systems that give you complete control and efficiency. We connect every part of your business to make it run smoothly.`,
+        text: ` We specialize in creating systems that give you complete control and efficiency. We connect every part of your business to make it run smoothly.`,
       },
       {
         header: "Pioneers in digital transformation",
-        text: `We were on the ground floor of the digital revolution, and we're still leading the charge. Your success is our priority.`,
+        text: ` We were on the ground floor of the digital revolution, and we're still leading the charge. Your success is our priority.`,
       },
     ];
 
-  const showMoreAdvantagesHandler = () => {
-    setListIsFull(true);
-    console.log("list full");
-  };
-
-  const scrollHandler = (e) => {
-    if (
-      list.current.scrollHeight -
-        list.current.scrollTop -
-        list.current.offsetHeight <=
-      10
-    ) {
-      setOverlayOpacity(0);
-    } else {
-      setOverlayOpacity(0.75);
-    }
-  };
-
   return (
-    <Container>
-      <div className="centered advantages">
-        {lang === "UA" && <h1 className="section-header">Переваги</h1>}
-        {lang === "ENG" && <h1 className="section-header">Why choose us?</h1>}
-        <div className="blocks-container">
-          <div
-            className={`blocks-list ${listIsFull ? "list-full" : ""}`}
-            onScroll={scrollHandler}
-            ref={list}
-          >
-            <div className="overlay" style={{ opacity: overlayOpacity }}></div>
+    <Container className="centered">
+      <div className="left">
+        {lang === "UA" && <h1 className="section-header ">Переваги</h1>}
+        {lang === "ENG" && <h1 className="section-header ">Why choose us?</h1>}
+      </div>
+      <div className="right">
+        <div className="advantages">
+          <div className={`advantages__container `}>
             {blocks.map((block, index) => (
-              <div className="block" key={index}>
+              <div key={index} className="block">
                 <h2 className="block__header">{block.header}</h2>
-                <p className="block__text">{block.text}</p>
+                <div className="block__text">{block.text}</div>
               </div>
             ))}
           </div>
         </div>
-
-        <button
-          onClick={showMoreAdvantagesHandler}
-          className={`show-more ${listIsFull ? "hidden" : ""}`}
-        >
-          {lang === "UA" && "Показати ще"}
-          {lang === "ENG" && "Show more"}
-        </button>
       </div>
     </Container>
   );
 };
 
 const Container = styled.section`
-  margin: 0;
-  padding: 0;
-  padding-top: 2rem;
-  position: relative;
-  padding-bottom: 20rem;
-  overflow: hidden;
+  padding-top: 5rem;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 3rem;
 
   .show-more {
     display: none;
   }
 
+  .section-header {
+    margin: 0;
+    padding: 0;
+    position: sticky;
+    top: 50px;
+    margin-bottom: 80vh;
+  }
+
   .advantages {
-    display: grid;
-    grid-template-columns: 1fr 6fr;
-    gap: 9rem;
-    padding-top: 5rem;
+    position: relative;
 
-    h1 {
-      padding: 1rem 1rem 2rem 0;
-    }
-
-    .blocks-container {
-      position: relative;
-    }
-
-    .overlay {
-      background: radial-gradient(
-        ellipse at center bottom,
-        ${colors.primaryDarkGray},
-        rgba(28, 28, 28, 0.7)
-      );
-      opacity: 0.75;
-      position: absolute;
-      bottom: 0;
-      height: 15%;
-      pointer-events: none;
-      right: 0;
-      left: 0;
-      box-shadow: 0px -5px 30px ${colors.primaryDarkGray};
-    }
-
-    .blocks-list {
+    &__container {
       display: flex;
       flex-direction: column;
-      // width: 100%;
-      height: 76vh;
-      overflow: scroll;
-      overflow-x: hidden;
+      gap: 1rem;
 
       .block {
         width: 100%;
@@ -171,7 +115,7 @@ const Container = styled.section`
         padding: 2rem 1rem 2rem 0;
         border-bottom: 1px solid ${colors.lightColor};
 
-        &:nth-child(2) {
+        &:nth-child(1) {
           border-top: 1px solid ${colors.lightColor};
         }
 
@@ -196,68 +140,35 @@ const Container = styled.section`
         }
       }
     }
-  }
 
-  @media screen and (min-width: 1800px) {
-    .advantages {
-      gap: 11rem;
-    }
-  }
-
-  @media screen and (max-width: 1400px) {
-    padding: 0 2rem;
-    padding-bottom: 10rem;
-
-    .advantages {
-      gap: 2rem;
-
-      .blocks-list {
-        height: 90vh;
-        width: 90%;
-      }
+    .overlay {
+      background: linear-gradient(
+        to top,
+        ${colors.lightColor},
+        transparent 90%
+      );
+      opacity: 0.75;
+      position: absolute;
+      height: 15%;
+      width: 100%;
+      pointer-events: none;
+      left: 0;
+      bottom: 0;
+      display: none;
     }
   }
 
   @media screen and (max-width: 999px) {
-    padding-bottom: 7rem;
-
-    h1 {
-      line-height: 20px;
-    }
+    grid-template-columns: 1fr 4fr;
 
     .advantages {
-      display: grid;
-      grid-template-columns: 2fr 9fr;
-      gap: 2rem;
+      position: relative;
 
-      .blocks-list {
-        height: 35rem;
-        width: 100%;
-      }
-
-      .blocks-list {
-        display: flex;
-        flex-direction: column;
-        // width: 100%;
-        height: 76vh;
-        overflow: scroll;
-        overflow-x: hidden;
-
+      &__container {
         .block {
-          width: 100%;
-          display: grid;
-          grid-template-columns: 2fr 3fr;
-          gap: 1rem;
-          padding: 2rem 1rem 2rem 0;
-          border-bottom: 1px solid ${colors.lightColor};
-
           &__header {
-            width: 100%;
-          }
-
-          &__text {
-            margin: 0;
-            width: 100%;
+            font-size: 20px;
+            line-height: 24.8px;
           }
         }
       }
@@ -265,63 +176,57 @@ const Container = styled.section`
   }
 
   @media screen and (max-width: 760px) {
-    padding-bottom: 10rem;
-    .advantages {
-      grid-template-columns: 1fr;
-      gap: 0;
-
-      h1 {
-        padding: 0;
-      }
-
-      .overlay {
-        height: 15%;
-      }
-
-      .blocks-list {
-        // width: 100%;
-        height: 120vh;
-        overflow: hidden;
-
-        &.list-full {
-          height: 100% !important;
-
-          & > .overlay {
-            display: none;
-          }
-        }
-
-        .block {
-          flex-direction: column;
-          gap: 1rem;
-
-          &__header {
-            width: 100%;
-            font-size: 16px;
-            line-height: 19.2px;
-          }
-
-          &__text {
-            margin: 0;
-            width: 100%;
-          }
-        }
-      }
-    }
+    padding-top: 0;
+    grid-template-columns: 1fr;
+    overflow: hidden;
 
     .show-more {
+      background: ${colors.primaryDarkGray};
+      color: ${colors.lightColor};
       display: block;
-      background: ${colors.lightColor};
-      color: ${colors.primaryDarkGray};
 
       &.hidden {
         display: none;
       }
     }
-    .show-more:hover {
-      border: 1px solid ${colors.lightColor};
-      color: ${colors.lightColor};
-      background: inherit;
+
+    .section-header {
+      position: relative;
+      margin: 0;
+      padding: 0;
+    }
+    .left {
+      height: 6rem;
+    }
+
+    .advantages__container {
+      max-height: 29rem;
+      overflow-y: hidden;
+      &.list-full {
+        max-height: 100%;
+      }
+
+      .block {
+        padding-right: 36px;
+
+        &:last-child {
+          margin-bottom: 3rem;
+        }
+
+        &__header {
+          font-size: 16px;
+          line-height: 19.2px;
+        }
+      }
+    }
+    .advantages {
+      .overlay {
+        display: block;
+
+        &.hidden {
+          display: none;
+        }
+      }
     }
   }
 `;

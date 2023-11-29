@@ -67,10 +67,10 @@ const Portfolio = ({ lang }) => {
         ))}
       </div>
 
-      <button onClick={showMoreProjectsHandler} className="show-more">
+      {/* <button onClick={showMoreProjectsHandler} className="show-more">
         {lang === "UA" && "Показати ще"}
         {lang === "ENG" && "Show more"}
-      </button>
+      </button> */}
     </Container>
   );
 };
@@ -102,7 +102,6 @@ const Container = styled.section`
 
   .show-more{
     background-color: ${colors.primaryDarkGray};
-    margin-top: 5rem;
     color: ${colors.lightColor};
     
     &:hover{
@@ -138,6 +137,7 @@ const Container = styled.section`
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1.6rem;
     min-height: 23.5rem;
+    margin-bottom: 5rem;
 
     .project {
       perspective: 150rem;
