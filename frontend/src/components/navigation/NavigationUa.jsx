@@ -11,6 +11,7 @@ const NavigationUa = ({
   otherLang,
   className,
   navRef,
+  style,
 }) => {
   const [menuOpened, setMenuOpened] = useState(false);
 
@@ -66,7 +67,7 @@ const NavigationUa = ({
                   </div>
                 </li>
               </ul>
-              <a href="#contactUs" className="button">
+              <a href="/#contactUs" className="light button">
                 Зв'язатись
               </a>
             </div>
@@ -115,7 +116,7 @@ const NavigationUa = ({
               </div>
             </li>
           </ul>
-          <a href="#contactUs" className="button">
+          <a href="/#contactUs" className="button">
             Зв'язатись
           </a>
         </div>

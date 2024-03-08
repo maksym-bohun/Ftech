@@ -25,9 +25,9 @@ const Services = ({ lang }) => {
         },
         {
           number: "03",
-          title: "Digital Маркетинг",
+          title: "Розробка проекту повного циклу",
           content:
-            "Наша команда цифрового маркетингу може допомогти вам з будь-яким ГЕО, на якому ви зосереджуєтесь для ваших проєктів.",
+            "Ми керуємо вашою концепцією від планування до реалізації. Наша команда експертів гарантує повну інтеграцію креативності, технологій і стратегії заради отримання якісного результату.",
         },
         {
           number: "04",
@@ -52,9 +52,9 @@ const Services = ({ lang }) => {
         },
         {
           number: "03",
-          title: "Digital MARKETING",
+          title: "Full cycle project development",
           content:
-            "Our digital marketing team can assist you with whatever GEO you are focusing on for marketing.",
+            "Embark on a comprehensive journey with our full cycle project development service, where we guide your concept from planning to execution. Our expert team ensures a seamless integration of creativity, technology, and strategy to deliver a standout digital solution. Experience the transformative power of end-to-end excellence with us.",
         },
         {
           number: "04",
@@ -181,7 +181,7 @@ const Container = styled.section`
         }
       }
       &__content {
-        max-height: 100px; /* Достаточно большое значение */
+        max-height: 200px;
         overflow: hidden;
         transition: max-height 0.8s, opacity 1s;
         padding-bottom: 1rem;

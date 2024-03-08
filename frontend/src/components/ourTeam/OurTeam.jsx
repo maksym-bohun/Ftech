@@ -77,7 +77,7 @@ const Container = styled.section`
     }
 
     .next-line {
-      margin-right: 8rem;
+      margin-right: 0rem;
     }
   }
 
@@ -149,7 +149,7 @@ const Container = styled.section`
     }
   }
 
-  @media screen and (max-width: 999px) {
+  @media screen and (max-width: 760px) {
     .content {
       img {
         display: none;

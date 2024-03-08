@@ -75,12 +75,14 @@ const Cards = ({ lang }) => {
 
 const Container = styled.div`
   .cards-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-content: space-between;
+    gap: 2rem;
   }
 
   .card {
-    width: 20%;
+    // width: 20%;
     display: grid;
     grid-template-rows: 1fr 2fr;
     padding: 16px;
@@ -136,12 +138,12 @@ const Container = styled.div`
     }
   }
 
-  @media screen and (max-width: 1400px) {
-    .card {
-      width: 170px;
-      padding: 20px;
-    }
-  }
+  // @media screen and (max-width: 1400px) {
+  //   .card {
+  //     width: 170px;
+  //     padding: 20px;
+  //   }
+  // }
 
   @media screen and (max-width: 999px) {
     .cards-container {

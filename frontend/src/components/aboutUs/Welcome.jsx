@@ -79,10 +79,18 @@ const Container = styled.section`
     .header {
       line-height: 55.2px;
       font-size: 46px;
+      width: 95%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 5rem;
 
       &.english {
         margin-right: 5rem;
       }
+    }
+
+    .next-line {
+      margin: 0;
     }
 
     .text {
@@ -115,6 +123,7 @@ const Container = styled.section`
   @media screen and (max-width: 760px) {
     .header {
       line-height: 38.4px;
+      margin-left: 0;
       font-size: 32px;
     }
 

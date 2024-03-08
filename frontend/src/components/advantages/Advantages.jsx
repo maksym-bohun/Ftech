@@ -24,7 +24,7 @@ const Advantages = ({ lang }) => {
         text: ` Ми враховуємо потреби кожного клієнта і завжди відкриті до кастомної розробки. Ваші потреби - на першому місці, і ми готові підлаштуватися під них.`,
       },
       {
-        header: "Майстри складних CRM-систем",
+        header: "Майстри складних корпортативих систем",
         text: `Ми спеціалізуємося на побудові інтегрованих систем, включаючи облік будівництва та управління, які дають вам повний контроль та ефективність. Ми інтегруємо кожну частину вашого бізнесу, щоб він працював безперебійно.`,
       },
       {
@@ -83,7 +83,8 @@ const Advantages = ({ lang }) => {
 };
 
 const Container = styled.section`
-  padding-top: 5rem;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
   display: grid;
   grid-template-columns: 1fr 3fr;
   gap: 3rem;
@@ -160,6 +161,7 @@ const Container = styled.section`
 
   @media screen and (max-width: 999px) {
     grid-template-columns: 1fr 4fr;
+    padding-bottom: 2rem;
 
     .advantages {
       position: relative;
@@ -180,16 +182,6 @@ const Container = styled.section`
     grid-template-columns: 1fr;
     overflow: hidden;
 
-    .show-more {
-      background: ${colors.primaryDarkGray};
-      color: ${colors.lightColor};
-      display: block;
-
-      &.hidden {
-        display: none;
-      }
-    }
-
     .section-header {
       position: relative;
       margin: 0;
@@ -200,20 +192,21 @@ const Container = styled.section`
     }
 
     .advantages__container {
-      max-height: 29rem;
-      overflow-y: hidden;
-      &.list-full {
-        max-height: 100%;
-      }
+      overflow: hidden;
 
       .block {
         padding-right: 36px;
+        gap: 1rem;
+        display: grid;
+        grid-template-columns: 35% 65%;
+        gap: 0;
 
         &:last-child {
           margin-bottom: 3rem;
         }
 
         &__header {
+          width: 100%;
           font-size: 16px;
           line-height: 19.2px;
         }
@@ -227,6 +220,12 @@ const Container = styled.section`
           display: none;
         }
       }
+    }
+  }
+
+  @media screen and (max-width: 410px) {
+    .advantages__container block__text {
+      width: 100% !important;
     }
   }
 `;

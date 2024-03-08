@@ -9,28 +9,40 @@ const Footer = ({ lang }) => {
       <div className="centered footer">
         <div className="footer__column--1">
           <h2>ftECH</h2>
-          <div>info@ftech.com.ua</div>
+          <a href="mailto:INFO@FTECH.COMPANY">INFO@FTECH.COMPANY</a>
         </div>
 
         <div className="footer__column--2">
           {lang === "UA" && <h2>Контакти</h2>}
           {lang === "ENG" && <h2>сontacts</h2>}
           <div className="contacts">
-            <div className="contacts__ukraine">
-              <h4>Україна</h4>
-              <div>
-                <div>Київ, вул.Звіринецька 63</div>
-                <div>01014</div>
+            {lang === "UA" && (
+              <div className="contacts__ukraine">
+                <h4>Україна</h4>
+                <div>
+                  <div>Київ, вул.Звіринецька 63</div>
+                  <div>01014</div>
+                </div>
+                <a href="tel:+380443442390">+38 (044) 344-23-90</a>
               </div>
-              <div>+38 (044) 344-23-90</div>
-            </div>
+            )}
+            {lang === "ENG" && (
+              <div className="contacts__ukraine">
+                <h4>Ukraine</h4>
+                <div>
+                  <div>Kyiv, 63 Zvirinetska St</div>
+                  <div>01014</div>
+                </div>
+                <a href="tel:+380443442390">+38 (044) 344-23-90</a>
+              </div>
+            )}
             <div className="contacts__usa">
               <h4>USA</h4>
               <div>
                 <div>Bruce Way, North Highlands</div>
                 <div>CA 95660</div>
               </div>
-              <div>+1 (279) 356-8085</div>
+              <a href="tel:+12793568085">+1 (279) 356-8085</a>
             </div>
           </div>
         </div>
@@ -47,7 +59,7 @@ const Footer = ({ lang }) => {
           {lang === "ENG" && (
             <>
               <h2>links</h2>
-              <Link to="/#portfolio">Projects</Link>
+              <a href="/#portfolio">Projects</a>
               <Link to="/career">Careers</Link>
               <div>Privacy Policy</div>
             </>
@@ -80,6 +92,12 @@ const Container = styled.footer`
       text-transform: uppercase;
       margin-top: 0;
       padding-top: 2rem;
+    }
+
+    a {
+      &:hover {
+        animation: changeTextColor 1s;
+      }
     }
 
     &__column--1 {
@@ -128,7 +146,7 @@ const Container = styled.footer`
     }
   }
 
-  @media screen and (max-width: 1400px) {
+  @media screen and (max-width: 1300px) {
     .footer {
       grid-template-columns: 1fr 3fr;
 

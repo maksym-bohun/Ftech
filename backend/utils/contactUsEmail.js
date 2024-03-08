@@ -6,7 +6,7 @@ module.exports = async ({
   projectInfo = "",
   interests = [],
 }) => {
-  console.log("INTERESTS", interests);
+  "INTERESTS", interests;
 
   const html = `
   <h1 style="color: #333;">FTECH</h1>
@@ -30,12 +30,10 @@ module.exports = async ({
 
   const mailOptions = {
     from: "ftech2023@outlook.com",
-    to: "maxim.boggun@gmail.com",
+    to: "INFO@FTECH.COMPANY",
     html,
     subject: "New lead!",
   };
-
-  console.log("Sending");
 
   try {
     // Используем await для дожидания завершения отправки письма

@@ -15,6 +15,10 @@ const AboutUs = ({ lang }) => {
 const Container = styled.section`
   margin-top: 80px;
   min-height: 48rem;
+
+  @media screen and (max-width: 1400px) {
+    min-height: 42rem;
+  }
 `;
 
 export default AboutUs;

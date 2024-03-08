@@ -13,11 +13,10 @@ const WhoWeAre = ({ lang }) => {
               FTech [first technologies] –{" "}
               <span className="green">Ваш вірний союзник</span> у розробці
               програмного забезпечення <span className="next-line--sm"></span>{" "}
-              та CRM-систем.{" "}
+              та систем будь якого класу.{" "}
               <span className="italic violet ">Ми створюємо</span>{" "}
-              бізнес-орієнтовані
-              <span className="next-line sm"></span> веб- та мобільні додатки і
-              пропонуємо їх бездоганне впровадження, експертну підтримку та
+              бізнес-орієнтовані корпоративні системи, веб- та мобільні додатки
+              і пропонуємо їх бездоганне впровадження, експертну підтримку та
               індивідуальні рекомендації.
             </div>
           </>
@@ -28,10 +27,10 @@ const WhoWeAre = ({ lang }) => {
             <div className="description">
               FTech first technologies is{" "}
               <span className="green">your trusted ally</span> in software and
-              CRM development. <span className="italic violet">We craft</span>{" "}
-              business-centric web and mobile applications and offer their
-              flawless implementation, expert support, and individual
-              recommendations.
+              systems of any class .{" "}
+              <span className="italic violet">We craft</span> business-centric
+              web and mobile applications and offer their flawless
+              implementation, expert support, and individual recommendations.
             </div>
           </>
         )}

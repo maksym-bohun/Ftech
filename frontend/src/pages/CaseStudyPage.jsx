@@ -37,7 +37,7 @@ const CaseStudyPage = () => {
 
   return (
     <Container>
-      <Navigation lang={lang} navRef={navRef} />
+      <Navigation lang={lang} navRef={navRef} style="light" />
       <CaseStudy lang={lang} currentProject={currentProject} />
       <OtherProjects lang={lang} currentProject={currentProject} />
       <Footer lang={lang} />

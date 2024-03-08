@@ -6,7 +6,7 @@ import { changeLanguage } from "../../store/slices/languageSlice";
 import NavigationUa from "./NavigationUa";
 import NavigationEng from "./NavigationEng";
 
-const Navigation = ({ lang, className, navRef }) => {
+const Navigation = ({ lang, className, navRef, style = "default" }) => {
   const languages = [
     {
       name: "UA",
@@ -52,6 +52,7 @@ const Navigation = ({ lang, className, navRef }) => {
           showLanguagesContainer={showLanguagesContainer}
           otherLang={languages[1]}
           navRef={navRef}
+          style={style}
         />
       )}
       {lang === "ENG" && (
@@ -63,6 +64,7 @@ const Navigation = ({ lang, className, navRef }) => {
           otherLang={languages[0]}
           showLanguagesContainer={showLanguagesContainer}
           navRef={navRef}
+          style={style}
         />
       )}
     </>

@@ -46,12 +46,12 @@ const OfficialInfo = ({ lang }) => {
         <div>
           {lang === "UA" && (
             <>
-              <h3>10+</h3> <span>CRM систем</span>
+              <h3>10+</h3> <span>Систем</span>
             </>
           )}
           {lang === "ENG" && (
             <>
-              <h3>10+</h3> <span>CRM systems</span>
+              <h3>10+</h3> <span>Systems</span>
             </>
           )}
         </div>
@@ -121,7 +121,7 @@ const Container = styled.section`
         margin: 0;
         padding: 0;
         font-weight: 800;
-        font-size: 24px;
+        font-size: 28px;
       }
     }
   }

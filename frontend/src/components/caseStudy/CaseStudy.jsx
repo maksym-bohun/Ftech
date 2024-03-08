@@ -16,13 +16,36 @@ const CaseStudy = ({ currentProject, lang }) => {
             <h3>{currentProject.headingSecondary[lang]}</h3>
             {currentProject.text[lang]}
           </div>
-
-          <div className="labels-container">
-            {currentProject.labels[lang].map((label, index) => (
-              <div key={index} className="label">
-                {label}
+          <div className="right">
+            <div className="labels-container">
+              {currentProject.labels[lang].map((label, index) => (
+                <div key={index} className="label">
+                  {label}
+                </div>
+              ))}
+            </div>
+            {currentProject.webSiteLink && (
+              <div className="button-container">
+                {lang === "UA" && (
+                  <a
+                    href={currentProject.webSiteLink}
+                    target="blank"
+                    className="go-to-site-btn"
+                  >
+                    Перейти на сайт
+                  </a>
+                )}
+                {lang === "ENG" && (
+                  <a
+                    href={currentProject.webSiteLink}
+                    target="blank"
+                    className="go-to-site-btn"
+                  >
+                    Visit the site
+                  </a>
+                )}
               </div>
-            ))}
+            )}
           </div>
         </div>
       </div>
@@ -61,6 +84,36 @@ const Container = styled.section`
 
   ol {
     padding-left: 1.5rem;
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .button-container {
+    margin-top: 2rem;
+    display: flex;
+    width: 100%;
+
+    .go-to-site-btn {
+      background-color: ${colors.primaryViolet};
+      width: 100%;
+      text-align: center;
+      color: ${colors.lightColor};
+      border-radius: 16px;
+      padding: 12px 24px;
+      font-size: 18px;
+      text-decoration: none;
+      font-weight: 800;
+      text-transform: uppercase;
+      transition: all 0.3s;
+
+      &:hover {
+        box-shadow: 0 0 18px 0 #7a37ff32;
+      }
+    }
   }
 
   .container > div.centered {

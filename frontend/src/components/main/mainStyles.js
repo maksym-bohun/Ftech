@@ -64,20 +64,20 @@ export const MainContainer = styled.main`
         z-index: 1;
 
         &--5 {
-          top: -7%;
+          top: 6%;
           left: -5.5%;
         }
         &--6 {
-          top: 21%;
+          top: 29%;
           left: -5.5%;
         }
         &--7 {
-          top: 17.5%;
+          top: 27.5%;
           left: 13%;
         }
         &--8 {
-          top: 48%;
-          left: 2%;
+          top: 51%;
+          left: 4%;
         }
       }
 
@@ -185,22 +185,22 @@ export const MainContainer = styled.main`
       }
 
       &--8 {
-        margin-top: 2.5%;
+        margin-top: 4%;
         margin-left: 5%;
       }
 
       &--7 {
-        margin-top: 6%;
-        // margin-left: 0.5%;
+        margin-top: 5%;
+        margin-left: -1.5%;
       }
 
       &--6 {
-        margin-top: 5.5%;
-        margin-left: 4.5%;
+        margin-top: 4.5%;
+        margin-left: 3%;
       }
 
       &--5 {
-        margin-top: 7%;
+        margin-top: 2%;
         margin-left: 5.5%;
       }
 
@@ -265,22 +265,18 @@ export const MainContainer = styled.main`
 
   @media screen and (max-width: 999px) {
     .mail-image {
-      bottom: 15%;
-      right: 18%;
-      z-index: 100;
-      opacity: 1;
-      transition: all 0.3s;
-    }
-  }
-
-  @media screen and (max-width: 760px) {
-    .mail-image {
       bottom: 13%;
       right: 20%;
       z-index: 100;
       transform: scale(40%);
       opacity: 1;
       transition: all 0.3s;
+    }
+  }
+
+  @media screen and (max-width: 760px) {
+    .dark--2 {
+      overflow: hidden;
     }
 
     .triangle {

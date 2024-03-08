@@ -26,21 +26,40 @@ const Greeting = () => {
   }, [location.pathname]);
 
   useEffect(() => {
-    if (location.state.type === "cv") {
-      setText(
-        <h1>
-          дякуємо, наша <span className="next-line"></span> команда звʼяжеться з
-          вами <span className="italic violet">впродовж 24 годин</span>
-        </h1>
-      );
-    } else {
-      setText(
-        <h1>
-          дякуємо, наші <span className="next-line"></span> спеціалісти
-          звʼяжуться з вами{" "}
-          <span className="italic violet">впродовж 24 годин</span>
-        </h1>
-      );
+    if (lang === "UKR") {
+      if (location.state.type === "cv") {
+        setText(
+          <h1>
+            дякуємо, наша <span className="next-line"></span> команда звʼяжеться
+            з вами <span className="italic violet">впродовж 24 годин</span>
+          </h1>
+        );
+      } else {
+        setText(
+          <h1>
+            дякуємо, наші <span className="next-line"></span> спеціалісти
+            звʼяжуться з вами{" "}
+            <span className="italic violet">впродовж 24 годин</span>
+          </h1>
+        );
+      }
+    } else if (lang === "ENG") {
+      if (location.state.type === "cv") {
+        setText(
+          <h1>
+            Thank you, our <span className="next-line"></span> team will contact
+            you <span className="italic violet">within 24 hours</span>
+          </h1>
+        );
+      } else {
+        setText(
+          <h1>
+            Thank you, our <span className="next-line"></span> specialists will
+            contact you
+            <span className="italic violet">within 24 hours</span>
+          </h1>
+        );
+      }
     }
   }, [location.state]);
 

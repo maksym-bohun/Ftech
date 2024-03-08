@@ -5,13 +5,13 @@ import kiberSecurity from "../../assets/kiberSecurity.svg";
 import { BsArrowUpRight } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
-const Card = ({ lang, header, image, urlName }) => {
+const Card = ({ lang, header, image, urlName, staticCard = false }) => {
   return (
     <Container>
-      <div className="project">
+      <div className={`project ${staticCard ? "static" : ""}`}>
         <div className="project__side project__side--front">
           <h2>{header}</h2>
-          <img src={image} alt={`${header} demo`} />
+          <img src={image} alt={`${header} demo`} className="project__image" />
         </div>
         <div className="project__side project__side--back">
           <h2>{header}</h2>
@@ -64,10 +64,11 @@ const Container = styled.div`
     height: 100%;
     display: block;
     min-width: 20rem;
-    min-height: 20rem;
-    img {
+    min-height: 26rem;
+
+    &__image {
       width: 90%;
-      // height: 100%;
+      // height: 15rem;
     }
 
     h2 {

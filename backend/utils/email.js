@@ -7,8 +7,6 @@ module.exports = async ({
   coverLetter = "",
   file = null,
 }) => {
-  console.log(name, email, phone, coverLetter, file);
-
   const html = `
   <h1 style="color: #333;">FTECH</h1>
   <hr />
@@ -31,7 +29,7 @@ module.exports = async ({
 
   const mailOptions = {
     from: "ftech2023@outlook.com",
-    to: "maxim.boggun@gmail.com",
+    to: "INFO@FTECH.COMPANY",
     html,
     subject: "New CV was submitted!",
     attachments: [
@@ -43,7 +41,6 @@ module.exports = async ({
     ],
   };
 
-  console.log("Sending");
   try {
     await transporter.sendMail(mailOptions);
   } catch (error) {

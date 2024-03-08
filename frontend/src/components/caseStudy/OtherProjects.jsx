@@ -24,6 +24,7 @@ const OtherProjects = ({ lang, currentProject }) => {
           <Card
             key={index}
             lang={lang}
+            staticCard={project.static || false}
             header={project.headerPreview[lang]}
             image={project.imagePreview}
             urlName={project.urlName}
@@ -49,6 +50,17 @@ const Container = styled.div`
     padding: 1.5rem 0;
     margin-top: 2rem;
     margin-bottom: 1rem;
+
+    .project {
+      &.static {
+        &:hover .project__side--front {
+          transform: rotateY(0deg);
+        }
+        &:hover .project__side--back {
+          transform: rotateY(180deg);
+        }
+      }
+    }
   }
 
   > div {

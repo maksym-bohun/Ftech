@@ -91,10 +91,13 @@ const SubmitCv = ({ getData, lang }) => {
       formDataObj.append("file", selectedFile);
 
       try {
-        const response = await fetch("http://127.0.0.1:8000/api/sendMailCV", {
-          method: "POST",
-          body: formDataObj,
-        });
+        const response = await fetch(
+          "https://ftech.company:8443/api/sendMailCV",
+          {
+            method: "POST",
+            body: formDataObj,
+          }
+        );
 
         if (response.ok) {
           console.log("Email sent successfully");
@@ -290,6 +293,7 @@ const Container = styled.div`
       border-radius: 16px;
       border: 2px solid transparent;
       background-color: ${colors.secondaryDarkGray};
+      color: ${colors.lightColor};
       margin-top: 1rem;
       cursor: pointer;
       transition: all 0.7s;
@@ -392,6 +396,21 @@ const Container = styled.div`
       padding: 0;
       width: 100% !important;
     }
+  }
+
+  input,
+  textarea {
+    color: ${colors.primaryDarkGray};
+    -webkit-text-fill-color: ${colors.primaryDarkGray};
+    -webkit-box-shadow: inset 0 0 0 50px ${colors.lightColor};
+    outline: none;
+    background-color: transparent !important;
+    font-size: 24px;
+    padding: 1rem;
+    padding-left: 0;
+    border: none;
+    border-bottom: 1px solid ${colors.secondaryDarkGray};
+    font-family: "Nunito Sans", sans-serif;
   }
 
   @media screen and (max-width: 999px) {

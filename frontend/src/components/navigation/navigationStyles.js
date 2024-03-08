@@ -30,8 +30,9 @@ export const Navigation = styled.nav`
       .button{
         width: 90%;
         margin: 3rem 0 2rem;
-    display: block;
+        display: block;
 
+       
       }
 
       .list{
@@ -84,7 +85,7 @@ export const Navigation = styled.nav`
     width: 168px;
     height: 51px;
     font-size: 18px;
-    background-color: ${colors.primaryViolet};
+    background-color: ${colors.primaryViolet} !important;
     border: none;
     color: ${colors.primaryDarkGray};
     font-weight: 600;
@@ -137,12 +138,20 @@ export const Navigation = styled.nav`
   a.button:link, a.button:visited {
     color: ${colors.primaryDarkGray} !important;
     font-weight: 800;
+
+    &.light{
+      color: ${colors.lightColor} !important;
+    }
   }
   
   a.button:hover, a.button:active {
     animation: none;
     cursor: pointer;
     box-shadow: 0 0 18px 0 #7a37ff;
+
+    &.light{
+      box-shadow: 0 0 18px 0 #7a37ff32;
+    }
   }
 
   .list {

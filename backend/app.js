@@ -3,13 +3,20 @@ const cors = require("cors");
 const multer = require("multer");
 const upload = multer(); // create an instance of multer
 const app = express();
+const fs = require("fs");
 const sendEmail = require("./utils/email");
 const contactUsEmail = require("./utils/contactUsEmail");
 const AppError = require("./utils/appError");
 const dotenv = require("dotenv");
+var https = require("https");
 dotenv.config({ path: "./config.env" });
 
-const allowedOrigins = ["http://127.0.0.1:5173"]; // Add your front-end origin
+allowedOrigins = ["https://ftech.company", "http://ftech.company"];
+
+const options = {
+  key: fs.readFileSync("./certificates/key.pem"),
+  cert: fs.readFileSync("./certificates/certificate.pem"),
+};
 
 app.use(
   cors({
@@ -34,7 +41,6 @@ app.use(express.json());
 app.use(upload.any()); // Use multer for handling files
 
 app.post("/api/sendMailContactUs", async (req, res, next) => {
-  console.log("BODY1111", req.body);
   const { name, email, projectInfo, interests } = req.body;
 
   try {
@@ -49,7 +55,6 @@ app.post("/api/sendMailContactUs", async (req, res, next) => {
 });
 
 app.post("/api/sendMailCV", async (req, res, next) => {
-  console.log("BODY", req.body);
   const { name, email, phone, coverLetter } = req.body;
   const file = req.files[0];
 
@@ -63,7 +68,11 @@ app.post("/api/sendMailCV", async (req, res, next) => {
   }
 });
 
-const PORT = 8000;
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+app.on("request", (req, res) => {
+  // Далее обработка запроса...
 });
+
+const server = https.createServer(options, app);
+
+const PORT = 8443;
+server.listen(PORT, () => {});

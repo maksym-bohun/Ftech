@@ -10,62 +10,92 @@ const Reviews = ({ lang }) => {
     if (lang === "UA")
       setBlocks([
         {
-          header: `Комунальна бюджетна установа "Контактний центр міста Києва"`,
+          header: [
+            `Комунальна бюджетна установа "Контактний центр міста Києва"`,
+          ],
           text: [
             `Велика подяка FTech за їх фантастичну командну роботу. Команда повністю виконала свою роботу, контракт № 48, підписаний 21 жовтня 2020 року, передбачав встановлення системи запису дзвінків з аналітикою мовлення в нашому програмному та апаратному забезпеченні.`,
             `Ми були приємно вражені, що FTech перевершували наші очікування. Команда встигала вчасно, була надзвичайно надійною та дуже оперативною. А ще, вони завжди відповідали на поставленні запитання. Результатом ми залишилися задоволені.`,
           ],
         },
         {
-          header: `Комунальна бюджетна установа "Контактний центр міста Києва"`,
+          header: [
+            `Державне агентство автомобільних доріг України (Укравтодор)`,
+          ],
           text: [
-            `Велика подяка FTech за їх фантастичну командну роботу. Команда повністю виконала свою роботу, контракт № 48, підписаний 21 жовтня 2020 року, передбачав встановлення системи запису дзвінків з аналітикою мовлення в нашому програмному та апаратному забезпеченні.`,
-            `Ми були приємно вражені, що FTech перевершували наші очікування. Команда встигала вчасно, була надзвичайно надійною та дуже оперативною. А ще, вони завжди відповідали на поставленні запитання. Результатом ми залишилися задоволені.`,
+            `Минулого року Державне агентство автомобільних доріг України звернулося до ТОВ «ЕФ-ТЕК» з проханням вдосконалити систему звітності та моніторингу. Всі роботи були виконані відповідно до умов угоди та технічних вимог. Компанія ТОВ «ЕФ-ТЕК» надала якісні та своєчасні послуги. Результат нас повністю влаштував, все виконано згідно наших вимог.`,
           ],
         },
         {
-          header: `Комунальна бюджетна установа "Контактний центр міста Києва"`,
+          header: [`Державне агентство автомобільних доріг України`],
           text: [
-            `Велика подяка FTech за їх фантастичну командну роботу. Команда повністю виконала свою роботу, контракт № 48, підписаний 21 жовтня 2020 року, передбачав встановлення системи запису дзвінків з аналітикою мовлення в нашому програмному та апаратному забезпеченні.`,
-            `Ми були приємно вражені, що FTech перевершували наші очікування. Команда встигала вчасно, була надзвичайно надійною та дуже оперативною. А ще, вони завжди відповідали на поставленні запитання. Результатом ми залишилися задоволені.`,
+            `Ми вдячні ТОВ «ЕФ ТЕК» за чудову роботу, оскільки тепер ми можемо контролювати стан доріг та систематично вести облік виконаних дорожніх робіт завдяки розширенню можливостей Платформи «E-road». Компанія виконала проєкт відповідно до умов угоди та наших технічних вимог.`,
           ],
         },
         {
-          header: `Комунальна бюджетна установа "Контактний центр міста Києва"`,
+          header: [
+            `Анатолій Комірний,`,
+            `Заступник Міністра з питань цифрового розвитку, цифрових трансформацій і цифровізації`,
+          ],
           text: [
-            `Велика подяка FTech за їх фантастичну командну роботу. Команда повністю виконала свою роботу, контракт № 48, підписаний 21 жовтня 2020 року, передбачав встановлення системи запису дзвінків з аналітикою мовлення в нашому програмному та апаратному забезпеченні.`,
-            `Ми були приємно вражені, що FTech перевершували наші очікування. Команда встигала вчасно, була надзвичайно надійною та дуже оперативною. А ще, вони завжди відповідали на поставленні запитання. Результатом ми залишилися задоволені.`,
+            `Ми залишились приємно вражені співпрацею з ТОВ «ЕФ ТЕК» щодо розробки програмного забезпечення для системи управління чергами вантажних автомобілів на кордоні. Компанія відмінно виконала свої обов'язки, дотримуючись умов договору та встановлених термінів. Рекомендуємо як надійного партнера.`,
+          ],
+        },
+        {
+          header: [
+            `Валерій Кулик-Куличенко,`,
+            `Заступник Голови Державної Служби України з безпеки на транспорті`,
+          ],
+          text: [
+            `Ключовим для нас було вчасне та якісне надання ліцензійного програмного забезпечення Модуль «Автоматизоване робоче місце інспектора державної прикордонної служби до Єдиного комплексу інформаційних систем Укртрансбезпеки» —  і ТОВ «ЕФ ТЕК» вчасно виконали проєкт. `,
+            `Ми дуже цінуємо їхній професіоналізм і високий стандарт обслуговування. Робота була проведена якісно, вчасно та в повному обсязі, без жодних проблем чи недоліків. 
+        `,
+            `Сподіваємось на подальшу співпрацю.`,
           ],
         },
       ]);
     else if (lang === "ENG")
       setBlocks([
         {
-          header: `Municipal Budgetary Institution "Kyiv City Contact Centre""`,
+          header: [
+            `Municipal Budgetary Institution "Kyiv City Contact Centre"`,
+          ],
           text: [
             `Big thanks to FTech for their fantastic teamwork. They got the job done, Contract No. 48, signed on October 21, 2020, involved setting up a call recording system with speech analytics in our software and hardware.`,
             `We're thrilled to say that FTech consistently went above and beyond. They were on time, super reliable, and very responsive. They're like a dependable friend, always there to help us out.`,
           ],
         },
         {
-          header: `Municipal Budgetary Institution "Kyiv City Contact Centre""`,
+          header: [`State Road Agency of Ukraine (Ukravtodor)`],
           text: [
-            `Big thanks to FTech for their fantastic teamwork. They got the job done, Contract No. 48, signed on October 21, 2020, involved setting up a call recording system with speech analytics in our software and hardware.`,
-            `We're thrilled to say that FTech consistently went above and beyond. They were on time, super reliable, and very responsive. They're like a dependable friend, always there to help us out.`,
+            `Last year, the State Road Agency of Ukraine asked FTech to improve the reporting and monitoring system. All works were performed according to the contract terms and technical requirements. FTech provides high-quality and timely services. We were delighted with the result; everything was completed per our requirements.
+          `,
           ],
         },
         {
-          header: `Municipal Budgetary Institution "Kyiv City Contact Centre""`,
+          header: [`State Road Agency of Ukraine`],
           text: [
-            `Big thanks to FTech for their fantastic teamwork. They got the job done, Contract No. 48, signed on October 21, 2020, involved setting up a call recording system with speech analytics in our software and hardware.`,
-            `We're thrilled to say that FTech consistently went above and beyond. They were on time, super reliable, and very responsive. They're like a dependable friend, always there to help us out.`,
+            `We are grateful to FTech for their remarkable work. We can now monitor the condition of the roads and systematically keep records of road works performed thanks to the expansion of the E-road Platform's capabilities. The company completed the project by the terms of the agreement and our technical requirements. `,
           ],
         },
         {
-          header: `Municipal Budgetary Institution "Kyiv City Contact Centre""`,
+          header: [
+            `Anatoliy Komirnyi,`,
+            `Deputy Minister of Digital Development, Digital Transformation and Digitalisation`,
+          ],
           text: [
-            `Big thanks to FTech for their fantastic teamwork. They got the job done, Contract No. 48, signed on October 21, 2020, involved setting up a call recording system with speech analytics in our software and hardware.`,
-            `We're thrilled to say that FTech consistently went above and beyond. They were on time, super reliable, and very responsive. They're like a dependable friend, always there to help us out.`,
+            `We were pleasantly surprised by the cooperation with FTech on developing software for the truck queue management system at the border. The company has perfectly fulfilled its duties, adhering to the contract terms and the deadlines. We recommend them as a reliable partner.`,
+          ],
+        },
+        {
+          header: [
+            `Deputy Head of the State Service of Ukraine for Transport Safety,`,
+            `Valerii Kulyk-Kulichenko`,
+          ],
+          text: [
+            `The key for us was the timely and high-quality provision of the licensed software module "Automated Workstation of the State Border Guard Service Inspector to the Unified Complex of Information Systems of the State Border Guard Service of Ukraine" - and FTech completed the project on time. `,
+            `We appreciate their professionalism and high standard of service. The work was done qualitatively, on time, and without problems or shortcomings.`,
+            `We look forward to further cooperation.`,
           ],
         },
       ]);
@@ -79,7 +109,7 @@ const Reviews = ({ lang }) => {
     <Container className="centered">
       <div className="left">
         {lang === "UA" && <h1 className="section-header ">Відгуки</h1>}
-        {lang === "ENG" && <h1 className="section-header ">Rewiews</h1>}
+        {lang === "ENG" && <h1 className="section-header ">Reviews</h1>}
       </div>
       <div className="right">
         <div className="reviews">
@@ -88,7 +118,12 @@ const Reviews = ({ lang }) => {
           >
             {blocks.map((block, index) => (
               <div key={index} className="block">
-                <h2 className="block__header">{block.header}</h2>
+                {block.header.map((header) => (
+                  <h2 key={header} className="block__header">
+                    {header}
+                  </h2>
+                ))}
+
                 <div className="block__text">
                   {block.text.map((text, index) => {
                     return <p key={index}>{text}</p>;

@@ -6,6 +6,8 @@ import cyberTrackerFull from "../assets/cyberTrackerFull.png";
 import cyberTrackerPreview from "../assets/cyberTrackerPreview.png";
 import contactCenterKyivFull from "../assets/contactCenterKyivFull.png";
 import mayorsServicePreview from "../assets/mayorsServicePreview.png";
+import prykordonnykFull from "../assets/prykordonnyk.svg";
+import prykordonnykPreview from "../assets/prykordonnykPreview.svg";
 
 export const projects = [
   // E-ROAD
@@ -15,8 +17,8 @@ export const projects = [
     imagePreview: eRoadPreview,
     headerPreview: { UA: "E-road", ENG: "E-road" },
     header: {
-      UA: "«E-road» - підтримка інфраструктури автомобільних доріг",
-      ENG: '"E-road" - maintenance of road infrastructure',
+      UA: "«E-road» - управління інфраструктурою автомобільних доріг",
+      ENG: '"E-road" - management of road infrastructure',
     },
     headingSecondary: {
       UA: ` Управління та підтримка складних процесів будівництва та експлуатації
@@ -57,7 +59,6 @@ export const projects = [
               Cистему експлуатаційного утримання:{" "}
               <ul className="dashed">
                 <li>Планування та контроль витрат на утримання доріг.</li>
-                <li>CRM-система для обробки позаштатних ситуацій.</li>
               </ul>
             </li>
             <li>
@@ -135,7 +136,6 @@ export const projects = [
               Maintenance system:
               <ul className="dashed">
                 <li>Planning and control of road maintenance costs.</li>
-                <li>CRM system for handling emergencies.</li>
               </ul>
             </li>
             <li>
@@ -183,7 +183,6 @@ export const projects = [
     labels: {
       UA: [
         "Для держави",
-        "CRM cистема",
         "Сайт",
         "Android",
         "iOS",
@@ -194,7 +193,6 @@ export const projects = [
       ],
       ENG: [
         "For the state",
-        "CRM system",
         "Site",
         "Android",
         "iOS",
@@ -210,17 +208,18 @@ export const projects = [
     urlName: "служба-підримки-мера-києва",
     image: contactCenterKyivFull,
     imagePreview: mayorsServicePreview,
+    webSiteLink: "https://1551.gov.ua/",
     headerPreview: {
-      UA: "Служба мера Києва - 1551 CRM-система",
-      ENG: "Service of the Mayor of Kyiv - 1551 CRM system",
+      UA: "Служба мера Києва - 1551 ",
+      ENG: "Service of the Mayor of Kyiv - 1551 ",
     },
     header: {
-      UA: "CRM-система «Служба мера Києва — 1551»",
-      ENG: `The CRM system "Kyiv Mayor's Office - 1551"`,
+      UA: "Служба мера Києва — 1551",
+      ENG: `Kyiv Mayor's Office - 1551`,
     },
     headingSecondary: {
-      UA: "CRM-система «Служба мера Києва —1551​​» створена для забезпечення ефективної взаємодії мешканців та гостей міста з міською владою. Заснована на моделі збору та обробки даних, вона спрямована на оптимізацію процесів реєстрації звернень, розподілу завдань та контролю їх виконання.",
-      ENG: `The CRM system "Kyiv Mayor's Service -1551" is designed to ensure effective interaction between residents and guests of the city with the city administration. Based on the data collection and processing model, it aims to optimise the processes of registration of appeals, distribution of tasks, and control of their implementation.  `,
+      UA: "«Служба мера Києва —1551​​» створена для забезпечення ефективної взаємодії мешканців та гостей міста з міською владою. Заснована на моделі збору та обробки даних, вона спрямована на оптимізацію процесів реєстрації звернень, розподілу завдань та контролю їх виконання.",
+      ENG: `The "Kyiv Mayor's Service -1551" is designed to ensure effective interaction between residents and guests of the city with the city administration. Based on the data collection and processing model, it aims to optimise the processes of registration of appeals, distribution of tasks, and control of their implementation.  `,
     },
     text: {
       UA: (
@@ -284,15 +283,15 @@ export const projects = [
           </ul>
 
           <p>
-            CRM-система «Служба мера Києва — 1551» є важливим кроком у створенні
-            надійної комунікації між мешканцями та міською владою. Створона
-            система дозволяє реєструвати звернення від мешканців та гостей
-            міста, які оператори перевіряють та автоматично направляють для
-            виконання в служби міста. Заявки можна подавати через телефон,
-            додаток, веб-сайт або чат-ботів. Кожного дня в систему надходить від
-            10 до 40 тисяч звернень, які контролює спеціальна група. Крім того,
-            система інформує заявників про роботи та зміни у статусі їх звернень
-            через різні канали зв'язку.
+            «Служба мера Києва — 1551» є важливим кроком у створенні надійної
+            комунікації між мешканцями та міською владою. Створона система
+            дозволяє реєструвати звернення від мешканців та гостей міста, які
+            оператори перевіряють та автоматично направляють для виконання в
+            служби міста. Заявки можна подавати через телефон, додаток, веб-сайт
+            або чат-ботів. Кожного дня в систему надходить від 10 до 40 тисяч
+            звернень, які контролює спеціальна група. Крім того, система
+            інформує заявників про роботи та зміни у статусі їх звернень через
+            різні канали зв'язку.
           </p>
         </div>
       ),
@@ -359,8 +358,8 @@ export const projects = [
           </ul>
 
           <p>
-            The CRM system "Kyiv Mayor's Service 1551" is a significant move
-            towards creating reliable communication between residents and city
+            The "Kyiv Mayor's Service 1551" is a significant move towards
+            creating reliable communication between residents and city
             authorities. The system allows registering requests from residents
             and visitors of the city, which are checked by operators and
             automatically forwarded to the city services for execution. Requests
@@ -376,7 +375,6 @@ export const projects = [
     labels: {
       UA: [
         "Для держави",
-        "CRM cистема",
         "Сайт",
         "Android",
         "iOS",
@@ -387,7 +385,6 @@ export const projects = [
       ],
       ENG: [
         "Для держави",
-        "CRM system",
         "Site",
         "Android",
         "iOS",
@@ -403,18 +400,19 @@ export const projects = [
     urlName: "є-черга",
     image: eChergaFull,
     imagePreview: eChergaPreview,
+    webSiteLink: "https://echerha.gov.ua/",
     headerPreview: {
-      UA: "Агенство відновлення - є-черга",
-      ENG: "Recovery agency - e-черга",
+      UA: "Є-черга",
+      ENG: "Є-черга",
     },
     header: {
       UA: `Електронна Черга: швидкий перетин кордону`,
       ENG: `eQueue: fast border crossing`,
     },
     headingSecondary: {
-      UA: `CRM-система «Електронна Черга» призначена для оптимізації та поліпшення процесів перетину кордону для водіїв вагового транспорту на державному кордоні України. Система забезпечує ефективну організацію черги, моніторинг руху та прогнозування часу перетину, а також уніфікує правила роботи прикордонних пунктів пропуску.
+      UA: `«Електронна Черга» призначена для оптимізації та поліпшення процесів перетину кордону для водіїв вагового транспорту на державному кордоні України. Система забезпечує ефективну організацію черги, моніторинг руху та прогнозування часу перетину, а також уніфікує правила роботи прикордонних пунктів пропуску.
       `,
-      ENG: `The eQueue CRM system is designed to optimize and improve border crossing processes for drivers of heavy vehicles at the state border of Ukraine. The system ensures efficient queue management, traffic monitoring, and forecasting of crossing times, and unifies border checkpoints' operation rules.
+      ENG: `The eQueue is designed to optimize and improve border crossing processes for drivers of heavy vehicles at the state border of Ukraine. The system ensures efficient queue management, traffic monitoring, and forecasting of crossing times, and unifies border checkpoints' operation rules.
       `,
     },
     text: {
@@ -499,7 +497,7 @@ export const projects = [
     labels: {
       UA: [
         "Для держави",
-        "CRM cистема",
+        "Online government service",
         "Сайт",
         "Android",
         "iOS",
@@ -509,7 +507,7 @@ export const projects = [
       ],
       ENG: [
         "For the state",
-        "CRM system",
+        "Державний онлайн-сервіс",
         "Site",
         "Android",
         "iOS",
@@ -525,92 +523,131 @@ export const projects = [
     image: cyberTrackerFull,
     imagePreview: cyberTrackerPreview,
     headerPreview: {
-      UA: "нкцк - Національна система кібербезпеки",
-      ENG: "нкцк - Національна система кібербезпеки",
+      UA: "CyberTracker: інструмент управління та моніторингу кібербезпеки",
+      ENG: "CyberTracker: a cybersecurity management and monitoring tool",
     },
     header: {
-      UA: `НКЦК - НАЦІОНАЛЬНА СИСТЕМА КІБЕРБЕЗПЕКИ`,
-      ENG: `НКЦК - НАЦІОНАЛЬНА СИСТЕМА КІБЕРБЕЗПЕКИ`,
+      UA: `НАЦІОНАЛЬНА СИСТЕМА КІБЕРБЕЗПЕКИ`,
+      ENG: `THE NATIONAL CYBERSECURITY PROTECTION SYSTEM (NCPS)`,
     },
     headingSecondary: {
-      UA: `CRM-система «Електронна Черга» призначена для оптимізації та поліпшення процесів перетину кордону для водіїв вагового транспорту на державному кордоні України. Система забезпечує ефективну організацію черги, моніторинг руху та прогнозування часу перетину, а також уніфікує правила роботи прикордонних пунктів пропуску.
-      `,
-      ENG: `The eQueue CRM system is designed to optimize and improve border crossing processes for drivers of heavy vehicles at the state border of Ukraine. The system ensures efficient queue management, traffic monitoring, and forecasting of crossing times, and unifies border checkpoints' operation rules.
+      UA: `В Україні, сектори критичної інфраструктури потребують посилення заходів у кібербезпеці. З метою забезпечення цієї потреби та зменшення вразливості, було розроблено «CyberTracker»: ця платформа спрямована на ефективний моніторинг та впровадження стратегій кібербезпеки України.`,
+      ENG: `In Ukraine, critical infrastructure sectors require enhanced cybersecurity measures. CyberTracker is designed to help meet this need. This platform solves the problem of effectively monitoring and analyzing Ukraine's cybersecurity strategy implementation.
+      Reducing cybersecurity vulnerabilities in critical sectors of Ukrainian infrastructure
       `,
     },
     text: {
       UA: (
         <div>
-          <h3>Основні характеристики:</h3>
-          <ul>
-            <li>
-              Ефективне управління чергою: водії можуть контролювати рух черги
-              та прогнозувати час перетину.
-            </li>
-            <li>
-              Підвищена прозорість та систематизація правил: забезпечення
-              однакових стандартів роботи прикордонних пунктів пропуску.
-            </li>
-          </ul>
-          <h3>Вражаючий результат:</h3>
+          <h4>
+            Зниження вразливості кібербезпеки в критичних секторах української
+            інфраструктури
+          </h4>
+          <p>
+            Досягти цього можливо через автоматизоване відстеження прогресу
+            здійснення стратегічних завдань та ефективності реалізації цілей
+            ініціатив у реальному часі.
+          </p>
+          <p>Цілі «CyberTracker»:</p>
           <ol>
+            <li>Моніторинг прогресу впровадження Стратегії кібербезпеки.</li>
+            <li>Відомчий моніторинг виконання Стратегії.</li>
             <li>
-              Оптимізація часу: зменшення часу очікування для водіїв та
-              перевізників.
+              Збір і відображення даних щодо ефективності Стратегії та її впливу
+              на міжнародні рейтинги з кібербезпеки.
             </li>
             <li>
-              Підвищення координації: покращення процесів бронювання та виїзду
-              автотранспорту через кордон.
-            </li>
-            <li>
-              Інтеграція з іншими системами: підключення до інших пунктів
-              пропуску та інформаційних систем для спільного використання даних.
+              Публічний доступ до інформації для громадськості та зацікавлених
+              сторін для сприяння новим проєктам у сфері кібербезпеки.
             </li>
           </ol>
+          <p>Функції:</p>
+          <ol>
+            <li>
+              Моніторинг реалізації Стратегії кібербезпеки з підтримкою
+              збирання, введення та аналізу даних.
+            </li>
+            <li>Управління елементами Стратегії та їх характеристиками.</li>
+            <li>
+              Механізм проєктного управління для ефективної реалізації
+              Стратегії.
+            </li>
+            <li>Моніторинг бюджетів та звітування.</li>
+            <li>
+              Візуалізація стану виконання Стратегії для аналізу та контролю.
+            </li>
+          </ol>
+          <p>Особливості:</p>
+          <ol>
+            <li>Журнал подій системи для відстеження всіх дій.</li>
+            <li>Механізми аутентифікації та захисту від онлайн загроз.</li>
+            <li>Довідники об'єктів системи та документація.</li>
+          </ol>
           <p>
-            Запис до черги може здійснюватися онлайн та безкоштовно, що значно
-            спрощує та прискорює процес перетину кордону водіями. Щодня в
-            систему надходить від 10 до 40 тисяч звернень, кожне з яких
-            контролює спеціальна група. Планується модернізація та розширення
-            функціональності системи для підключення інших пунктів пропуску та
-            інтеграції з іншими інформаційними системами.
+            «CyberTracker» - це важливий інструмент, який сприяє контролю та
+            поліпшенню кібербезпеки України. Більш того, він дозволяє приймати
+            обґрунтовані управлінські рішення та реагувати на кіберзагрози
+            вчасно та швидко, що гарантує стабільность та безпеку в цифровому
+            просторі країни.
           </p>
         </div>
       ),
       ENG: (
         <div>
-          <h3>Core features:</h3>
-          <ul>
-            <li>
-              Efficient queue management: drivers can monitor queue movement and
-              predict crossing times.
-            </li>
-            <li>
-              Increased transparency and systematization of rules: ensuring
-              uniform standards of operation of border crossing points.
-            </li>
-          </ul>
-          <h3>Amazing result:</h3>
+          <p>
+            This can be achieved through automated real-time tracking of the
+            progress of strategic tasks and the effectiveness of initiatives'
+            goals.
+          </p>
+          <p>CyberTracker makes it all good:</p>
           <ol>
             <li>
-              Time optimisation: reduced waiting time for drivers and carriers.
+              Monitoring the progress of the Cybersecurity Strategy
+              implementation.
+            </li>
+            <li>Departmental monitoring of the Strategy implementation.</li>
+            <li>
+              Сollecting and displaying data on the strategy's effectiveness and
+              impact on international cybersecurity rankings.
             </li>
             <li>
-              Increased coordination: improved processes for booking and exiting
-              vehicles across the border.
-            </li>
-            <li>
-              Integration with other systems: connectivity to other border
-              crossing points and information systems for data sharing.
+              Public access to information for the public and stakeholders to
+              facilitate new cybersecurity projects.
             </li>
           </ol>
+          <p>Get highlights:</p>
+          <ol>
+            <li>
+              Monitoring the implementation of the Cybersecurity Strategy with
+              support for data collection, input, and analysis.
+            </li>
+            <li>
+              Management of the Strategy elements and their characteristics.
+            </li>
+            <li>
+              Project management mechanism for the effective implementation of
+              the Strategy.
+            </li>
+            <li>Budget monitoring and reporting.</li>
+            <li>
+              Visualization of the Strategy implementation status for analysis
+              and control.
+            </li>
+          </ol>
+          <p>Take a deeper look:</p>
+          <ol>
+            <li>System event log to track all actions.</li>
+            <li>
+              Authentication and protection mechanisms against online threats.
+            </li>
+            <li>System object directories and documentation.</li>
+          </ol>
           <p>
-            The queue can be booked online and free of charge, greatly
-            simplifying and speeding up the border crossing process for drivers.
-            The eQueue receives between 10,000 and 40,000 requests daily, each
-            monitored by a special team. We plan to upgrade and expand the
-            system's functionality to connect other checkpoints and integrate
-            with other information systems.
+            "CyberTracker is an essential tool that helps to control and improve
+            Ukraine's cybersecurity. Moreover, it allows for making informed
+            management decisions and responding to cyber threats promptly and
+            quickly, guaranteeing stability and security in the country's
+            digital space.
           </p>
         </div>
       ),
@@ -618,25 +655,216 @@ export const projects = [
     labels: {
       UA: [
         "Для держави",
-        "CRM cистема",
         "Сайт",
         "Android",
         "iOS",
         "WEB-додаток",
         "Онлайн підтримка",
-        "Чат боти",
-        "10к + користувачів",
+        "WIM-обладнання",
+        "1к + користувачів",
       ],
       ENG: [
+        "For the state",
+        "Site",
+        "Android",
+        "iOS",
+        "WEB application",
+        "Online support",
+        "WIM Hardware",
+        "1k + users",
+      ],
+    },
+  },
+  // BORDER GUARD CABINET
+  {
+    urlName: "dsbt",
+    image: prykordonnykFull,
+    imagePreview: prykordonnykPreview,
+    webSiteLink: "https://18-60.dsbt.gov.ua/",
+    headerPreview: {
+      UA: "дсбт - КАБІНЕТ ПРИКОРДОННИКА",
+      ENG: "State Transport Safety Service - BORDER GUARD CABINET",
+    },
+    header: {
+      UA: `КАБІНЕТ ПРИКОРДОННИКА ЄДИНОГО КОМПЛЕКСУ ІНФОРМАЦІЙНИХ СИСТЕМ УКРТРАНСБЕЗПЕКИ `,
+      ENG: `UNITED COMPLEX INFORMATION SYSTEM BORDER GUARD CABINET`,
+    },
+    headingSecondary: {
+      UA: `Нагальна необхідність оформлення заявки на перетин державного кордону водіями призовного віку 18-60 років під час воєнного стану призвела до необхідності впровадження Модуля «Кабінет прикордонника». `,
+      ENG: `The urgent need to submit applications for crossing the state border by drivers of conscription age (18-60 years) during a state of war has led to the implementation of the "Border Guard Cabinet" module.`,
+    },
+    text: {
+      UA: (
+        <div>
+          <h4>Фіксація факту перетину кордону (виїзд та в’їзд) водіями</h4>
+          <p>
+            Модуль «Кабінет прикордонника» призначено для перевірки інспекторами
+            Державної прикордонної служби України (ДПСУ) наявності заявок на
+            бронювання та подальшого безперешкодного перетину кордону
+            водіями-перевізниками або волонтерами обласних військових
+            адміністрацій (ОВА) і отримання стану перетину кордону згідно цим
+            заявкам. 
+          </p>
+          <p>Aвтоматизація процесів, пов’язаних із: </p>
+          <ol>
+            <li>
+              Консолідацією та зберіганням інформації щодо заявок від
+              перевізників та ОВА на перетин кордону та факт перетину кордону
+              (виїзд та в’їзд) водіями. 
+            </li>
+            <li>
+              Фіксацією факту перетину кордону (виїзд та в’їзд)
+              водіїв-перевізників або волонтерів ОВА.  
+            </li>
+            <li>Формуванням звітності. </li>
+          </ol>
+          <p>Цілі:</p>
+          <ol>
+            <li>
+              Автоматизація робочих місць інспекторів ДПСУ, керівників ДПСУ та
+              фахівців Державної служби України з безпеки на транспорті. 
+            </li>
+            <li>
+              Спрощення процедури контролю щодо оформлення заявки на перетин
+              державного кордону водіями.
+            </li>
+            <li>Фіксація факту перетину кордону водіями. </li>
+            <li>
+              Фіксація потенційно-підозрілих водіїв та відображення статистики. 
+            </li>
+            <li>Зменшення часу на перетин кордону водіями.</li>
+          </ol>
+        </div>
+      ),
+      ENG: (
+        <div>
+          <h4>
+            Recording the fact of crossing the border (departure and entry) by
+            drivers
+          </h4>
+          <p>
+            The "Border Guard Cabinet" module is designed for border guards to
+            check the availability of reservation applications and facilitate
+            the unimpeded crossing of the border by drivers-transporters or
+            volunteers from regional military administrations (RMA), and to
+            obtain the border crossing status according to these applications.
+          </p>
+          <p>Automation of processes related to:  </p>
+          <ol>
+            <li>
+              Consolidation and storage of information regarding applications
+              from transporters and RMAs for border crossing and the fact of
+              border crossing (departure and entry) by drivers.
+            </li>
+            <li>
+              Recording the fact of border crossing (departure and entry) by
+              transporter drivers or RMA volunteers.
+            </li>
+            <li>Report generation. </li>
+          </ol>
+          <p>Objectives:</p>
+          <ol>
+            <li>
+              Automation of workplaces for border guard inspectors, DPSU
+              leaders, and experts from the State Service of Ukraine for
+              Transport Security.
+            </li>
+            <li>
+              Simplification of the control procedure for submitting
+              applications for crossing the state border by drivers.
+            </li>
+            <li>Recording the fact of border crossing by drivers. </li>
+            <li>
+              Recording potentially suspicious drivers and reflecting
+              statistics.
+            </li>
+            <li>Reducing the time for border crossing by drivers.</li>
+          </ol>
+        </div>
+      ),
+
+      // ENG: (
+      //   <div>
+      //     <p>
+      //       This can be achieved through automated real-time tracking of the
+      //       progress of strategic tasks and the effectiveness of initiatives'
+      //       goals.
+      //     </p>
+      //     <p>CyberTracker makes it all good:</p>
+      //     <ol>
+      //       <li>
+      //         Monitoring the progress of the Cybersecurity Strategy
+      //         implementation.
+      //       </li>
+      //       <li>Departmental monitoring of the Strategy implementation.</li>
+      //       <li>
+      //         Сollecting and displaying data on the strategy's effectiveness and
+      //         impact on international cybersecurity rankings.
+      //       </li>
+      //       <li>
+      //         Public access to information for the public and stakeholders to
+      //         facilitate new cybersecurity projects.
+      //       </li>
+      //     </ol>
+      //     <p>Get highlights:</p>
+      //     <ol>
+      //       <li>
+      //         Monitoring the implementation of the Cybersecurity Strategy with
+      //         support for data collection, input, and analysis.
+      //       </li>
+      //       <li>
+      //         Management of the Strategy elements and their characteristics.
+      //       </li>
+      //       <li>
+      //         Project management mechanism for the effective implementation of
+      //         the Strategy.
+      //       </li>
+      //       <li>Budget monitoring and reporting.</li>
+      //       <li>
+      //         Visualization of the Strategy implementation status for analysis
+      //         and control.
+      //       </li>
+      //     </ol>
+      //     <p>Take a deeper look:</p>
+      //     <ol>
+      //       <li>System event log to track all actions.</li>
+      //       <li>
+      //         Authentication and protection mechanisms against online threats.
+      //       </li>
+      //       <li>System object directories and documentation.</li>
+      //     </ol>
+      //     <p>
+      //       "CyberTracker is an essential tool that helps to control and improve
+      //       Ukraine's cybersecurity. Moreover, it allows for making informed
+      //       management decisions and responding to cyber threats promptly and
+      //       quickly, guaranteeing stability and security in the country's
+      //       digital space.
+      //     </p>
+      //   </div>
+      // ),
+    },
+    labels: {
+      UA: [
         "Для держави",
-        "CRM cистема",
+        "CRM система",
         "Сайт",
         "Android",
         "iOS",
         "WEB-додаток",
         "Онлайн підтримка",
-        "Чат боти",
-        "10к + користувачів",
+        "WIM-обладнання",
+        "1к + користувачів",
+      ],
+      ENG: [
+        "For the state",
+        "CRM system",
+        "Site",
+        "Android",
+        "iOS",
+        "WEB application",
+        "Online support",
+        "WIM Hardware",
+        "1k + users",
       ],
     },
   },

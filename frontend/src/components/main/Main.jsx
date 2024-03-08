@@ -51,6 +51,10 @@ const Main = () => {
       window.location.hash = "";
       window.location.hash = "portfolio";
     }
+    if (location.hash === "#contactUs") {
+      window.location.hash = "";
+      window.location.hash = "contactUs";
+    }
   }, []);
 
   setInterval(() => {
@@ -63,7 +67,7 @@ const Main = () => {
 
   const scrollHandler = () => {
     // NAVIGATION
-    if (lastScrollY < window.scrollY) {
+    if (lastScrollY < window.scrollY && window.scrollY > 40) {
       navRef.current?.classList.add("nav--hidden");
     } else {
       navRef.current?.classList.remove("nav--hidden");

@@ -81,7 +81,7 @@ const ContactUs = ({ lang, ref }) => {
       formData.append("interests", selectedInterests);
       setLoading(true);
 
-      fetch("http://127.0.0.1:8000/api/sendMailContactUs", {
+      fetch("https://ftech.company:8443/api/sendMailContactUs", {
         method: "POST",
         body: formData,
       })
@@ -89,6 +89,7 @@ const ContactUs = ({ lang, ref }) => {
         .then((data) => {
           navigate("/formSubmitted", { state: { type: "contactUs" } });
         })
+        .catch((err) => console.log("Error ", err))
         .finally(() => setLoading(false));
     }
   };
@@ -114,7 +115,7 @@ const ContactUs = ({ lang, ref }) => {
           <div className="header">
             {lang === "UA" && <h2 className="green">Звʼяжіться з нами</h2>}
             {lang === "ENG" && <h2 className="green">contact us</h2>}
-            <div className="header__email">info@ftech.com.ua</div>
+            <div className="header__email">INFO@FTECH.COMPANY</div>
           </div>
 
           <form
@@ -152,20 +153,40 @@ const ContactUs = ({ lang, ref }) => {
               {lang === "ENG" && (
                 <div className="interests__header">I am interested in..</div>
               )}
-              {interests.map((interest, index) => {
-                return (
-                  <div
-                    key={index}
-                    id={index}
-                    onClick={selectInterestHandler}
-                    className={`interests__label ${
-                      selectedInterests.includes(interest) ? "selected" : ""
-                    }`}
-                  >
-                    {interest}
-                  </div>
-                );
-              })}
+              <div className="first-row">
+                {interests.map((interest, index) => {
+                  if (index <= 1)
+                    return (
+                      <div
+                        key={index}
+                        id={index}
+                        onClick={selectInterestHandler}
+                        className={`interests__label ${
+                          selectedInterests.includes(interest) ? "selected" : ""
+                        }`}
+                      >
+                        {interest}
+                      </div>
+                    );
+                })}
+              </div>
+              <div className="second-row">
+                {interests.map((interest, index) => {
+                  if (index > 1)
+                    return (
+                      <div
+                        key={index}
+                        id={index}
+                        onClick={selectInterestHandler}
+                        className={`interests__label ${
+                          selectedInterests.includes(interest) ? "selected" : ""
+                        }`}
+                      >
+                        {interest}
+                      </div>
+                    );
+                })}
+              </div>
             </div>
 
             {loading && (
@@ -283,14 +304,21 @@ const Container = styled.section`
       }
 
       .interests {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
         &__header {
           margin: 1.4rem 0 0.2rem;
           width: 100%;
         }
 
-        display: flex;
-        gap: 1rem;
-        flex-wrap: wrap;
+        .first-row,
+        .second-row {
+          display: flex;
+          gap: 1rem;
+          width: 100%;
+          flex-wrap: wrap;
+        }
 
         &__label {
           display: inline-block;
@@ -304,13 +332,6 @@ const Container = styled.section`
           transition: all 0.3s;
           border: 2px solid transparent;
           z-index: 2;
-
-          &:nth-child(3) {
-            margin-right: 10rem;
-            @media screen and (min-width: 1800px) {
-              margin-right: 20rem;
-            }
-          }
 
           &:hover {
             box-shadow: 0 0 14px 0 ${colors.primaryGreen};
@@ -438,12 +459,7 @@ const Container = styled.section`
             margin: 1.4rem 0 0.2rem;
             width: 100%;
           }
-
-          display: flex;
-          gap: 1rem;
-          flex-wrap: wrap;
-
-          &__label {
+          x &__label {
             &:nth-child(3) {
               margin-right: 0;
             }

@@ -56,15 +56,20 @@ const Portfolio = ({ lang }) => {
       </div>
 
       <div className="projects">
-        {otherProjects.map((project, index) => (
-          <Card
-            key={index}
-            lang={lang}
-            header={project.headerPreview[lang]}
-            image={project.imagePreview}
-            urlName={project.urlName}
-          />
-        ))}
+        <div>
+          {otherProjects.map((project, index) => {
+            return (
+              <Card
+                key={index}
+                lang={lang}
+                header={project.headerPreview[lang]}
+                image={project.imagePreview}
+                urlName={project.urlName}
+                staticCard={project.static || false}
+              />
+            );
+          })}
+        </div>
       </div>
 
       {/* <button onClick={showMoreProjectsHandler} className="show-more">
@@ -131,19 +136,61 @@ const Container = styled.section`
     }
   }
 
-  .projects {
+ .projects{
+      // display: block;
+      margin: 0 auto;
+      width: 100%;
+      // overflow: auto;
+      display: flex;
+      flex-direction: row;
+    }
+
+  
+
+  .projects>div {
+    padding: 1rem 0;
     margin-top: 5rem;
-    display: grid;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 1.6rem;
-    min-height: 23.5rem;
-    margin-bottom: 5rem;
+    // gap: 1.6rem;
+    min-height: 25.5rem;
+    margin-bottom: 2rem;
+    padding-bottom: 3rem;
+    // overflow: hidden;
+    overflow-x: scroll;
+
+    &::-webkit-scrollbar {
+      background-color: #f5f5f5;
+      border-radius: 10px;
+      width: 7px;
+      height: 7px;
+
+    }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #666666;
+    border-radius: 10px;
+  }
+
+
+    &>div{
+      &:last-child{
+        padding-right: 1rem;
+      }
+    }
+    
 
     .project {
       perspective: 150rem;
       -moz-perspective: 150rem;
       position: relative;
       max-width: 20rem;
+      width: 100%;
+      margin-right: 2.4rem;
+
+     
 
       &__side {
         transition: all 0.8s ease;
@@ -156,6 +203,7 @@ const Container = styled.section`
         overflow: hidden;
         box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
         padding: 1rem;
+        padding-bottom: 0;
         display: flex;
           flex-direction: column;
           justify-content: space-between;
@@ -186,12 +234,22 @@ const Container = styled.section`
         }
       }
 
+
       &:hover .project__side--front {
         transform: rotateY(-180deg);
       }
 
       &:hover .project__side--back {
         transform: rotateY(0);
+      }
+
+      &.static{
+        &:hover .project__side--front{
+        transform: rotateY(0deg);
+        }
+        &:hover .project__side--back {
+          transform: rotateY(180deg);
+        }
       }
 
       h2 {
@@ -207,7 +265,7 @@ const Container = styled.section`
   }
 
   
-  @media screen  and (max-width: 1400px) {
+  @media screen  and (max-width: 1100px) {
     .e-road {
       flex-direction: column;
 
@@ -219,6 +277,26 @@ const Container = styled.section`
           width: 580px;
         }
       }
+    }
+
+   
+    .projects{
+      overflow-x: auto;
+      width: 100%;
+    }
+
+
+    .projects>div{
+      width: 100%;
+      margin-left:  auto;
+      margin-right:  auto;
+      display: flex;
+      justify-content: space-between;
+      
+      min-height: 23.5rem;
+      gap: 1rem;
+      padding-bottom: 2rem;
+      margin-bottom: -2rem;
     }
 
     .projects .project{
@@ -276,6 +354,12 @@ const Container = styled.section`
     .projects{
       display: flex;
       justify-content: space-around;
+
+      &>div{
+        overflow: auto;
+        padding-bottom: 4rem;
+        min-height: 21rem;
+      }
     }
 
     .projects .project{
@@ -327,6 +411,10 @@ const Container = styled.section`
       grid-template-columns: 1fr 1fr;
       min-height: 15rem;
 
+      &>div{
+        min-height: 17rem;
+      }
+
       .project:nth-child(n+3) {
         display: none; 
       }
@@ -345,6 +433,7 @@ const Container = styled.section`
     .projects{
       min-height: 15rem;
       gap: 0;
+      margin-bottom: 0;
 
       .project{
         width: 90% !important;
@@ -358,8 +447,15 @@ const Container = styled.section`
         width: 95%;
       }
     }
+
+    .projects>div{
+      padding-bottom: 2rem;
+      overflow-x: scroll;
+      display: flex;
+      justify-content: space-between;
+    }
     .projects>div:nth-child(3){
-      display: none;
+      // display: none;
     }
   }
   
@@ -377,9 +473,22 @@ const Container = styled.section`
         }
       }
     }
+
+
+    .projects{
+      height: 30rem;
+    }
+    .projects>div{
+      padding-bottom: 2rem;
+      overflow-y: scroll;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
     .projects .project__side--front{
       img{
-        width: 60%;
+        width: 70%;
       }
     }
   }
